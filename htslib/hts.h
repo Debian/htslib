@@ -1,14 +1,15 @@
 #ifndef HTS_H
 #define HTS_H
 
-#ifndef VERSION
-#define HTS_VERSION "0.0.1+"
-#else
-#define HTS_VERSION VERSION
-#endif
-
+#include <stddef.h>
 #include <stdint.h>
-#include "bgzf.h"
+
+#ifndef HTS_BGZF_TYPEDEF
+typedef struct BGZF BGZF;
+#define HTS_BGZF_TYPEDEF
+#endif
+struct cram_fd;
+struct hFILE;
 
 #ifndef KSTRING_T
 #define KSTRING_T kstring_t
@@ -44,11 +45,16 @@ typedef struct __kstring_t {
  ************/
 
 typedef struct {
-	uint32_t is_bin:1, is_write:1, is_be:1, dummy:29;
+	uint32_t is_bin:1, is_write:1, is_be:1, is_cram:1, is_compressed:2, is_kstream:1, dummy:25;
 	int64_t lineno;
 	kstring_t line;
 	char *fn, *fn_aux;
-	void *fp; // file pointer; actual type depending on is_bin and is_write
+	union {
+		BGZF *bgzf;
+		struct cram_fd *cram;
+		struct hFILE *hfile;
+		void *voidp;
+	} fp;
 } htsFile;
 
 /**********************
@@ -56,17 +62,52 @@ typedef struct {
  **********************/
 
 extern int hts_verbose;
+
+/*! @abstract Table for converting a nucleotide character to the 4-bit encoding. */
 extern const unsigned char seq_nt16_table[256];
+
+/*! @abstract Table for converting a 4-bit encoded nucleotide to a letter. */
 extern const char seq_nt16_str[];
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-	htsFile *hts_open(const char *fn, const char *mode, const char *fn_aux);
+/*!
+  @abstract  Get the htslib version number
+  @return    For released versions, a string like "N.N[.N]"; or git describe
+  output if using a library built within a Git repository.
+*/
+const char *hts_version();
+
+    /*!
+        @param fn       The file name or "-" for stdin/stdout
+        @param mode     Mode matching /[rwbuz0-9]+/: 'r' for reading, 'w' for writing and
+                        a digit specifies the zlib compression level. Note that there
+                        is a distinction between 'u' and '0': the first yields plain
+                        uncompressed output whereas the latter outputs uncompressed
+                        data wrapped in the zlib format.
+        @example 
+                        [rw]b .. compressed BCF, BAM, FAI; with "r" detects uncompressed
+                                    files when not reading from stdin
+                        [rw]u .. uncompressed BCF
+                        [rw]z .. compressed VCF
+                        [rw]  .. uncompressed VCF
+     */
+	htsFile *hts_open(const char *fn, const char *mode);
 	void hts_close(htsFile *fp);
 	int hts_getline(htsFile *fp, int delimiter, kstring_t *str);
 	char **hts_readlines(const char *fn, int *_n);
+
+
+/*!
+  @abstract  Set .fai filename for a file opened for reading
+  @return    0 for success, negative on failure
+  @discussion
+      Called before *_hdr_read(), this provides the name of a .fai file
+      used to provide a reference list if the htsFile contains no @SQ headers.
+*/
+int hts_set_fai_filename(htsFile *fp, const char *fn_aux);
 
 #ifdef __cplusplus
 }
@@ -131,20 +172,22 @@ extern "C" {
 	int hts_itr_next(BGZF *fp, hts_itr_t *iter, void *r, hts_readrec_f readrec, void *hdr);
 
     /**
-     * file_type() - Convenience function to determine file type
+     * hts_file_type() - Convenience function to determine file type
      * @fname: the file name
      *
-     * Returns one of the IS_* defines.
+     * Returns one of the FT_* defines.
      *
      * This function was added in order to avoid the need for excessive command
-     * line switches. Note that in the current implementation only the file name is
-     * checked, looking at magic string is also a possibility.
+     * line switches.
      */
-    #define IS_VCF    1
-    #define IS_VCF_GZ 2
-    #define IS_BCF    4
-    #define IS_STDIN  5
-    int file_type(const char *fname);
+    #define FT_UNKN   0
+    #define FT_GZ     1
+    #define FT_VCF    2
+    #define FT_VCF_GZ (FT_GZ|FT_VCF)
+    #define FT_BCF    4
+    #define FT_BCF_GZ (FT_GZ|FT_BCF)
+    #define FT_STDIN  8
+    int hts_file_type(const char *fname);
 
 
 #ifdef __cplusplus
