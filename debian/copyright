@@ -1,34 +1,98 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://github.com/samtools/htslib
 
-Files: htslib/bgzf.?
-Copyright: (c) 2008 Broad Institute / Massachusetts Institute of Technology
+Files: *
+Copyright: (C) 2012-2013 Genome Research Ltd.
+           (c) 2008 Broad Institute / Massachusetts Institute of Technology
+           The Wellcome Trust Sanger Institute
+           (c) 2008, 2009, 2011 by Attractive Chaos <attractor@live.co.uk>
 License: MIT
 
-Files: htslib/faidx.h:
-Copyright: (c) 2008 Genome Research Ltd (GRL).
-           The Wellcome Trust Sanger Institute.
-License: MIT
+Files: cram/*
+Copyright: (c) 2012-2013 Genome Research Ltd.
+           (c) 1995-1996 MEDICAL RESEARCH COUNCIL
+License: Various_BSD-3-Clause
+ The files in the 'cram' directory are under one or both of the following
+ licenses.
+ .
+ ---------------------------------------------------------------------------
+ .
+ Redistribution and use in source and binary forms, with or without 
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1. Redistributions of source code must retain the above copyright notice, 
+ this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright notice, 
+ this list of conditions and the following disclaimer in the documentation 
+ and/or other materials provided with the distribution.
+ .
+ 3. Neither the names Genome Research Ltd and Wellcome Trust Sanger
+ Institute nor the names of its contributors may be used to endorse or promote
+ products derived from this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY GENOME RESEARCH LTD AND CONTRIBUTORS "AS IS" AND 
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+ DISCLAIMED. IN NO EVENT SHALL GENOME RESEARCH LTD OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ .
+ ---------------------------------------------------------------------------
+ .
+ Redistribution and use in source and binary forms, with or without 
+ modification, are permitted provided that the following conditions are met:
+ .
+ 1 Redistributions of source code must retain the above copyright notice, 
+ this list of conditions and the following disclaimer.
+ .
+ 2 Redistributions in binary form must reproduce the above copyright notice, 
+ this list of conditions and the following disclaimer in the documentation 
+ and/or other materials provided with the distribution.
+ .
+ 3 Neither the name of the MEDICAL RESEARCH COUNCIL, THE LABORATORY OF 
+ MOLECULAR BIOLOGY nor the names of its contributors may be used to endorse or 
+ promote products derived from this software without specific prior written 
+ permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+ ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+ WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE 
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR 
+ ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON 
+ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT 
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Files: htslib/khash.h
-Copyright: (c) 2008, 2009, 2011 by Attractive Chaos <attractor@live.co.uk>
-License: MIT
-
-Files: htslib/knetfile.c
-Copyright: (c) 2008 by Genome Research Ltd (GRL).
-License: MIT
-
-Files: htslib/kseq.h
-Copyright: (c) 2008, 2009, 2011 Attractive Chaos <attractor@live.co.uk>
-License: MIT
-
-Files: htslib/ksort.h
-Copyright: (c) 2008, 2011 Attractive Chaos <attractor@live.co.uk>
-License: MIT
-
-Files: htslib/kstring.h
-Copyright: (c) by Attractive Chaos <attractor@live.co.uk> 
-License: MIT
+Files: cram/md5.? 
+Copyright: No copyright is claimed
+License: solar-MD5
+ This is an OpenSSL-compatible implementation of the RSA Data Security, Inc.
+ MD5 Message-Digest Algorithm (RFC 1321).
+ .
+ Homepage:
+ http://openwall.info/wiki/people/solar/software/public-domain-source-code/md5
+ .
+ Author:
+ Alexander Peslyak, better known as Solar Designer <solar at openwall.com>
+ .
+ This software was written by Alexander Peslyak in 2001.  No copyright is
+ claimed, and the software is hereby placed in the public domain.
+ In case this attempt to disclaim copyright and place the software in the
+ public domain is deemed null and void, then the software is
+ Copyright (c) 2001 Alexander Peslyak and it is hereby released to the
+ general public under the following terms:
+ .
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted.
+ .
+ There's ABSOLUTELY NO WARRANTY, express or implied.
 
 Files: htslib/razf.?
 Copyright: 2008, Jue Ruan <ruanjue@gmail.com>, Heng Li <lh3@sanger.ac.uk>
