@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
 Standards-Version: 3.9.5
 Homepage: https://github.com/samtools/htslib
 
-Package: libhts
+Package: libhts0
 Architecture: any
 Multi-Arch: same
 Depends: ${shlibs:Depends},
