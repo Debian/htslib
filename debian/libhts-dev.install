@@ -1,1 +1,4 @@
-htslib/libhts.a	usr/lib
+usr/include/*
+usr/lib/*/*.a
+usr/lib/*/*.so
+share/man/man5/*
