@@ -4,12 +4,14 @@ Uploaders: Charles Plessy <plessy@debian.org>
 Section: libs
 Priority: optional
 Build-Depends: debhelper (>= 9),
+               dh-exec,
                zlib1g-dev
 Standards-Version: 3.9.5
 Homepage: https://github.com/samtools/htslib
 
 Package: libhts
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Description: C library for high-throughput sequencing data formats
@@ -25,6 +27,7 @@ Description: C library for high-throughput sequencing data formats
 
 Package: libhts-dev
 Architecture: any
+Multi-Arch: same
 Section: libdevel
 Depends: ${shlibs:Depends},
          ${misc:Depends}
