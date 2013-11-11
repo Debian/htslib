@@ -15,14 +15,15 @@ Multi-Arch: same
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Description: C library for high-throughput sequencing data formats
- HTSlib is an experimental implementation of a unified C library for accessing
- common file formats, such as SAM and VCF, used for high-throughput sequencing
- data.
+ HTSlib is a unified C library for accessing common file formats, such as SAM
+ (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+ sequence data obtained by high-throughput sequencing.
  .
- HTSlib implements a generalized BAM index.  The HTSlib file reader first looks
- for the new index and then for the old if the new index is absent.
+ HTSlib implements a generalized BAM (binary SAM) index.  The HTSlib file
+ reader first looks for the new index and then for the old if the new index is
+ absent.
  .
- HTSlib is unfinished. It has not been tested on large-scale real data. Some
+ HTSlib is still experimental.  It has not been tested on large-scale real data. Some
  useful APIs are missing.
 
 Package: libhts-dev
@@ -31,21 +32,20 @@ Multi-Arch: same
 Section: libdevel
 Depends: ${shlibs:Depends},
          ${misc:Depends}
-Description: C library for high-throughput sequencing data formats
- HTSlib is an experimental implementation of a unified C library for accessing
- common file formats, such as SAM and VCF, used for high-throughput sequencing
- data.
+Description: Development files for the HTSlib
+ HTSlib is a unified C library for accessing common file formats, such as SAM
+ (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+ sequence data obtained by high-throughput sequencing.
  .
- HTSlib implements a generalized BAM index.  The HTSlib file reader first looks
- for the new index and then for the old if the new index is absent.
- .
- HTSlib is unfinished. It has not been tested on large-scale real data. Some
- useful APIs are missing.
+ This package contains development files: headers, static library, manual pages,
+ etc.
 
 Package: htslib-test
 Architecture: all
 Depends: ${misc:Depends}
-Description: test data for HTSlib
- HTSlib is an experimental implementation of a unified C library for accessing
- common file formats, such as SAM and VCF, used for high-throughput sequencing
- data.
+Description: Test data for HTSlib
+ HTSlib is a unified C library for accessing common file formats, such as SAM
+ (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+ sequence data obtained by high-throughput sequencing.
+ .
+ This package contains test files and scripts for the HTSlib.
