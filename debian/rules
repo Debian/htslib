@@ -5,5 +5,10 @@ export DH_VERBOSE=1
 %:
 	dh $@
 
+override_dh_auto_test:
+	dh_auto_test
+	$(RM) test/*.tmp test/*.tmp.* test/*.o test/*.dSYM \
+              test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
+
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr
