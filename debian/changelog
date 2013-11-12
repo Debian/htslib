@@ -1,4 +1,4 @@
-htslib (0.0.1+-1) UNRELEASED; urgency=low
+htslib (0.2.0~rc3-1) UNRELEASED; urgency=low
 
   * Initial release. (Closes: #729282)
 
