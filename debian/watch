@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/htslib-$1.tar.gz/,dversionmangle=s/~/-/ \
+  https://github.com/samtools/htslib/tags .*/v?(\d\S*)\.tar\.gz
