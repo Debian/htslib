@@ -10,6 +10,12 @@ override_dh_auto_test:
 	$(RM) test/*.tmp test/*.tmp.* test/*.o test/*.dSYM \
               test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
 
+override_dh_auto_build:
+	dh_auto_build -- \
+	  CFLAGS="$$(dpkg-buildflags --get CFLAGS)" \
+	  CPPFLAGS="-I. -DSAMTOOLS=1 $$(dpkg-buildflags --get CPPFLAGS)" \
+	  LDFLAGS="$$(dpkg-buildflags --get LDFLAGS)"
+
 override_dh_auto_install:
 	dh_auto_install -- prefix=/usr
 
