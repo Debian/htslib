@@ -23,8 +23,8 @@ Description: C library for high-throughput sequencing data formats
  reader first looks for the new index and then for the old if the new index is
  absent.
  .
- HTSlib is still experimental.  It has not been tested on large-scale real data. Some
- useful APIs are missing.
+ HTSlib is still experimental.  It has not been tested on large-scale real
+ data. Some useful APIs are missing.
 
 Package: libhts-dev
 Architecture: any
