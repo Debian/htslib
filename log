@@ -1,0 +1,1705 @@
+sbuild (Debian sbuild) 0.64.0 (17 May 2013) on aqwa.igloo
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ htslib 0.2.0~rc3-1 (amd64)                                16 nov. 2013 15:36 ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Package: htslib
+Version: 0.2.0~rc3-1
+Source Version: 0.2.0~rc3-1
+Distribution: unstable
+Machine Architecture: amd64
+Host Architecture: amd64
+Build Architecture: amd64
+
+I: NOTICE: Log filtering will replace 'build/htslib-LDWG20/htslib-0.2.0~rc3' with '«PKGBUILDDIR»'
+I: NOTICE: Log filtering will replace 'build/htslib-LDWG20' with '«BUILDDIR»'
+I: NOTICE: Log filtering will replace 'var/lib/schroot/mount/unstable-amd64-sbuild-3623818a-285b-44c6-8b58-d098bced0492' with '«CHROOT»'
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Update chroot                                                                │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Hit http://ftp.jp.debian.org unstable InRelease
+Hit http://ftp.jp.debian.org unstable/main Sources/DiffIndex
+Hit http://ftp.jp.debian.org unstable/main amd64 Packages/DiffIndex
+Hit http://ftp.jp.debian.org unstable/main Translation-en/DiffIndex
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Fetch source files                                                           │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+Local sources
+─────────────
+
+htslib_0.2.0~rc3-1.dsc exists in .; copying to chroot
+
+Check arch
+──────────
+
+Merged Build-Depends: build-essential, fakeroot
+Filtered Build-Depends: build-essential, fakeroot
+dpkg-deb: building package `sbuild-build-depends-core-dummy' in `/«BUILDDIR»/resolver-d1H_ig/apt_archive/sbuild-build-depends-core-dummy.deb'.
+OK
+Reading package lists...
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Install core build dependencies (apt-based resolver)                         │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Installing build dependencies
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  sbuild-build-depends-core-dummy
+debconf: delaying package configuration, since apt-utils is not installed
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/768 B of archives.
+After this operation, 0 B of additional disk space will be used.
+Selecting previously unselected package sbuild-build-depends-core-dummy.
+(Reading database ... 11123 files and directories currently installed.)
+Unpacking sbuild-build-depends-core-dummy (from .../sbuild-build-depends-core-dummy.deb) ...
+Setting up sbuild-build-depends-core-dummy (0.invalid.0) ...
+Merged Build-Depends: base-files, base-passwd, bash, bsdutils, coreutils, dash, debianutils, diffutils, dpkg, e2fsprogs, findutils, grep, gzip, hostname, libc-bin, login, mount, ncurses-base, ncurses-bin, perl-base, sed, sysvinit, sysvinit-utils, tar, util-linux, libc6-dev | libc-dev, gcc (>= 4:4.4.3), g++ (>= 4:4.4.3), make, dpkg-dev (>= 1.13.5), debhelper (>= 9), dh-exec, zlib1g-dev
+Filtered Build-Depends: base-files, base-passwd, bash, bsdutils, coreutils, dash, debianutils, diffutils, dpkg, e2fsprogs, findutils, grep, gzip, hostname, libc-bin, login, mount, ncurses-base, ncurses-bin, perl-base, sed, sysvinit, sysvinit-utils, tar, util-linux, libc6-dev, gcc (>= 4:4.4.3), g++ (>= 4:4.4.3), make, dpkg-dev (>= 1.13.5), debhelper (>= 9), dh-exec, zlib1g-dev
+dpkg-deb: building package `sbuild-build-depends-htslib-dummy' in `/«BUILDDIR»/resolver-vtjHRp/apt_archive/sbuild-build-depends-htslib-dummy.deb'.
+OK
+Reading package lists...
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Install htslib build dependencies (apt-based resolver)                       │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Installing build dependencies
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  bsdmainutils debhelper dh-exec file gettext gettext-base groff-base
+  intltool-debian libasprintf0c2 libcroco3 libffi6 libglib2.0-0 libmagic1
+  libpipeline1 libunistring0 libxml2 man-db po-debconf zlib1g-dev
+Suggested packages:
+  wamerican wordlist whois vacation dh-make gettext-doc groff less www-browser
+  libmail-box-perl
+Recommended packages:
+  curl wget lynx-cur autopoint libasprintf-dev libgettextpo-dev
+  libglib2.0-data shared-mime-info xml-core libmail-sendmail-perl
+The following NEW packages will be installed:
+  bsdmainutils debhelper dh-exec file gettext gettext-base groff-base
+  intltool-debian libasprintf0c2 libcroco3 libffi6 libglib2.0-0 libmagic1
+  libpipeline1 libunistring0 libxml2 man-db po-debconf
+  sbuild-build-depends-htslib-dummy zlib1g-dev
+debconf: delaying package configuration, since apt-utils is not installed
+0 upgraded, 20 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/8210 kB of archives.
+After this operation, 25.5 MB of additional disk space will be used.
+Selecting previously unselected package libpipeline1:amd64.
+(Reading database ... 11123 files and directories currently installed.)
+Unpacking libpipeline1:amd64 (from .../libpipeline1_1.2.4-1_amd64.deb) ...
+Selecting previously unselected package groff-base.
+Unpacking groff-base (from .../groff-base_1.22.2-3_amd64.deb) ...
+Selecting previously unselected package bsdmainutils.
+Unpacking bsdmainutils (from .../bsdmainutils_9.0.5_amd64.deb) ...
+Selecting previously unselected package man-db.
+Unpacking man-db (from .../man-db_2.6.5-2_amd64.deb) ...
+Selecting previously unselected package libasprintf0c2:amd64.
+Unpacking libasprintf0c2:amd64 (from .../libasprintf0c2_0.18.3.1-1_amd64.deb) ...
+Selecting previously unselected package libmagic1:amd64.
+Unpacking libmagic1:amd64 (from .../libmagic1_1%3a5.14-2_amd64.deb) ...
+Selecting previously unselected package libxml2:amd64.
+Unpacking libxml2:amd64 (from .../libxml2_2.9.1+dfsg1-3_amd64.deb) ...
+Selecting previously unselected package libffi6:amd64.
+Unpacking libffi6:amd64 (from .../libffi6_3.0.13-4_amd64.deb) ...
+Selecting previously unselected package libglib2.0-0:amd64.
+Unpacking libglib2.0-0:amd64 (from .../libglib2.0-0_2.36.4-1_amd64.deb) ...
+Selecting previously unselected package libcroco3:amd64.
+Unpacking libcroco3:amd64 (from .../libcroco3_0.6.8-2_amd64.deb) ...
+Selecting previously unselected package libunistring0:amd64.
+Unpacking libunistring0:amd64 (from .../libunistring0_0.9.3-5_amd64.deb) ...
+Selecting previously unselected package file.
+Unpacking file (from .../file_1%3a5.14-2_amd64.deb) ...
+Selecting previously unselected package gettext-base.
+Unpacking gettext-base (from .../gettext-base_0.18.3.1-1_amd64.deb) ...
+Selecting previously unselected package gettext.
+Unpacking gettext (from .../gettext_0.18.3.1-1_amd64.deb) ...
+Selecting previously unselected package intltool-debian.
+Unpacking intltool-debian (from .../intltool-debian_0.35.0+20060710.1_all.deb) ...
+Selecting previously unselected package po-debconf.
+Unpacking po-debconf (from .../po-debconf_1.0.16+nmu2_all.deb) ...
+Selecting previously unselected package debhelper.
+Unpacking debhelper (from .../debhelper_9.20131110_all.deb) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Unpacking zlib1g-dev:amd64 (from .../zlib1g-dev_1%3a1.2.8.dfsg-1_amd64.deb) ...
+Selecting previously unselected package dh-exec.
+Unpacking dh-exec (from .../dh-exec_0.12_amd64.deb) ...
+Selecting previously unselected package sbuild-build-depends-htslib-dummy.
+Unpacking sbuild-build-depends-htslib-dummy (from .../sbuild-build-depends-htslib-dummy.deb) ...
+Setting up libpipeline1:amd64 (1.2.4-1) ...
+Setting up groff-base (1.22.2-3) ...
+Setting up bsdmainutils (9.0.5) ...
+update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
+update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
+Setting up man-db (2.6.5-2) ...
+Not building database; man-db/auto-update is not 'true'.
+Setting up libasprintf0c2:amd64 (0.18.3.1-1) ...
+Setting up libmagic1:amd64 (1:5.14-2) ...
+Setting up libxml2:amd64 (2.9.1+dfsg1-3) ...
+Setting up libffi6:amd64 (3.0.13-4) ...
+Setting up libglib2.0-0:amd64 (2.36.4-1) ...
+No schema files found: doing nothing.
+Setting up libcroco3:amd64 (0.6.8-2) ...
+Setting up libunistring0:amd64 (0.9.3-5) ...
+Setting up file (1:5.14-2) ...
+Setting up gettext-base (0.18.3.1-1) ...
+Setting up gettext (0.18.3.1-1) ...
+Setting up intltool-debian (0.35.0+20060710.1) ...
+Setting up po-debconf (1.0.16+nmu2) ...
+Setting up debhelper (9.20131110) ...
+Setting up zlib1g-dev:amd64 (1:1.2.8.dfsg-1) ...
+Setting up dh-exec (0.12) ...
+Setting up sbuild-build-depends-htslib-dummy (0.invalid.0) ...
+Processing triggers for libc-bin ...
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Build environment                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Kernel: Linux 3.10-1-amd64 amd64 (x86_64)
+Toolchain package versions: binutils_2.23.90.20131017-1 dpkg-dev_1.17.1 g++-4.8_4.8.2-4 gcc-4.8_4.8.2-4 libc6-dev_2.17-96 libstdc++-4.8-dev_4.8.2-4 libstdc++6_4.8.2-4 linux-libc-dev_3.11.8-1
+Package versions: apt_0.9.12.1 base-files_7.2 base-passwd_3.5.28 bash_4.2+dfsg-1 binutils_2.23.90.20131017-1 bsdmainutils_9.0.5 bsdutils_1:2.20.1-5.5 build-essential_11.6 bzip2_1.0.6-5 coreutils_8.21-1 cpp_4:4.8.1-3 cpp-4.8_4.8.2-4 dash_0.5.7-3 debconf_1.5.52 debconf-i18n_1.5.52 debfoster_2.7-1.2 debhelper_9.20131110 debian-archive-keyring_2012.4 debianutils_4.4 dh-exec_0.12 diffutils_1:3.3-1 dpkg_1.17.1 dpkg-dev_1.17.1 e2fslibs_1.42.8-1 e2fsprogs_1.42.8-1 eatmydata_26-2 fakeroot_1.20-1 file_1:5.14-2 findutils_4.4.2-6 g++_4:4.8.1-3 g++-4.8_4.8.2-4 gcc_4:4.8.1-3 gcc-4.7-base_4.7.3-9 gcc-4.8_4.8.2-4 gcc-4.8-base_4.8.2-4 gettext_0.18.3.1-1 gettext-base_0.18.3.1-1 gnupg_1.4.15-1.1 gpgv_1.4.15-1.1 grep_2.14-4 groff-base_1.22.2-3 gzip_1.6-2 hostname_3.15 initscripts_2.88dsf-43 insserv_1.14.0-5 intltool-debian_0.35.0+20060710.1 libacl1_2.2.52-1 libapt-pkg4.12_0.9.12.1 libarchive-extract-perl_0.68-1 libasan0_4.8.2-4 libasprintf0c2_0.18.3.1-1 libatomic1_4.8.2-4 libattr1_1:2.4.47-1 libaudit-common_1:2.3.2-2 libaudit1_1:2.3.2-2 libblkid1_2.20.1-5.5 libbz2-1.0_1.0.6-5 libc-bin_2.17-96 libc-dev-bin_2.17-96 libc6_2.17-96 libc6-dev_2.17-96 libcap2_1:2.22-1.2 libclass-isa-perl_0.36-5 libcloog-isl4_0.18.1-1 libcomerr2_1.42.8-1 libcroco3_0.6.8-2 libdb5.1_5.1.29-7 libdpkg-perl_1.17.1 libffi6_3.0.13-4 libgc1c2_1:7.2d-5 libgcc-4.8-dev_4.8.2-4 libgcc1_1:4.8.2-4 libgdbm3_1.8.3-12 libglib2.0-0_2.36.4-1 libgmp10_2:5.1.2+dfsg-3 libgomp1_4.8.2-4 libisl10_0.12.1-1 libitm1_4.8.2-4 liblocale-gettext-perl_1.05-7+b2 liblog-message-simple-perl_0.10-1 liblzma5_5.1.1alpha+20120614-2 libmagic1_1:5.14-2 libmodule-pluggable-perl_4.8-1 libmount1_2.20.1-5.5 libmpc3_1.0.1-1 libmpfr4_3.1.2-1 libncurses5_5.9+20130608-1 libpam-modules_1.1.3-10 libpam-modules-bin_1.1.3-10 libpam-runtime_1.1.3-10 libpam0g_1.1.3-10 libpcre3_1:8.31-2 libpipeline1_1.2.4-1 libpod-latex-perl_0.61-1 libquadmath0_4.8.2-4 libreadline6_6.2+dfsg-0.1 libselinux1_2.2.1-1 libsemanage-common_2.2-1 libsemanage1_2.2-1 libsepol1_2.2-1 libslang2_2.2.4-15 libss2_1.42.8-1 libstdc++-4.8-dev_4.8.2-4 libstdc++6_4.8.2-4 libswitch-perl_2.16-2 libterm-ui-perl_0.38-1 libtext-charwidth-perl_0.04-7+b2 libtext-iconv-perl_1.7-5+b1 libtext-soundex-perl_3.4-1+b1 libtext-wrapi18n-perl_0.06-7 libtimedate-perl_1.2000-1 libtinfo5_5.9+20130608-1 libtsan0_4.8.2-4 libunistring0_0.9.3-5 libusb-0.1-4_2:0.1.12-23.2 libustr-1.0-1_1.0.4-3 libuuid1_2.20.1-5.5 libxml2_2.9.1+dfsg1-3 linux-libc-dev_3.11.8-1 login_1:4.1.5.1-1 lsb-base_4.1+Debian12 make_3.81-8.3 man-db_2.6.5-2 mawk_1.3.3-17 mount_2.20.1-5.5 multiarch-support_2.17-96 ncurses-base_5.9+20130608-1 ncurses-bin_5.9+20130608-1 passwd_1:4.1.5.1-1 patch_2.7.1-4 perl_5.18.1-4 perl-base_5.18.1-4 perl-modules_5.18.1-4 po-debconf_1.0.16+nmu2 readline-common_6.2+dfsg-0.1 sbuild-build-depends-core-dummy_0.invalid.0 sbuild-build-depends-htslib-dummy_0.invalid.0 sed_4.2.2-2 sensible-utils_0.0.9 sysv-rc_2.88dsf-43 sysvinit_2.88dsf-43 sysvinit-utils_2.88dsf-43 tar_1.27-3 tzdata_2013d-1 util-linux_2.20.1-5.5 xz-utils_5.1.1alpha+20120614-2 zlib1g_1:1.2.8.dfsg-1 zlib1g-dev_1:1.2.8.dfsg-1
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Build                                                                        │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+Unpack source
+─────────────
+
+dpkg-source: warning: extracting unsigned source package (htslib_0.2.0~rc3-1.dsc)
+dpkg-source: info: extracting htslib in htslib-0.2.0~rc3
+dpkg-source: info: unpacking htslib_0.2.0~rc3.orig.tar.gz
+dpkg-source: info: applying htslib_0.2.0~rc3-1.diff.gz
+dpkg-source: info: upstream files that have been modified: 
+ htslib-0.2.0~rc3/bgzf.c
+ htslib-0.2.0~rc3/cram/cram_io.c
+ htslib-0.2.0~rc3/hfile.c
+ htslib-0.2.0~rc3/hfile.h
+ htslib-0.2.0~rc3/hts.c
+ htslib-0.2.0~rc3/htslib/bgzf.h
+ htslib-0.2.0~rc3/htslib/hts.h
+ htslib-0.2.0~rc3/htslib/vcfutils.h
+ htslib-0.2.0~rc3/sam.c
+ htslib-0.2.0~rc3/vcfutils.c
+
+Check disc space
+────────────────
+
+Sufficient free space for build
+
+User Environment
+────────────────
+
+HOME=/sbuild-nonexistent
+LOGNAME=charles
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+SCHROOT_ALIAS_NAME=unstable-amd64-sbuild
+SCHROOT_CHROOT_NAME=unstable-amd64-sbuild
+SCHROOT_COMMAND=env
+SCHROOT_GID=1000
+SCHROOT_GROUP=charles
+SCHROOT_SESSION_ID=unstable-amd64-sbuild-3623818a-285b-44c6-8b58-d098bced0492
+SCHROOT_UID=1000
+SCHROOT_USER=charles
+SHELL=/bin/sh
+TERM=xterm
+USER=charles
+USERNAME=charles
+XDG_RUNTIME_DIR=/run/user/1000
+XDG_SEAT=seat0
+XDG_SESSION_ID=2
+XDG_VTNR=7
+
+dpkg-buildpackage
+─────────────────
+
+dpkg-buildpackage: source package htslib
+dpkg-buildpackage: source version 0.2.0~rc3-1
+dpkg-buildpackage: source distribution unstable
+dpkg-buildpackage: source changed by Charles Plessy <plessy@debian.org>
+ dpkg-source --before-build htslib-0.2.0~rc3
+dpkg-buildpackage: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   dh_testdir
+   dh_auto_clean
+	make -j1 distclean
+make[1]: Entering directory `/«PKGBUILDDIR»'
+rm -f test/*.tmp test/*.tmp.*
+rm -f *.o *.pico cram/*.o cram/*.pico test/*.o test/*.dSYM version.h
+rm -f libhts.so libhts.so.*
+rm -f libhts.a test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
+rm -f TAGS
+make[1]: Leaving directory `/«PKGBUILDDIR»'
+   debian/rules override_dh_clean
+make[1]: Entering directory `/«PKGBUILDDIR»'
+chmod ugo+x debian/libhts0.install debian/libhts-dev.install
+dh_clean
+	rm -f debian/libhts0.substvars
+	rm -f debian/libhts0.*.debhelper
+	rm -rf debian/libhts0/
+	rm -f debian/libhts-dev.substvars
+	rm -f debian/libhts-dev.*.debhelper
+	rm -rf debian/libhts-dev/
+	rm -f debian/htslib-test.substvars
+	rm -f debian/htslib-test.*.debhelper
+	rm -rf debian/htslib-test/
+	rm -f debian/*.debhelper.log
+	rm -f debian/files
+	find .  \( \( -type f -a \
+	        \( -name '#*#' -o -name '.*~' -o -name '*~' -o -name DEADJOE \
+		 -o -name '*.orig' -o -name '*.rej' -o -name '*.bak' \
+		 -o -name '.*.orig' -o -name .*.rej -o -name '.SUMS' \
+		 -o -name TAGS -o \( -path '*/.deps/*' -a -name '*.P' \) \
+		\) -exec rm -f {} + \) -o \
+		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
+	rm -f *-stamp
+make[1]: Leaving directory `/«PKGBUILDDIR»'
+ dpkg-source -b htslib-0.2.0~rc3
+dpkg-source: warning: no source format specified in debian/source/format, see dpkg-source(1)
+dpkg-source: info: using source format `1.0'
+dpkg-source: info: building htslib using existing htslib_0.2.0~rc3.orig.tar.gz
+dpkg-source: info: building htslib in htslib_0.2.0~rc3-1.diff.gz
+dpkg-source: warning: executable mode 0755 of 'debian/libhts-dev.install' will not be represented in diff
+dpkg-source: warning: executable mode 0755 of 'debian/libhts0.install' will not be represented in diff
+dpkg-source: warning: the diff modifies the following upstream files: 
+ bgzf.c
+ cram/cram_io.c
+ hfile.c
+ hfile.h
+ hts.c
+ htslib/bgzf.h
+ htslib/hts.h
+ htslib/vcfutils.h
+ sam.c
+ vcfutils.c
+dpkg-source: info: use the '3.0 (quilt)' format to have separate and documented changes to upstream files, see dpkg-source(1)
+dpkg-source: info: building htslib in htslib_0.2.0~rc3-1.dsc
+ debian/rules build
+dh build
+   dh_testdir
+   dh_auto_configure
+   debian/rules override_dh_auto_build
+make[1]: Entering directory `/«PKGBUILDDIR»'
+dh_auto_build -- \
+	  CFLAGS="$(dpkg-buildflags --get CFLAGS)" \
+	  CPPFLAGS="-I. -DSAMTOOLS=1 $(dpkg-buildflags --get CPPFLAGS)" \
+	  LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"
+	make -j1 "CFLAGS=-g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security" "CPPFLAGS=-I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2" LDFLAGS=-Wl,-z,relro
+make[2]: Entering directory `/«PKGBUILDDIR»'
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o kfunc.o kfunc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o knetfile.o knetfile.c
+In file included from knetfile.c:46:0:
+knetfile.c: In function 'kftp_send_cmd':
+htslib/knetfile.h:9:37: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+ #define netwrite(fd, ptr, len) write(fd, ptr, len)
+                                     ^
+knetfile.c:236:2: note: in expansion of macro 'netwrite'
+  netwrite(ftp->ctrl_fd, cmd, strlen(cmd));
+  ^
+knetfile.c: In function 'khttp_connect_file':
+htslib/knetfile.h:9:37: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+ #define netwrite(fd, ptr, len) write(fd, ptr, len)
+                                     ^
+knetfile.c:415:2: note: in expansion of macro 'netwrite'
+  netwrite(fp->fd, buf, l);
+  ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o kstring.o kstring.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o bgzf.o bgzf.c
+bgzf.c: In function 'bgzf_index_load':
+bgzf.c:888:10: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+     fread(&x, 1, sizeof(x), idx);
+          ^
+bgzf.c:899:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].caddr = ed_swap_8(x);
+                  ^
+bgzf.c:900:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].uaddr = ed_swap_8(x);
+                  ^
+bgzf.c:907:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].caddr = x;
+                  ^
+bgzf.c:908:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].uaddr = x;
+                  ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o faidx.o faidx.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hfile.o hfile.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hfile_net.o hfile_net.c
+echo '#define HTS_VERSION "0.0.1"' > version.h
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hts.o hts.c
+hts.c: In function 'hts_idx_load_local':
+hts.c:823:8: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+   fread(magic, 1, 4, fp);
+        ^
+hts.c:824:8: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+   fread(&n, 4, 1, fp);
+        ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o razf.o razf.c
+razf.c: In function 'razf_flush':
+razf.c:223:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+        ^
+razf.c:236:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+         ^
+razf.c: In function '_razf_write':
+razf.c:203:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+        ^
+razf.c: In function 'razf_open_r':
+razf.c:423:7: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+   read(fd, &end, sizeof(int64_t));
+       ^
+razf.c:431:7: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+   read(fd, &end, sizeof(int64_t));
+       ^
+razf.c: In function 'load_zindex':
+razf.c:124:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, &rz->index->size, sizeof(int));
+      ^
+razf.c:133:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, rz->index->bin_offsets, sizeof(int64_t) * v32);
+      ^
+razf.c:139:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, rz->index->cell_offsets, sizeof(int) * rz->index->size);
+      ^
+razf.c: In function 'razf_close':
+razf.c:818:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &rz->in, sizeof(int64_t));
+         ^
+razf.c:819:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &rz->out, sizeof(int64_t));
+         ^
+razf.c:822:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &v64, sizeof(int64_t));
+         ^
+razf.c:824:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &v64, sizeof(int64_t));
+         ^
+razf.c: In function 'razf_end_flush':
+razf.c:260:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+         ^
+razf.c: In function 'save_zindex':
+razf.c:96:17: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  if(is_be) write(fd, &rz->index->size, sizeof(int));
+                 ^
+razf.c:99:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(fd, &v32, sizeof(uint32_t));
+        ^
+razf.c:106:7: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  write(fd, rz->index->bin_offsets, sizeof(int64_t) * v32);
+       ^
+razf.c:107:7: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  write(fd, rz->index->cell_offsets, sizeof(int32_t) * rz->index->size);
+       ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o sam.o sam.c
+sam.c: In function 'sam_hdr_write':
+sam.c:461:11: warning: ignoring return value of 'hwrite', declared with attribute warn_unused_result [-Wunused-result]
+     hwrite(fp->fp.hfile, fp->line.s, fp->line.l);
+           ^
+sam.c:464:9: warning: ignoring return value of 'hflush', declared with attribute warn_unused_result [-Wunused-result]
+   hflush(fp->fp.hfile);
+         ^
+sam.c: In function 'sam_write1':
+sam.c:758:9: warning: ignoring return value of 'hwrite', declared with attribute warn_unused_result [-Wunused-result]
+   hwrite(fp->fp.hfile, fp->line.s, fp->line.l);
+         ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o synced_bcf_reader.o synced_bcf_reader.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o vcf_sweep.o vcf_sweep.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o tbx.o tbx.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o vcf.o vcf.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o vcfutils.o vcfutils.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_codecs.o cram/cram_codecs.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_decode.o cram/cram_decode.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_encode.o cram/cram_encode.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_index.o cram/cram_index.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_io.o cram/cram_io.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_samtools.o cram/cram_samtools.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/cram_stats.o cram/cram_stats.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/files.o cram/files.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/mFILE.o cram/mFILE.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/md5.o cram/md5.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/open_trace_file.o cram/open_trace_file.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/pooled_alloc.o cram/pooled_alloc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/sam_header.o cram/sam_header.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/string_alloc.o cram/string_alloc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/thread_pool.o cram/thread_pool.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/vlen.o cram/vlen.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o cram/zfio.o cram/zfio.c
+ar -rc libhts.a kfunc.o knetfile.o kstring.o bgzf.o faidx.o hfile.o hfile_net.o hts.o razf.o sam.o synced_bcf_reader.o vcf_sweep.o tbx.o vcf.o vcfutils.o cram/cram_codecs.o cram/cram_decode.o cram/cram_encode.o cram/cram_index.o cram/cram_io.o cram/cram_samtools.o cram/cram_stats.o cram/files.o cram/mFILE.o cram/md5.o cram/open_trace_file.o cram/pooled_alloc.o cram/sam_header.o cram/string_alloc.o cram/thread_pool.o cram/vlen.o cram/zfio.o
+ranlib libhts.a
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o kfunc.pico kfunc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o knetfile.pico knetfile.c
+In file included from knetfile.c:46:0:
+knetfile.c: In function 'kftp_send_cmd':
+htslib/knetfile.h:9:37: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+ #define netwrite(fd, ptr, len) write(fd, ptr, len)
+                                     ^
+knetfile.c:236:2: note: in expansion of macro 'netwrite'
+  netwrite(ftp->ctrl_fd, cmd, strlen(cmd));
+  ^
+knetfile.c: In function 'khttp_connect_file':
+htslib/knetfile.h:9:37: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+ #define netwrite(fd, ptr, len) write(fd, ptr, len)
+                                     ^
+knetfile.c:415:2: note: in expansion of macro 'netwrite'
+  netwrite(fp->fd, buf, l);
+  ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o kstring.pico kstring.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o bgzf.pico bgzf.c
+bgzf.c: In function 'bgzf_index_load':
+bgzf.c:888:10: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+     fread(&x, 1, sizeof(x), idx);
+          ^
+bgzf.c:899:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].caddr = ed_swap_8(x);
+                  ^
+bgzf.c:900:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].uaddr = ed_swap_8(x);
+                  ^
+bgzf.c:907:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].caddr = x;
+                  ^
+bgzf.c:908:18: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+             fread(&x, 1, sizeof(x), idx); fp->idx->offs[i].uaddr = x;
+                  ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o faidx.pico faidx.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o hfile.pico hfile.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o hfile_net.pico hfile_net.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o hts.pico hts.c
+hts.c: In function 'hts_idx_load_local':
+hts.c:823:8: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+   fread(magic, 1, 4, fp);
+        ^
+hts.c:824:8: warning: ignoring return value of 'fread', declared with attribute warn_unused_result [-Wunused-result]
+   fread(&n, 4, 1, fp);
+        ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o razf.pico razf.c
+razf.c: In function 'razf_flush':
+razf.c:223:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+        ^
+razf.c:236:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+         ^
+razf.c: In function '_razf_write':
+razf.c:203:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+        ^
+razf.c: In function 'razf_open_r':
+razf.c:423:7: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+   read(fd, &end, sizeof(int64_t));
+       ^
+razf.c:431:7: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+   read(fd, &end, sizeof(int64_t));
+       ^
+razf.c: In function 'load_zindex':
+razf.c:124:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, &rz->index->size, sizeof(int));
+      ^
+razf.c:133:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, rz->index->bin_offsets, sizeof(int64_t) * v32);
+      ^
+razf.c:139:6: warning: ignoring return value of 'read', declared with attribute warn_unused_result [-Wunused-result]
+  read(fd, rz->index->cell_offsets, sizeof(int) * rz->index->size);
+      ^
+razf.c: In function 'razf_close':
+razf.c:818:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &rz->in, sizeof(int64_t));
+         ^
+razf.c:819:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &rz->out, sizeof(int64_t));
+         ^
+razf.c:822:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &v64, sizeof(int64_t));
+         ^
+razf.c:824:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, &v64, sizeof(int64_t));
+         ^
+razf.c: In function 'razf_end_flush':
+razf.c:260:9: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+    write(rz->filedes, rz->outbuf, RZ_BUFFER_SIZE - rz->stream->avail_out);
+         ^
+razf.c: In function 'save_zindex':
+razf.c:96:17: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  if(is_be) write(fd, &rz->index->size, sizeof(int));
+                 ^
+razf.c:99:8: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+   write(fd, &v32, sizeof(uint32_t));
+        ^
+razf.c:106:7: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  write(fd, rz->index->bin_offsets, sizeof(int64_t) * v32);
+       ^
+razf.c:107:7: warning: ignoring return value of 'write', declared with attribute warn_unused_result [-Wunused-result]
+  write(fd, rz->index->cell_offsets, sizeof(int32_t) * rz->index->size);
+       ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o sam.pico sam.c
+sam.c: In function 'sam_hdr_write':
+sam.c:461:11: warning: ignoring return value of 'hwrite', declared with attribute warn_unused_result [-Wunused-result]
+     hwrite(fp->fp.hfile, fp->line.s, fp->line.l);
+           ^
+sam.c:464:9: warning: ignoring return value of 'hflush', declared with attribute warn_unused_result [-Wunused-result]
+   hflush(fp->fp.hfile);
+         ^
+sam.c: In function 'sam_write1':
+sam.c:758:9: warning: ignoring return value of 'hwrite', declared with attribute warn_unused_result [-Wunused-result]
+   hwrite(fp->fp.hfile, fp->line.s, fp->line.l);
+         ^
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o synced_bcf_reader.pico synced_bcf_reader.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o vcf_sweep.pico vcf_sweep.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o tbx.pico tbx.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o vcf.pico vcf.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o vcfutils.pico vcfutils.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_codecs.pico cram/cram_codecs.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_decode.pico cram/cram_decode.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_encode.pico cram/cram_encode.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_index.pico cram/cram_index.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_io.pico cram/cram_io.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_samtools.pico cram/cram_samtools.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/cram_stats.pico cram/cram_stats.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/files.pico cram/files.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/mFILE.pico cram/mFILE.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/md5.pico cram/md5.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/open_trace_file.pico cram/open_trace_file.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/pooled_alloc.pico cram/pooled_alloc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/sam_header.pico cram/sam_header.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/string_alloc.pico cram/string_alloc.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/thread_pool.pico cram/thread_pool.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/vlen.pico cram/vlen.c
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -fpic -c -o cram/zfio.pico cram/zfio.c
+gcc -shared -Wl,-soname,libhts.so.0 -o libhts.so kfunc.pico knetfile.pico kstring.pico bgzf.pico faidx.pico hfile.pico hfile_net.pico hts.pico razf.pico sam.pico synced_bcf_reader.pico vcf_sweep.pico tbx.pico vcf.pico vcfutils.pico cram/cram_codecs.pico cram/cram_decode.pico cram/cram_encode.pico cram/cram_index.pico cram/cram_io.pico cram/cram_samtools.pico cram/cram_stats.pico cram/files.pico cram/mFILE.pico cram/md5.pico cram/open_trace_file.pico cram/pooled_alloc.pico cram/sam_header.pico cram/string_alloc.pico cram/thread_pool.pico cram/vlen.pico cram/zfio.pico -lz
+ln -sf libhts.so libhts.so.0
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o test/fieldarith.o test/fieldarith.c
+gcc -pthread -Wl,-z,relro -o test/fieldarith test/fieldarith.o libhts.a  -lz
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o test/hfile.o test/hfile.c
+gcc -Wl,-z,relro -o test/hfile test/hfile.o libhts.a  -lz
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o test/test_view.o test/test_view.c
+gcc -pthread -Wl,-z,relro -o test/test_view test/test_view.o libhts.a  -lz
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o test/test-vcf-api.o test/test-vcf-api.c
+gcc -pthread -Wl,-z,relro -o test/test-vcf-api test/test-vcf-api.o libhts.a  -lz
+gcc -g -O2 -fstack-protector --param=ssp-buffer-size=4 -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o test/test-vcf-sweep.o test/test-vcf-sweep.c
+gcc -pthread -Wl,-z,relro -o test/test-vcf-sweep test/test-vcf-sweep.o libhts.a  -lz
+make[2]: Leaving directory `/«PKGBUILDDIR»'
+make[1]: Leaving directory `/«PKGBUILDDIR»'
+   debian/rules override_dh_auto_test
+make[1]: Entering directory `/«PKGBUILDDIR»'
+dh_auto_test
+	make -j1 test
+make[2]: Entering directory `/«PKGBUILDDIR»'
+test/fieldarith test/fieldarith.sam
+test/hfile
+cd test && ./test_view.pl
+
+=== Testing aux#aux.sam, ref aux.fa ===
+  ./test_view -S -b aux#aux.sam > aux#aux.tmp.bam
+  ./test_view aux#aux.tmp.bam > aux#aux.tmp.bam.sam_
+  ./compare_sam.pl aux#aux.sam aux#aux.tmp.bam.sam_
+  ./test_view -t aux.fa -S -C aux#aux.sam > aux#aux.tmp.cram
+  ./test_view -D aux#aux.tmp.cram > aux#aux.tmp.cram.sam_
+  ./compare_sam.pl aux#aux.sam aux#aux.tmp.cram.sam_
+  ./test_view -t aux.fa -C aux#aux.tmp.bam > aux#aux.tmp.bam.cram
+  ./test_view -b -D aux#aux.tmp.bam.cram > aux#aux.tmp.bam.cram.bam
+  ./test_view aux#aux.tmp.bam.cram.bam > aux#aux.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl aux#aux.sam aux#aux.tmp.bam.cram.bam.sam_
+
+=== Testing c1#bounds.sam, ref c1.fa ===
+  ./test_view -S -b c1#bounds.sam > c1#bounds.tmp.bam
+  ./test_view c1#bounds.tmp.bam > c1#bounds.tmp.bam.sam_
+  ./compare_sam.pl c1#bounds.sam c1#bounds.tmp.bam.sam_
+  ./test_view -t c1.fa -S -C c1#bounds.sam > c1#bounds.tmp.cram
+  ./test_view -D c1#bounds.tmp.cram > c1#bounds.tmp.cram.sam_
+  ./compare_sam.pl c1#bounds.sam c1#bounds.tmp.cram.sam_
+  ./test_view -t c1.fa -C c1#bounds.tmp.bam > c1#bounds.tmp.bam.cram
+  ./test_view -b -D c1#bounds.tmp.bam.cram > c1#bounds.tmp.bam.cram.bam
+  ./test_view c1#bounds.tmp.bam.cram.bam > c1#bounds.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl c1#bounds.sam c1#bounds.tmp.bam.cram.bam.sam_
+
+=== Testing c1#clip.sam, ref c1.fa ===
+  ./test_view -S -b c1#clip.sam > c1#clip.tmp.bam
+  ./test_view c1#clip.tmp.bam > c1#clip.tmp.bam.sam_
+  ./compare_sam.pl c1#clip.sam c1#clip.tmp.bam.sam_
+  ./test_view -t c1.fa -S -C c1#clip.sam > c1#clip.tmp.cram
+  ./test_view -D c1#clip.tmp.cram > c1#clip.tmp.cram.sam_
+  ./compare_sam.pl c1#clip.sam c1#clip.tmp.cram.sam_
+  ./test_view -t c1.fa -C c1#clip.tmp.bam > c1#clip.tmp.bam.cram
+  ./test_view -b -D c1#clip.tmp.bam.cram > c1#clip.tmp.bam.cram.bam
+  ./test_view c1#clip.tmp.bam.cram.bam > c1#clip.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl c1#clip.sam c1#clip.tmp.bam.cram.bam.sam_
+
+=== Testing c1#pad1.sam, ref c1.fa ===
+  ./test_view -S -b c1#pad1.sam > c1#pad1.tmp.bam
+  ./test_view c1#pad1.tmp.bam > c1#pad1.tmp.bam.sam_
+  ./compare_sam.pl c1#pad1.sam c1#pad1.tmp.bam.sam_
+  ./test_view -t c1.fa -S -C c1#pad1.sam > c1#pad1.tmp.cram
+  ./test_view -D c1#pad1.tmp.cram > c1#pad1.tmp.cram.sam_
+  ./compare_sam.pl c1#pad1.sam c1#pad1.tmp.cram.sam_
+  ./test_view -t c1.fa -C c1#pad1.tmp.bam > c1#pad1.tmp.bam.cram
+  ./test_view -b -D c1#pad1.tmp.bam.cram > c1#pad1.tmp.bam.cram.bam
+  ./test_view c1#pad1.tmp.bam.cram.bam > c1#pad1.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl c1#pad1.sam c1#pad1.tmp.bam.cram.bam.sam_
+
+=== Testing c1#pad2.sam, ref c1.fa ===
+  ./test_view -S -b c1#pad2.sam > c1#pad2.tmp.bam
+  ./test_view c1#pad2.tmp.bam > c1#pad2.tmp.bam.sam_
+  ./compare_sam.pl c1#pad2.sam c1#pad2.tmp.bam.sam_
+  ./test_view -t c1.fa -S -C c1#pad2.sam > c1#pad2.tmp.cram
+  ./test_view -D c1#pad2.tmp.cram > c1#pad2.tmp.cram.sam_
+  ./compare_sam.pl c1#pad2.sam c1#pad2.tmp.cram.sam_
+  ./test_view -t c1.fa -C c1#pad2.tmp.bam > c1#pad2.tmp.bam.cram
+  ./test_view -b -D c1#pad2.tmp.bam.cram > c1#pad2.tmp.bam.cram.bam
+  ./test_view c1#pad2.tmp.bam.cram.bam > c1#pad2.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl c1#pad2.sam c1#pad2.tmp.bam.cram.bam.sam_
+
+=== Testing c1#pad3.sam, ref c1.fa ===
+  ./test_view -S -b c1#pad3.sam > c1#pad3.tmp.bam
+  ./test_view c1#pad3.tmp.bam > c1#pad3.tmp.bam.sam_
+  ./compare_sam.pl c1#pad3.sam c1#pad3.tmp.bam.sam_
+  ./test_view -t c1.fa -S -C c1#pad3.sam > c1#pad3.tmp.cram
+  ./test_view -D c1#pad3.tmp.cram > c1#pad3.tmp.cram.sam_
+  ./compare_sam.pl c1#pad3.sam c1#pad3.tmp.cram.sam_
+  ./test_view -t c1.fa -C c1#pad3.tmp.bam > c1#pad3.tmp.bam.cram
+  ./test_view -b -D c1#pad3.tmp.bam.cram > c1#pad3.tmp.bam.cram.bam
+  ./test_view c1#pad3.tmp.bam.cram.bam > c1#pad3.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl c1#pad3.sam c1#pad3.tmp.bam.cram.bam.sam_
+
+=== Testing ce#1.sam, ref ce.fa ===
+  ./test_view -S -b ce#1.sam > ce#1.tmp.bam
+  ./test_view ce#1.tmp.bam > ce#1.tmp.bam.sam_
+  ./compare_sam.pl ce#1.sam ce#1.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#1.sam > ce#1.tmp.cram
+  ./test_view -D ce#1.tmp.cram > ce#1.tmp.cram.sam_
+  ./compare_sam.pl ce#1.sam ce#1.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#1.tmp.bam > ce#1.tmp.bam.cram
+  ./test_view -b -D ce#1.tmp.bam.cram > ce#1.tmp.bam.cram.bam
+  ./test_view ce#1.tmp.bam.cram.bam > ce#1.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#1.sam ce#1.tmp.bam.cram.bam.sam_
+
+=== Testing ce#2.sam, ref ce.fa ===
+  ./test_view -S -b ce#2.sam > ce#2.tmp.bam
+  ./test_view ce#2.tmp.bam > ce#2.tmp.bam.sam_
+  ./compare_sam.pl ce#2.sam ce#2.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#2.sam > ce#2.tmp.cram
+  ./test_view -D ce#2.tmp.cram > ce#2.tmp.cram.sam_
+  ./compare_sam.pl ce#2.sam ce#2.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#2.tmp.bam > ce#2.tmp.bam.cram
+  ./test_view -b -D ce#2.tmp.bam.cram > ce#2.tmp.bam.cram.bam
+  ./test_view ce#2.tmp.bam.cram.bam > ce#2.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#2.sam ce#2.tmp.bam.cram.bam.sam_
+
+=== Testing ce#5.sam, ref ce.fa ===
+  ./test_view -S -b ce#5.sam > ce#5.tmp.bam
+  ./test_view ce#5.tmp.bam > ce#5.tmp.bam.sam_
+  ./compare_sam.pl ce#5.sam ce#5.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#5.sam > ce#5.tmp.cram
+  ./test_view -D ce#5.tmp.cram > ce#5.tmp.cram.sam_
+  ./compare_sam.pl ce#5.sam ce#5.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#5.tmp.bam > ce#5.tmp.bam.cram
+  ./test_view -b -D ce#5.tmp.bam.cram > ce#5.tmp.bam.cram.bam
+  ./test_view ce#5.tmp.bam.cram.bam > ce#5.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#5.sam ce#5.tmp.bam.cram.bam.sam_
+
+=== Testing ce#5b.sam, ref ce.fa ===
+  ./test_view -S -b ce#5b.sam > ce#5b.tmp.bam
+  ./test_view ce#5b.tmp.bam > ce#5b.tmp.bam.sam_
+  ./compare_sam.pl ce#5b.sam ce#5b.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#5b.sam > ce#5b.tmp.cram
+  ./test_view -D ce#5b.tmp.cram > ce#5b.tmp.cram.sam_
+  ./compare_sam.pl ce#5b.sam ce#5b.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#5b.tmp.bam > ce#5b.tmp.bam.cram
+  ./test_view -b -D ce#5b.tmp.bam.cram > ce#5b.tmp.bam.cram.bam
+  ./test_view ce#5b.tmp.bam.cram.bam > ce#5b.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#5b.sam ce#5b.tmp.bam.cram.bam.sam_
+
+=== Testing ce#large_seq.sam, ref ce.fa ===
+  ./test_view -S -b ce#large_seq.sam > ce#large_seq.tmp.bam
+  ./test_view ce#large_seq.tmp.bam > ce#large_seq.tmp.bam.sam_
+  ./compare_sam.pl ce#large_seq.sam ce#large_seq.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#large_seq.sam > ce#large_seq.tmp.cram
+  ./test_view -D ce#large_seq.tmp.cram > ce#large_seq.tmp.cram.sam_
+  ./compare_sam.pl ce#large_seq.sam ce#large_seq.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#large_seq.tmp.bam > ce#large_seq.tmp.bam.cram
+  ./test_view -b -D ce#large_seq.tmp.bam.cram > ce#large_seq.tmp.bam.cram.bam
+  ./test_view ce#large_seq.tmp.bam.cram.bam > ce#large_seq.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#large_seq.sam ce#large_seq.tmp.bam.cram.bam.sam_
+
+=== Testing ce#tag_depadded.sam, ref ce.fa ===
+  ./test_view -S -b ce#tag_depadded.sam > ce#tag_depadded.tmp.bam
+  ./test_view ce#tag_depadded.tmp.bam > ce#tag_depadded.tmp.bam.sam_
+  ./compare_sam.pl ce#tag_depadded.sam ce#tag_depadded.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#tag_depadded.sam > ce#tag_depadded.tmp.cram
+  ./test_view -D ce#tag_depadded.tmp.cram > ce#tag_depadded.tmp.cram.sam_
+  ./compare_sam.pl ce#tag_depadded.sam ce#tag_depadded.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#tag_depadded.tmp.bam > ce#tag_depadded.tmp.bam.cram
+  ./test_view -b -D ce#tag_depadded.tmp.bam.cram > ce#tag_depadded.tmp.bam.cram.bam
+  ./test_view ce#tag_depadded.tmp.bam.cram.bam > ce#tag_depadded.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#tag_depadded.sam ce#tag_depadded.tmp.bam.cram.bam.sam_
+
+=== Testing ce#tag_padded.sam, ref ce.fa ===
+  ./test_view -S -b ce#tag_padded.sam > ce#tag_padded.tmp.bam
+  ./test_view ce#tag_padded.tmp.bam > ce#tag_padded.tmp.bam.sam_
+  ./compare_sam.pl ce#tag_padded.sam ce#tag_padded.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#tag_padded.sam > ce#tag_padded.tmp.cram
+  ./test_view -D ce#tag_padded.tmp.cram > ce#tag_padded.tmp.cram.sam_
+  ./compare_sam.pl ce#tag_padded.sam ce#tag_padded.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#tag_padded.tmp.bam > ce#tag_padded.tmp.bam.cram
+  ./test_view -b -D ce#tag_padded.tmp.bam.cram > ce#tag_padded.tmp.bam.cram.bam
+  ./test_view ce#tag_padded.tmp.bam.cram.bam > ce#tag_padded.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#tag_padded.sam ce#tag_padded.tmp.bam.cram.bam.sam_
+
+=== Testing ce#unmap.sam, ref ce.fa ===
+  ./test_view -S -b ce#unmap.sam > ce#unmap.tmp.bam
+  ./test_view ce#unmap.tmp.bam > ce#unmap.tmp.bam.sam_
+  ./compare_sam.pl ce#unmap.sam ce#unmap.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#unmap.sam > ce#unmap.tmp.cram
+  ./test_view -D ce#unmap.tmp.cram > ce#unmap.tmp.cram.sam_
+  ./compare_sam.pl ce#unmap.sam ce#unmap.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#unmap.tmp.bam > ce#unmap.tmp.bam.cram
+  ./test_view -b -D ce#unmap.tmp.bam.cram > ce#unmap.tmp.bam.cram.bam
+  ./test_view ce#unmap.tmp.bam.cram.bam > ce#unmap.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#unmap.sam ce#unmap.tmp.bam.cram.bam.sam_
+
+=== Testing ce#unmap1.sam, ref ce.fa ===
+  ./test_view -S -b ce#unmap1.sam > ce#unmap1.tmp.bam
+  ./test_view ce#unmap1.tmp.bam > ce#unmap1.tmp.bam.sam_
+  ./compare_sam.pl ce#unmap1.sam ce#unmap1.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#unmap1.sam > ce#unmap1.tmp.cram
+  ./test_view -D ce#unmap1.tmp.cram > ce#unmap1.tmp.cram.sam_
+  ./compare_sam.pl ce#unmap1.sam ce#unmap1.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#unmap1.tmp.bam > ce#unmap1.tmp.bam.cram
+  ./test_view -b -D ce#unmap1.tmp.bam.cram > ce#unmap1.tmp.bam.cram.bam
+  ./test_view ce#unmap1.tmp.bam.cram.bam > ce#unmap1.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#unmap1.sam ce#unmap1.tmp.bam.cram.bam.sam_
+
+=== Testing ce#unmap2.sam, ref ce.fa ===
+  ./test_view -S -b ce#unmap2.sam > ce#unmap2.tmp.bam
+  ./test_view ce#unmap2.tmp.bam > ce#unmap2.tmp.bam.sam_
+  ./compare_sam.pl ce#unmap2.sam ce#unmap2.tmp.bam.sam_
+  ./test_view -t ce.fa -S -C ce#unmap2.sam > ce#unmap2.tmp.cram
+  ./test_view -D ce#unmap2.tmp.cram > ce#unmap2.tmp.cram.sam_
+  ./compare_sam.pl ce#unmap2.sam ce#unmap2.tmp.cram.sam_
+  ./test_view -t ce.fa -C ce#unmap2.tmp.bam > ce#unmap2.tmp.bam.cram
+  ./test_view -b -D ce#unmap2.tmp.bam.cram > ce#unmap2.tmp.bam.cram.bam
+  ./test_view ce#unmap2.tmp.bam.cram.bam > ce#unmap2.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl ce#unmap2.sam ce#unmap2.tmp.bam.cram.bam.sam_
+
+=== Testing xx#blank.sam, ref xx.fa ===
+  ./test_view -S -b xx#blank.sam > xx#blank.tmp.bam
+  ./test_view xx#blank.tmp.bam > xx#blank.tmp.bam.sam_
+  ./compare_sam.pl xx#blank.sam xx#blank.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#blank.sam > xx#blank.tmp.cram
+  ./test_view -D xx#blank.tmp.cram > xx#blank.tmp.cram.sam_
+  ./compare_sam.pl xx#blank.sam xx#blank.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#blank.tmp.bam > xx#blank.tmp.bam.cram
+  ./test_view -b -D xx#blank.tmp.bam.cram > xx#blank.tmp.bam.cram.bam
+  ./test_view xx#blank.tmp.bam.cram.bam > xx#blank.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#blank.sam xx#blank.tmp.bam.cram.bam.sam_
+
+=== Testing xx#large_aux.sam, ref xx.fa ===
+  ./test_view -S -b xx#large_aux.sam > xx#large_aux.tmp.bam
+  ./test_view xx#large_aux.tmp.bam > xx#large_aux.tmp.bam.sam_
+  ./compare_sam.pl xx#large_aux.sam xx#large_aux.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#large_aux.sam > xx#large_aux.tmp.cram
+  ./test_view -D xx#large_aux.tmp.cram > xx#large_aux.tmp.cram.sam_
+  ./compare_sam.pl xx#large_aux.sam xx#large_aux.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#large_aux.tmp.bam > xx#large_aux.tmp.bam.cram
+  ./test_view -b -D xx#large_aux.tmp.bam.cram > xx#large_aux.tmp.bam.cram.bam
+  ./test_view xx#large_aux.tmp.bam.cram.bam > xx#large_aux.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#large_aux.sam xx#large_aux.tmp.bam.cram.bam.sam_
+
+=== Testing xx#large_aux2.sam, ref xx.fa ===
+  ./test_view -S -b xx#large_aux2.sam > xx#large_aux2.tmp.bam
+  ./test_view xx#large_aux2.tmp.bam > xx#large_aux2.tmp.bam.sam_
+  ./compare_sam.pl xx#large_aux2.sam xx#large_aux2.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#large_aux2.sam > xx#large_aux2.tmp.cram
+  ./test_view -D xx#large_aux2.tmp.cram > xx#large_aux2.tmp.cram.sam_
+  ./compare_sam.pl xx#large_aux2.sam xx#large_aux2.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#large_aux2.tmp.bam > xx#large_aux2.tmp.bam.cram
+  ./test_view -b -D xx#large_aux2.tmp.bam.cram > xx#large_aux2.tmp.bam.cram.bam
+  ./test_view xx#large_aux2.tmp.bam.cram.bam > xx#large_aux2.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#large_aux2.sam xx#large_aux2.tmp.bam.cram.bam.sam_
+
+=== Testing xx#minimal.sam, ref xx.fa ===
+  ./test_view -S -b xx#minimal.sam > xx#minimal.tmp.bam
+  ./test_view xx#minimal.tmp.bam > xx#minimal.tmp.bam.sam_
+  ./compare_sam.pl xx#minimal.sam xx#minimal.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#minimal.sam > xx#minimal.tmp.cram
+  ./test_view -D xx#minimal.tmp.cram > xx#minimal.tmp.cram.sam_
+  ./compare_sam.pl xx#minimal.sam xx#minimal.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#minimal.tmp.bam > xx#minimal.tmp.bam.cram
+  ./test_view -b -D xx#minimal.tmp.bam.cram > xx#minimal.tmp.bam.cram.bam
+  ./test_view xx#minimal.tmp.bam.cram.bam > xx#minimal.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#minimal.sam xx#minimal.tmp.bam.cram.bam.sam_
+
+=== Testing xx#pair.sam, ref xx.fa ===
+  ./test_view -S -b xx#pair.sam > xx#pair.tmp.bam
+  ./test_view xx#pair.tmp.bam > xx#pair.tmp.bam.sam_
+  ./compare_sam.pl xx#pair.sam xx#pair.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#pair.sam > xx#pair.tmp.cram
+  ./test_view -D xx#pair.tmp.cram > xx#pair.tmp.cram.sam_
+  ./compare_sam.pl xx#pair.sam xx#pair.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#pair.tmp.bam > xx#pair.tmp.bam.cram
+  ./test_view -b -D xx#pair.tmp.bam.cram > xx#pair.tmp.bam.cram.bam
+  ./test_view xx#pair.tmp.bam.cram.bam > xx#pair.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#pair.sam xx#pair.tmp.bam.cram.bam.sam_
+
+=== Testing xx#rg.sam, ref xx.fa ===
+  ./test_view -S -b xx#rg.sam > xx#rg.tmp.bam
+  ./test_view xx#rg.tmp.bam > xx#rg.tmp.bam.sam_
+  ./compare_sam.pl xx#rg.sam xx#rg.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#rg.sam > xx#rg.tmp.cram
+  ./test_view -D xx#rg.tmp.cram > xx#rg.tmp.cram.sam_
+  ./compare_sam.pl xx#rg.sam xx#rg.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#rg.tmp.bam > xx#rg.tmp.bam.cram
+  ./test_view -b -D xx#rg.tmp.bam.cram > xx#rg.tmp.bam.cram.bam
+  ./test_view xx#rg.tmp.bam.cram.bam > xx#rg.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#rg.sam xx#rg.tmp.bam.cram.bam.sam_
+
+=== Testing xx#triplet.sam, ref xx.fa ===
+  ./test_view -S -b xx#triplet.sam > xx#triplet.tmp.bam
+  ./test_view xx#triplet.tmp.bam > xx#triplet.tmp.bam.sam_
+  ./compare_sam.pl xx#triplet.sam xx#triplet.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#triplet.sam > xx#triplet.tmp.cram
+  ./test_view -D xx#triplet.tmp.cram > xx#triplet.tmp.cram.sam_
+  ./compare_sam.pl xx#triplet.sam xx#triplet.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#triplet.tmp.bam > xx#triplet.tmp.bam.cram
+  ./test_view -b -D xx#triplet.tmp.bam.cram > xx#triplet.tmp.bam.cram.bam
+  ./test_view xx#triplet.tmp.bam.cram.bam > xx#triplet.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#triplet.sam xx#triplet.tmp.bam.cram.bam.sam_
+
+=== Testing xx#unsorted.sam, ref xx.fa ===
+  ./test_view -S -b xx#unsorted.sam > xx#unsorted.tmp.bam
+  ./test_view xx#unsorted.tmp.bam > xx#unsorted.tmp.bam.sam_
+  ./compare_sam.pl xx#unsorted.sam xx#unsorted.tmp.bam.sam_
+  ./test_view -t xx.fa -S -C xx#unsorted.sam > xx#unsorted.tmp.cram
+  ./test_view -D xx#unsorted.tmp.cram > xx#unsorted.tmp.cram.sam_
+  ./compare_sam.pl xx#unsorted.sam xx#unsorted.tmp.cram.sam_
+  ./test_view -t xx.fa -C xx#unsorted.tmp.bam > xx#unsorted.tmp.bam.cram
+  ./test_view -b -D xx#unsorted.tmp.bam.cram > xx#unsorted.tmp.bam.cram.bam
+  ./test_view xx#unsorted.tmp.bam.cram.bam > xx#unsorted.tmp.bam.cram.bam.sam_
+  ./compare_sam.pl xx#unsorted.sam xx#unsorted.tmp.bam.cram.bam.sam_
+
+Successes 240
+
+Failures  0
+cd test && ./test.pl
+test_vcf_api:
+	/«PKGBUILDDIR»/test/test-vcf-api /tmp/ZTPQ6jFdh9/test-vcf-api.bcf
+.. ok
+
+test_vcf_sweep:
+	/«PKGBUILDDIR»/test/test-vcf-sweep /tmp/ZTPQ6jFdh9/test-vcf-api.bcf
+.. ok
+
+
+Number of tests:
+    total   .. 2
+    passed  .. 2
+    failed  .. 0
+
+make[2]: Leaving directory `/«PKGBUILDDIR»'
+rm -f test/*.tmp test/*.tmp.* test/*.o test/*.dSYM \
+              test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
+make[1]: Leaving directory `/«PKGBUILDDIR»'
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+	rm -f debian/libhts0.substvars
+	rm -f debian/libhts0.*.debhelper
+	rm -rf debian/libhts0/
+	rm -f debian/libhts-dev.substvars
+	rm -f debian/libhts-dev.*.debhelper
+	rm -rf debian/libhts-dev/
+	rm -f debian/htslib-test.substvars
+	rm -f debian/htslib-test.*.debhelper
+	rm -rf debian/htslib-test/
+   debian/rules override_dh_auto_install
+make[1]: Entering directory `/«PKGBUILDDIR»'
+dh_auto_install -- prefix=/usr
+	install -d debian/libhts0
+	install -d debian/libhts-dev
+	install -d debian/htslib-test
+	make -j1 install DESTDIR=/«BUILDDIR»/htslib-0.2.0\~rc3/debian/tmp AM_UPDATE_INFO_DIR=no prefix=/usr
+make[2]: Entering directory `/«PKGBUILDDIR»'
+mkdir -p /«PKGBUILDDIR»/debian/tmp/usr/include/htslib /«PKGBUILDDIR»/debian/tmp/usr/lib /«PKGBUILDDIR»/debian/tmp/usr/share/man/man5
+install -p -m 644 libhts.so /«PKGBUILDDIR»/debian/tmp/usr/lib/libhts.so.0.0.1
+ln -sf libhts.so.0.0.1 /«PKGBUILDDIR»/debian/tmp/usr/lib/libhts.so
+ln -sf libhts.so.0.0.1 /«PKGBUILDDIR»/debian/tmp/usr/lib/libhts.so.0
+install -p -m 644 htslib/*.h /«PKGBUILDDIR»/debian/tmp/usr/include/htslib
+install -p -m 644 libhts.a /«PKGBUILDDIR»/debian/tmp/usr/lib/libhts.a
+install -p -m 644 *.5 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man5
+make[2]: Leaving directory `/«PKGBUILDDIR»'
+make[1]: Leaving directory `/«PKGBUILDDIR»'
+   dh_install
+	install -d debian/libhts0/usr/lib/x86_64-linux-gnu/
+	cp -a debian/tmp/usr/lib/libhts.so.0 debian/libhts0/usr/lib/x86_64-linux-gnu//
+	cp -a debian/tmp/usr/lib/libhts.so.0.0.1 debian/libhts0/usr/lib/x86_64-linux-gnu//
+	install -d debian/libhts-dev/usr/include/
+	cp -a debian/tmp/usr/include/htslib debian/libhts-dev/usr/include//
+	install -d debian/libhts-dev/usr/lib/x86_64-linux-gnu/
+	cp -a debian/tmp/usr/lib/libhts.a debian/libhts-dev/usr/lib/x86_64-linux-gnu//
+	cp -a debian/tmp/usr/lib/libhts.so debian/libhts-dev/usr/lib/x86_64-linux-gnu//
+	install -d debian/libhts-dev/usr/share/man/man5/
+	cp -a debian/tmp/usr/share/man/man5/faidx.5 debian/libhts-dev/usr/share/man/man5//
+	cp -a debian/tmp/usr/share/man/man5/sam.5 debian/libhts-dev/usr/share/man/man5//
+	cp -a debian/tmp/usr/share/man/man5/vcf.5 debian/libhts-dev/usr/share/man/man5//
+	install -d debian/htslib-test//usr/share/htslib-test
+	cp -a ./test/aux\#aux.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/aux.fa debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/aux.fa.fai debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1\#bounds.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1\#clip.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1\#pad1.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1\#pad2.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1\#pad3.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1.fa debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/c1.fa.fai debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#1.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#2.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#5.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#5b.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#large_seq.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#tag_depadded.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#tag_padded.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#unmap.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#unmap1.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce\#unmap2.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce.fa debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/ce.fa.fai debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/compare_sam.pl debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/fieldarith.c debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/fieldarith.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/hfile.c debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test-vcf-api.c debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test-vcf-api.out debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test-vcf-sweep.c debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test-vcf-sweep.out debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test.pl debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test_view.c debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/test_view.pl debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#blank.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#large_aux.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#large_aux2.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#minimal.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#pair.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#rg.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#triplet.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx\#unsorted.sam debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx.fa debian/htslib-test//usr/share/htslib-test/
+	cp -a ./test/xx.fa.fai debian/htslib-test//usr/share/htslib-test/
+   dh_installdocs
+	install -g 0 -o 0 -d debian/libhts0/usr/share/doc/libhts0
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/libhts0/usr/share/doc/libhts0/copyright
+	install -g 0 -o 0 -d debian/libhts-dev/usr/share/doc/libhts-dev
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/libhts-dev/usr/share/doc/libhts-dev/copyright
+	install -g 0 -o 0 -d debian/htslib-test/usr/share/doc/htslib-test
+	install -g 0 -o 0 -m 644 -p debian/copyright debian/htslib-test/usr/share/doc/htslib-test/copyright
+   dh_installchangelogs
+	install -o 0 -g 0 -p -m644 debian/changelog debian/libhts0/usr/share/doc/libhts0/changelog.Debian
+	install -o 0 -g 0 -p -m644 debian/changelog debian/libhts-dev/usr/share/doc/libhts-dev/changelog.Debian
+	install -o 0 -g 0 -p -m644 debian/changelog debian/htslib-test/usr/share/doc/htslib-test/changelog.Debian
+   dh_installman
+	man --recode UTF-8 ./vcf\.5 > vcf\.5\.new
+	chmod 644 vcf.5.new
+	mv -f vcf.5.new vcf.5
+	man --recode UTF-8 ./faidx\.5 > faidx\.5\.new
+	chmod 644 faidx.5.new
+	mv -f faidx.5.new faidx.5
+	man --recode UTF-8 ./sam\.5 > sam\.5\.new
+	chmod 644 sam.5.new
+	mv -f sam.5.new sam.5
+   dh_perl
+	(grep -s -v perl:Depends debian/htslib-test.substvars; echo perl:Depends=perl) > debian/htslib-test.substvars.new
+	mv debian/htslib-test.substvars.new debian/htslib-test.substvars
+   dh_link
+	rm -f debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0
+	ln -sf libhts.so.0.0.1 debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0
+	rm -f debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.so
+	ln -sf libhts.so.0.0.1 debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.so
+   dh_compress
+	cd debian/libhts0
+	chmod a-x usr/share/doc/libhts0/changelog.Debian
+	gzip -9nf usr/share/doc/libhts0/changelog.Debian
+	cd '/«PKGBUILDDIR»'
+	cd debian/libhts-dev
+	chmod a-x usr/share/man/man5/vcf.5 usr/share/man/man5/faidx.5 usr/share/man/man5/sam.5 usr/share/doc/libhts-dev/changelog.Debian
+	gzip -9nf usr/share/man/man5/vcf.5 usr/share/man/man5/faidx.5 usr/share/man/man5/sam.5 usr/share/doc/libhts-dev/changelog.Debian
+	cd '/«PKGBUILDDIR»'
+	cd debian/htslib-test
+	chmod a-x usr/share/doc/htslib-test/changelog.Debian
+	gzip -9nf usr/share/doc/htslib-test/changelog.Debian
+	cd '/«PKGBUILDDIR»'
+   dh_fixperms
+	find debian/libhts0  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/libhts0 ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/libhts0/usr/share/doc -type f  ! -regex 'debian/libhts0/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/libhts0/usr/share/man debian/libhts0/usr/man/ debian/libhts0/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0 -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0 -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts0/usr/lib/perl5 debian/libhts0/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/libhts0/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+	find debian/libhts-dev  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/libhts-dev ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/libhts-dev/usr/share/doc -type f  ! -regex 'debian/libhts-dev/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/libhts-dev/usr/share/man debian/libhts-dev/usr/man/ debian/libhts-dev/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/libhts-dev/usr/lib/perl5 debian/libhts-dev/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/libhts-dev/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+	find debian/htslib-test  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
+	find debian/htslib-test ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
+	find debian/htslib-test/usr/share/doc -type f  ! -regex 'debian/htslib-test/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test/usr/share/doc -type d  -print0 2>/dev/null | xargs -0r chmod 755
+	find debian/htslib-test/usr/share/man debian/htslib-test/usr/man/ debian/htslib-test/usr/X11*/man/ -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test -perm -5 -type f \( -name '*.so.*' -or -name '*.so' -or -name '*.la' -or -name '*.a' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test/usr/include -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test/usr/share/applications -type f  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test -perm -5 -type f \( -name '*.cmxs' \)  -print0 2>/dev/null | xargs -0r chmod 644
+	find debian/htslib-test/usr/lib/perl5 debian/htslib-test/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
+	find debian/htslib-test/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
+   dh_strip
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1
+	strip --strip-debug debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.a
+   dh_makeshlibs
+	rm -f debian/libhts0/DEBIAN/shlibs
+	install -d debian/libhts0/DEBIAN
+	echo 'libhts 0 libhts0' >>debian/libhts0/DEBIAN/shlibs
+	echo "# Automatically added by dh_makeshlibs">> debian/libhts0.postinst.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postinst-makeshlibs >> debian/libhts0.postinst.debhelper
+	echo '# End automatically added section' >> debian/libhts0.postinst.debhelper
+	echo "# Automatically added by dh_makeshlibs">> debian/libhts0.postrm.debhelper
+	sed "" /usr/share/debhelper/autoscripts/postrm-makeshlibs >> debian/libhts0.postrm.debhelper
+	echo '# End automatically added section' >> debian/libhts0.postrm.debhelper
+	chmod 644 debian/libhts0/DEBIAN/shlibs
+	chown 0:0 debian/libhts0/DEBIAN/shlibs
+	dpkg-gensymbols -plibhts0 -Idebian/libhts0.symbols -Pdebian/libhts0 "-edebian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1\
+"
+	(grep -s -v misc:Pre-Depends debian/libhts0.substvars; echo misc:Pre-Depends=multiarch-support) > debian/libhts0.substvars.new
+	mv debian/libhts0.substvars.new debian/libhts0.substvars
+	rm -f debian/libhts-dev/DEBIAN/shlibs
+	rm -f debian/htslib-test/DEBIAN/shlibs
+   dh_shlibdeps
+	dpkg-shlibdeps -Tdebian/libhts0.substvars debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1
+dpkg-shlibdeps: warning: symbol log used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+dpkg-shlibdeps: warning: symbol lgamma used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+dpkg-shlibdeps: warning: symbol pthread_create used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+dpkg-shlibdeps: warning: symbol pthread_join used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+dpkg-shlibdeps: warning: symbol exp used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+dpkg-shlibdeps: warning: symbol pthread_kill used by debian/libhts0/usr/lib/x86_64-linux-gnu/libhts.so.0.0.1 found in none of the libraries
+	install -o 0 -g 0 -d debian/libhts-dev/DEBIAN
+	install -o 0 -g 0 -d debian/htslib-test/DEBIAN
+   dh_installdeb
+	printf '#!/bin/sh
+set -e
+' > debian/libhts0/DEBIAN/postinst
+	cat debian/libhts0.postinst.debhelper >> debian/libhts0/DEBIAN/postinst
+	chown 0:0 debian/libhts0/DEBIAN/postinst
+	chmod 755 debian/libhts0/DEBIAN/postinst
+	printf '#!/bin/sh
+set -e
+' > debian/libhts0/DEBIAN/postrm
+	cat debian/libhts0.postrm.debhelper >> debian/libhts0/DEBIAN/postrm
+	chown 0:0 debian/libhts0/DEBIAN/postrm
+	chmod 755 debian/libhts0/DEBIAN/postrm
+   dh_gencontrol
+	echo misc:Depends= >> debian/libhts0.substvars
+	dpkg-gencontrol -plibhts0 -ldebian/changelog -Tdebian/libhts0.substvars -Pdebian/libhts0
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package libhts0: unused substitution variable ${misc:Pre-Depends}
+	chmod 644 debian/libhts0/DEBIAN/control
+	chown 0:0 debian/libhts0/DEBIAN/control
+	echo misc:Depends= >> debian/libhts-dev.substvars
+	dpkg-gencontrol -plibhts-dev -ldebian/changelog -Tdebian/libhts-dev.substvars -Pdebian/libhts-dev
+dpkg-gencontrol: warning: Depends field of package libhts-dev: unknown substitution variable ${shlibs:Depends}
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+	chmod 644 debian/libhts-dev/DEBIAN/control
+	chown 0:0 debian/libhts-dev/DEBIAN/control
+	echo misc:Depends= >> debian/htslib-test.substvars
+	dpkg-gencontrol -phtslib-test -ldebian/changelog -Tdebian/htslib-test.substvars -Pdebian/htslib-test
+dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
+dpkg-gencontrol: warning: package htslib-test: unused substitution variable ${perl:Depends}
+	chmod 644 debian/htslib-test/DEBIAN/control
+	chown 0:0 debian/htslib-test/DEBIAN/control
+   dh_md5sums
+	(cd debian/libhts0 >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/libhts0/DEBIAN/md5sums
+	chown 0:0 debian/libhts0/DEBIAN/md5sums
+	(cd debian/libhts-dev >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/libhts-dev/DEBIAN/md5sums
+	chown 0:0 debian/libhts-dev/DEBIAN/md5sums
+	(cd debian/htslib-test >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
+	chmod 644 debian/htslib-test/DEBIAN/md5sums
+	chown 0:0 debian/htslib-test/DEBIAN/md5sums
+   dh_builddeb
+	dpkg-deb --build debian/libhts0 ..
+dpkg-deb: building package `libhts0' in `../libhts0_0.2.0~rc3-1_amd64.deb'.
+	dpkg-deb --build debian/libhts-dev ..
+dpkg-deb: building package `libhts-dev' in `../libhts-dev_0.2.0~rc3-1_amd64.deb'.
+	dpkg-deb --build debian/htslib-test ..
+dpkg-deb: building package `htslib-test' in `../htslib-test_0.2.0~rc3-1_all.deb'.
+ dpkg-genchanges  >../htslib_0.2.0~rc3-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build htslib-0.2.0~rc3
+dpkg-buildpackage: full upload (original source is included)
+────────────────────────────────────────────────────────────────────────────────
+Build finished at 20131116-1538
+
+Finished
+────────
+
+I: Built successfully
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Post Build Chroot                                                            │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+lintian
+───────
+
+Merged Build-Depends: lintian
+Filtered Build-Depends: lintian
+dpkg-deb: building package `sbuild-build-depends-lintian-dummy' in `/«BUILDDIR»/resolver-dVjKkY/apt_archive/sbuild-build-depends-lintian-dummy.deb'.
+OK
+Reading package lists...
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Install lintian build dependencies (apt-based resolver)                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Installing build dependencies
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following extra packages will be installed:
+  diffstat hardening-includes libapt-pkg-perl libarchive-zip-perl
+  libclass-accessor-perl libclone-perl libdigest-hmac-perl libemail-valid-perl
+  libfile-basedir-perl libio-pty-perl libio-socket-inet6-perl
+  libio-socket-ssl-perl libio-string-perl libipc-run-perl
+  liblist-moreutils-perl libmailtools-perl libnet-dns-perl
+  libnet-domain-tld-perl libnet-ip-perl libnet-smtp-ssl-perl
+  libnet-ssleay-perl libparse-debianchangelog-perl libsocket6-perl libssl1.0.0
+  libsub-name-perl libtext-levenshtein-perl liburi-perl lintian netbase
+  patchutils t1utils
+Suggested packages:
+  libwww-perl binutils-multiarch libtext-template-perl
+Recommended packages:
+  libauthen-sasl-perl libhtml-parser-perl libhtml-template-perl
+  libxml-simple-perl libperlio-gzip-perl ifupdown
+The following NEW packages will be installed:
+  diffstat hardening-includes libapt-pkg-perl libarchive-zip-perl
+  libclass-accessor-perl libclone-perl libdigest-hmac-perl libemail-valid-perl
+  libfile-basedir-perl libio-pty-perl libio-socket-inet6-perl
+  libio-socket-ssl-perl libio-string-perl libipc-run-perl
+  liblist-moreutils-perl libmailtools-perl libnet-dns-perl
+  libnet-domain-tld-perl libnet-ip-perl libnet-smtp-ssl-perl
+  libnet-ssleay-perl libparse-debianchangelog-perl libsocket6-perl libssl1.0.0
+  libsub-name-perl libtext-levenshtein-perl liburi-perl lintian netbase
+  patchutils sbuild-build-depends-lintian-dummy t1utils
+debconf: delaying package configuration, since apt-utils is not installed
+0 upgraded, 32 newly installed, 0 to remove and 0 not upgraded.
+Need to get 0 B/3481 kB of archives.
+After this operation, 11.1 MB of additional disk space will be used.
+Selecting previously unselected package libssl1.0.0:amd64.
+(Reading database ... 12543 files and directories currently installed.)
+Unpacking libssl1.0.0:amd64 (from .../libssl1.0.0_1.0.1e-4_amd64.deb) ...
+Selecting previously unselected package netbase.
+Unpacking netbase (from .../archives/netbase_5.1_all.deb) ...
+Selecting previously unselected package diffstat.
+Unpacking diffstat (from .../diffstat_1.57-1_amd64.deb) ...
+Selecting previously unselected package hardening-includes.
+Unpacking hardening-includes (from .../hardening-includes_2.4_all.deb) ...
+Selecting previously unselected package libapt-pkg-perl.
+Unpacking libapt-pkg-perl (from .../libapt-pkg-perl_0.1.29+b1_amd64.deb) ...
+Selecting previously unselected package libarchive-zip-perl.
+Unpacking libarchive-zip-perl (from .../libarchive-zip-perl_1.30-7_all.deb) ...
+Selecting previously unselected package libsub-name-perl.
+Unpacking libsub-name-perl (from .../libsub-name-perl_0.05-1+b3_amd64.deb) ...
+Selecting previously unselected package libclass-accessor-perl.
+Unpacking libclass-accessor-perl (from .../libclass-accessor-perl_0.34-1_all.deb) ...
+Selecting previously unselected package libclone-perl.
+Unpacking libclone-perl (from .../libclone-perl_0.35-1_amd64.deb) ...
+Selecting previously unselected package libdigest-hmac-perl.
+Unpacking libdigest-hmac-perl (from .../libdigest-hmac-perl_1.03+dfsg-1_all.deb) ...
+Selecting previously unselected package libnet-ssleay-perl.
+Unpacking libnet-ssleay-perl (from .../libnet-ssleay-perl_1.55-1+b2_amd64.deb) ...
+Selecting previously unselected package libio-socket-ssl-perl.
+Unpacking libio-socket-ssl-perl (from .../libio-socket-ssl-perl_1.955-1_all.deb) ...
+Selecting previously unselected package libnet-smtp-ssl-perl.
+Unpacking libnet-smtp-ssl-perl (from .../libnet-smtp-ssl-perl_1.01-3_all.deb) ...
+Selecting previously unselected package libmailtools-perl.
+Unpacking libmailtools-perl (from .../libmailtools-perl_2.12-1_all.deb) ...
+Selecting previously unselected package libnet-ip-perl.
+Unpacking libnet-ip-perl (from .../libnet-ip-perl_1.26-1_all.deb) ...
+Selecting previously unselected package libsocket6-perl.
+Unpacking libsocket6-perl (from .../libsocket6-perl_0.23+ds-0+nmu1_amd64.deb) ...
+Selecting previously unselected package libio-socket-inet6-perl.
+Unpacking libio-socket-inet6-perl (from .../libio-socket-inet6-perl_2.71-1_all.deb) ...
+Selecting previously unselected package libnet-dns-perl.
+Unpacking libnet-dns-perl (from .../libnet-dns-perl_0.68-1.2_amd64.deb) ...
+Selecting previously unselected package libnet-domain-tld-perl.
+Unpacking libnet-domain-tld-perl (from .../libnet-domain-tld-perl_1.70-1_all.deb) ...
+Selecting previously unselected package libemail-valid-perl.
+Unpacking libemail-valid-perl (from .../libemail-valid-perl_1.192-1_all.deb) ...
+Selecting previously unselected package libfile-basedir-perl.
+Unpacking libfile-basedir-perl (from .../libfile-basedir-perl_0.03-1_all.deb) ...
+Selecting previously unselected package libio-pty-perl.
+Unpacking libio-pty-perl (from .../libio-pty-perl_1%3a1.08-1+b3_amd64.deb) ...
+Selecting previously unselected package libio-string-perl.
+Unpacking libio-string-perl (from .../libio-string-perl_1.08-2_all.deb) ...
+Selecting previously unselected package libipc-run-perl.
+Unpacking libipc-run-perl (from .../libipc-run-perl_0.92-1_all.deb) ...
+Selecting previously unselected package liblist-moreutils-perl.
+Unpacking liblist-moreutils-perl (from .../liblist-moreutils-perl_0.33-1+b2_amd64.deb) ...
+Selecting previously unselected package libparse-debianchangelog-perl.
+Unpacking libparse-debianchangelog-perl (from .../libparse-debianchangelog-perl_1.2.0-1_all.deb) ...
+Selecting previously unselected package libtext-levenshtein-perl.
+Unpacking libtext-levenshtein-perl (from .../libtext-levenshtein-perl_0.06~01-2_all.deb) ...
+Selecting previously unselected package liburi-perl.
+Unpacking liburi-perl (from .../liburi-perl_1.60-1_all.deb) ...
+Selecting previously unselected package patchutils.
+Unpacking patchutils (from .../patchutils_0.3.2-3_amd64.deb) ...
+Selecting previously unselected package t1utils.
+Unpacking t1utils (from .../t1utils_1.37-2_amd64.deb) ...
+Selecting previously unselected package lintian.
+Unpacking lintian (from .../lintian_2.5.19_all.deb) ...
+Selecting previously unselected package sbuild-build-depends-lintian-dummy.
+Unpacking sbuild-build-depends-lintian-dummy (from .../sbuild-build-depends-lintian-dummy.deb) ...
+Processing triggers for man-db ...
+Not building database; man-db/auto-update is not 'true'.
+Setting up libssl1.0.0:amd64 (1.0.1e-4) ...
+Setting up netbase (5.1) ...
+Setting up diffstat (1.57-1) ...
+Setting up hardening-includes (2.4) ...
+Setting up libapt-pkg-perl (0.1.29+b1) ...
+Setting up libarchive-zip-perl (1.30-7) ...
+Setting up libsub-name-perl (0.05-1+b3) ...
+Setting up libclass-accessor-perl (0.34-1) ...
+Setting up libclone-perl (0.35-1) ...
+Setting up libdigest-hmac-perl (1.03+dfsg-1) ...
+Setting up libnet-ssleay-perl (1.55-1+b2) ...
+Setting up libio-socket-ssl-perl (1.955-1) ...
+Setting up libnet-smtp-ssl-perl (1.01-3) ...
+Setting up libmailtools-perl (2.12-1) ...
+Setting up libnet-ip-perl (1.26-1) ...
+Setting up libsocket6-perl (0.23+ds-0+nmu1) ...
+Setting up libio-socket-inet6-perl (2.71-1) ...
+Setting up libnet-dns-perl (0.68-1.2) ...
+Setting up libnet-domain-tld-perl (1.70-1) ...
+Setting up libemail-valid-perl (1.192-1) ...
+Setting up libfile-basedir-perl (0.03-1) ...
+Setting up libio-pty-perl (1:1.08-1+b3) ...
+Setting up libio-string-perl (1.08-2) ...
+Setting up libipc-run-perl (0.92-1) ...
+Setting up liblist-moreutils-perl (0.33-1+b2) ...
+Setting up libparse-debianchangelog-perl (1.2.0-1) ...
+Setting up libtext-levenshtein-perl (0.06~01-2) ...
+Setting up liburi-perl (1.60-1) ...
+Setting up patchutils (0.3.2-3) ...
+Setting up t1utils (1.37-2) ...
+Setting up lintian (2.5.19) ...
+Setting up sbuild-build-depends-lintian-dummy (0.invalid.0) ...
+Processing triggers for libc-bin ...
+W: htslib source: brace-expansion-in-debhelper-config-file debian/libhts-dev.install
+W: htslib source: brace-expansion-in-debhelper-config-file debian/libhts0.install
+I: htslib source: missing-debian-source-format
+P: htslib source: direct-changes-in-diff-but-no-patch-system bgzf.c and 9 more
+W: htslib source: newer-standards-version 3.9.5 (current is 3.9.4)
+P: htslib-test: no-upstream-changelog
+W: libhts0: hardening-no-relro usr/lib/x86_64-linux-gnu/libhts.so.0.0.1
+P: libhts0: no-upstream-changelog
+P: libhts-dev: no-upstream-changelog
+W: libhts-dev: manpage-has-errors-from-man usr/share/man/man5/vcf.5.gz  file `<standard input>', around line 15:
+
+I: Lintian run was successful.
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Changes                                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+htslib_0.2.0~rc3-1_amd64.changes:
+─────────────────────────────────
+
+Format: 1.8
+Date: Sat, 16 Nov 2013 15:35:03 +0900
+Source: htslib
+Binary: libhts0 libhts-dev htslib-test
+Architecture: source amd64 all
+Version: 0.2.0~rc3-1
+Distribution: unstable
+Urgency: low
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Changed-By: Charles Plessy <plessy@debian.org>
+Description: 
+ htslib-test - Test data for HTSlib
+ libhts-dev - Development files for the HTSlib
+ libhts0    - C library for high-throughput sequencing data formats
+Closes: 729282
+Changes: 
+ htslib (0.2.0~rc3-1) unstable; urgency=low
+ .
+   * Initial release. (Closes: #729282)
+Checksums-Sha1: 
+ 8e440416198ca459f60188a2321152af7432ce2f 1153 htslib_0.2.0~rc3-1.dsc
+ a34fc68574d10754d9813fdb7ce4dad52da99d05 923352 htslib_0.2.0~rc3.orig.tar.gz
+ 336b5f8094a71997a7cbd74d0d1c69f43801449b 10532 htslib_0.2.0~rc3-1.diff.gz
+ 68883a6fb26a0c9fc5d057d370eff2c5d795af5d 183826 libhts0_0.2.0~rc3-1_amd64.deb
+ 65beede3659386ae4d9df13d15bcb770b77b2112 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
+ ac04ef188b27f4aed31836d948d3c1e5afb8d5ec 514106 htslib-test_0.2.0~rc3-1_all.deb
+Checksums-Sha256: 
+ d7a5f98d93b0468380d439ca52bdcef1dfa990e8057e362d30473c2f0e632606 1153 htslib_0.2.0~rc3-1.dsc
+ 5e972ce7048c9b236911cd30e2100f7bfb28e65aa4cc3687a9aaf31d116be3ce 923352 htslib_0.2.0~rc3.orig.tar.gz
+ 3575954047af6c97d4500b3eb0b0bf78c327f355804a54844a128bb5391dd1a8 10532 htslib_0.2.0~rc3-1.diff.gz
+ ca825bf740968fab20c50d49be6ea446f6dad4cc041638af28e51c48c4b8092b 183826 libhts0_0.2.0~rc3-1_amd64.deb
+ 49f8bb3be8c784927e60bc856fbe3004f013f26dfe7b8f06f7e80754c6db4bd2 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
+ 7fd8597061206552f31f146276bac59473d2e96fb751c1f6451affdbe7a49f6b 514106 htslib-test_0.2.0~rc3-1_all.deb
+Files: 
+ e1146c59ebd8de27c5acfe4621fb6720 1153 libs optional htslib_0.2.0~rc3-1.dsc
+ 5d055a061e84ae987b25cb72bb4173d6 923352 libs optional htslib_0.2.0~rc3.orig.tar.gz
+ e7f26daf824e4fa67171c78cc6ef932b 10532 libs optional htslib_0.2.0~rc3-1.diff.gz
+ 136ca39311885c1aeffe2565f9cfcd47 183826 libs optional libhts0_0.2.0~rc3-1_amd64.deb
+ bb6e3c45eb785b132025527bd2bdc884 221284 libdevel optional libhts-dev_0.2.0~rc3-1_amd64.deb
+ 40e1ca3c045337aad2355198183ead36 514106 libs optional htslib-test_0.2.0~rc3-1_all.deb
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Package contents                                                             │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+libhts0_0.2.0~rc3-1_amd64.deb
+─────────────────────────────
+
+ new debian package, version 2.0.
+ size 183826 bytes: control archive=3637 bytes.
+     878 bytes,    22 lines      control              
+     217 bytes,     3 lines      md5sums              
+     135 bytes,     7 lines   *  postinst             #!/bin/sh
+     132 bytes,     7 lines   *  postrm               #!/bin/sh
+      17 bytes,     1 lines      shlibs               
+   15859 bytes,   507 lines      symbols              
+ Package: libhts0
+ Source: htslib
+ Version: 0.2.0~rc3-1
+ Architecture: amd64
+ Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+ Installed-Size: 508
+ Depends: libc6 (>= 2.15), zlib1g (>= 1:1.2.2)
+ Section: libs
+ Priority: optional
+ Multi-Arch: same
+ Homepage: https://github.com/samtools/htslib
+ Description: C library for high-throughput sequencing data formats
+  HTSlib is a unified C library for accessing common file formats, such as SAM
+  (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+  sequence data obtained by high-throughput sequencing.
+  .
+  HTSlib implements a generalized BAM (binary SAM) index.  The HTSlib file
+  reader first looks for the new index and then for the old if the new index is
+  absent.
+  .
+  HTSlib is still experimental.  It has not been tested on large-scale real
+  data. Some useful APIs are missing.
+
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/libhts0/
+-rw-r--r-- root/root      7175 2013-11-16 15:36 ./usr/share/doc/libhts0/copyright
+-rw-r--r-- root/root       160 2013-11-16 15:36 ./usr/share/doc/libhts0/changelog.Debian.gz
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/lib/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/
+-rw-r--r-- root/root    463656 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/libhts.so.0.0.1
+lrwxrwxrwx root/root         0 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/libhts.so.0 -> libhts.so.0.0.1
+
+
+libhts-dev_0.2.0~rc3-1_amd64.deb
+────────────────────────────────
+
+ new debian package, version 2.0.
+ size 221284 bytes: control archive=1304 bytes.
+     661 bytes,    18 lines      control              
+    1517 bytes,    24 lines      md5sums              
+ Package: libhts-dev
+ Source: htslib
+ Version: 0.2.0~rc3-1
+ Architecture: amd64
+ Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+ Installed-Size: 840
+ Depends: libhts0 (= 0.2.0~rc3-1)
+ Section: libdevel
+ Priority: optional
+ Multi-Arch: same
+ Homepage: https://github.com/samtools/htslib
+ Description: Development files for the HTSlib
+  HTSlib is a unified C library for accessing common file formats, such as SAM
+  (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+  sequence data obtained by high-throughput sequencing.
+  .
+  This package contains development files: headers, static library, manual pages,
+  etc.
+
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/man/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/man/man5/
+-rw-r--r-- root/root       885 2013-11-16 15:37 ./usr/share/man/man5/sam.5.gz
+-rw-r--r-- root/root      1429 2013-11-16 15:37 ./usr/share/man/man5/faidx.5.gz
+-rw-r--r-- root/root      1197 2013-11-16 15:37 ./usr/share/man/man5/vcf.5.gz
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/libhts-dev/
+-rw-r--r-- root/root      7175 2013-11-16 15:36 ./usr/share/doc/libhts-dev/copyright
+-rw-r--r-- root/root       160 2013-11-16 15:36 ./usr/share/doc/libhts-dev/changelog.Debian.gz
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/include/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/include/htslib/
+-rw-r--r-- root/root      1431 2013-10-28 22:03 ./usr/include/htslib/kfunc.h
+-rw-r--r-- root/root      1612 2013-10-28 22:03 ./usr/include/htslib/knetfile.h
+-rw-r--r-- root/root      8896 2013-10-28 22:03 ./usr/include/htslib/sam.h
+-rw-r--r-- root/root      9607 2013-11-16 15:36 ./usr/include/htslib/bgzf.h
+-rw-r--r-- root/root      1493 2013-10-28 22:03 ./usr/include/htslib/tbx.h
+-rw-r--r-- root/root      3615 2013-10-28 22:03 ./usr/include/htslib/faidx.h
+-rw-r--r-- root/root      8934 2013-10-28 22:03 ./usr/include/htslib/kseq.h
+-rw-r--r-- root/root       346 2013-10-28 22:03 ./usr/include/htslib/vcf_sweep.h
+-rw-r--r-- root/root      4640 2013-10-28 22:03 ./usr/include/htslib/klist.h
+-rw-r--r-- root/root      7280 2013-11-16 15:36 ./usr/include/htslib/hts.h
+-rw-r--r-- root/root     21224 2013-10-28 22:03 ./usr/include/htslib/khash.h
+-rw-r--r-- root/root      4151 2013-10-28 22:03 ./usr/include/htslib/razf.h
+-rw-r--r-- root/root      9112 2013-10-28 22:03 ./usr/include/htslib/synced_bcf_reader.h
+-rw-r--r-- root/root      2312 2013-10-28 22:03 ./usr/include/htslib/kstdint.h
+-rw-r--r-- root/root      2875 2013-11-16 15:36 ./usr/include/htslib/vcfutils.h
+-rw-r--r-- root/root      6332 2013-10-28 22:03 ./usr/include/htslib/kstring.h
+-rw-r--r-- root/root     26737 2013-10-28 22:03 ./usr/include/htslib/vcf.h
+-rw-r--r-- root/root     10125 2013-10-28 22:03 ./usr/include/htslib/ksort.h
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/lib/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/
+-rw-r--r-- root/root    668682 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/libhts.a
+lrwxrwxrwx root/root         0 2013-11-16 15:37 ./usr/lib/x86_64-linux-gnu/libhts.so -> libhts.so.0.0.1
+
+
+htslib-test_0.2.0~rc3-1_all.deb
+───────────────────────────────
+
+ new debian package, version 2.0.
+ size 514106 bytes: control archive=1790 bytes.
+     570 bytes,    15 lines      control              
+    3099 bytes,    45 lines      md5sums              
+ Package: htslib-test
+ Source: htslib
+ Version: 0.2.0~rc3-1
+ Architecture: all
+ Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+ Installed-Size: 4103
+ Section: libs
+ Priority: optional
+ Homepage: https://github.com/samtools/htslib
+ Description: Test data for HTSlib
+  HTSlib is a unified C library for accessing common file formats, such as SAM
+  (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
+  sequence data obtained by high-throughput sequencing.
+  .
+  This package contains test files and scripts for the HTSlib.
+
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/doc/htslib-test/
+-rw-r--r-- root/root      7175 2013-11-16 15:36 ./usr/share/doc/htslib-test/copyright
+-rw-r--r-- root/root       160 2013-11-16 15:36 ./usr/share/doc/htslib-test/changelog.Debian.gz
+drwxr-xr-x root/root         0 2013-11-16 15:37 ./usr/share/htslib-test/
+-rw-r--r-- root/root       230 2013-10-28 22:03 ./usr/share/htslib-test/ce.fa.fai
+-rw-r--r-- root/root        15 2013-10-28 22:03 ./usr/share/htslib-test/c1.fa
+-rw-r--r-- root/root      1287 2013-10-28 22:03 ./usr/share/htslib-test/test-vcf-api.out
+-rw-r--r-- root/root       517 2013-10-28 22:03 ./usr/share/htslib-test/xx#rg.sam
+-rw-r--r-- root/root       267 2013-10-28 22:03 ./usr/share/htslib-test/xx#triplet.sam
+-rw-r--r-- root/root        14 2013-10-28 22:03 ./usr/share/htslib-test/c1.fa.fai
+-rw-r--r-- root/root      1889 2013-10-28 22:03 ./usr/share/htslib-test/ce#5.sam
+-rw-r--r-- root/root       320 2013-10-28 22:03 ./usr/share/htslib-test/xx#unsorted.sam
+-rw-r--r-- root/root        29 2013-10-28 22:03 ./usr/share/htslib-test/aux.fa
+-rw-r--r-- root/root      1646 2013-10-28 22:03 ./usr/share/htslib-test/ce#tag_padded.sam
+-rw-r--r-- root/root         0 2013-10-28 22:03 ./usr/share/htslib-test/xx#blank.sam
+-rw-r--r-- root/root       342 2013-10-28 22:03 ./usr/share/htslib-test/ce#1.sam
+-rw-r--r-- root/root      5270 2013-10-28 22:03 ./usr/share/htslib-test/hfile.c
+-rw-r--r-- root/root       916 2013-10-28 22:03 ./usr/share/htslib-test/fieldarith.sam
+-rw-r--r-- root/root      2769 2013-10-28 22:03 ./usr/share/htslib-test/ce#unmap1.sam
+-rw-r--r-- root/root      5536 2013-10-28 22:03 ./usr/share/htslib-test/test-vcf-api.c
+-rw-r--r-- root/root      2615 2013-10-28 22:03 ./usr/share/htslib-test/test-vcf-sweep.c
+-rw-r--r-- root/root        51 2013-10-28 22:03 ./usr/share/htslib-test/xx.fa
+-rwxr-xr-x root/root      2922 2013-10-28 22:03 ./usr/share/htslib-test/compare_sam.pl
+-rw-r--r-- root/root       727 2013-10-28 22:03 ./usr/share/htslib-test/aux#aux.sam
+-rw-r--r-- root/root   2147245 2013-10-28 22:03 ./usr/share/htslib-test/ce#large_seq.sam
+-rw-r--r-- root/root       388 2013-10-28 22:03 ./usr/share/htslib-test/c1#pad1.sam
+-rw-r--r-- root/root      1634 2013-10-28 22:03 ./usr/share/htslib-test/ce#tag_depadded.sam
+-rw-r--r-- root/root        18 2013-10-28 22:03 ./usr/share/htslib-test/aux.fa.fai
+-rw-r--r-- root/root       651 2013-10-28 22:03 ./usr/share/htslib-test/xx#large_aux2.sam
+-rw-r--r-- root/root    905485 2013-10-28 22:03 ./usr/share/htslib-test/xx#large_aux.sam
+-rw-r--r-- root/root       527 2013-10-28 22:03 ./usr/share/htslib-test/c1#pad2.sam
+-rw-r--r-- root/root   1060702 2013-10-28 22:03 ./usr/share/htslib-test/ce.fa
+-rw-r--r-- root/root      1853 2013-10-28 22:03 ./usr/share/htslib-test/ce#5b.sam
+-rw-r--r-- root/root       148 2013-10-28 22:03 ./usr/share/htslib-test/c1#bounds.sam
+-rw-r--r-- root/root      5547 2013-10-28 22:03 ./usr/share/htslib-test/ce#unmap2.sam
+-rw-r--r-- root/root       304 2013-10-28 22:03 ./usr/share/htslib-test/xx#pair.sam
+-rwxr-xr-x root/root      5086 2013-10-28 22:03 ./usr/share/htslib-test/test.pl
+-rw-r--r-- root/root       337 2013-10-28 22:03 ./usr/share/htslib-test/c1#clip.sam
+-rw-r--r-- root/root       254 2013-10-28 22:03 ./usr/share/htslib-test/xx#minimal.sam
+-rw-r--r-- root/root      2577 2013-10-28 22:03 ./usr/share/htslib-test/test_view.c
+-rw-r--r-- root/root       646 2013-10-28 22:03 ./usr/share/htslib-test/ce#2.sam
+-rwxr-xr-x root/root      1143 2013-10-28 22:03 ./usr/share/htslib-test/test_view.pl
+-rw-r--r-- root/root        29 2013-10-28 22:03 ./usr/share/htslib-test/xx.fa.fai
+-rw-r--r-- root/root      1126 2013-10-28 22:03 ./usr/share/htslib-test/fieldarith.c
+-rw-r--r-- root/root      1325 2013-10-28 22:03 ./usr/share/htslib-test/ce#unmap.sam
+-rw-r--r-- root/root        92 2013-10-28 22:03 ./usr/share/htslib-test/test-vcf-sweep.out
+-rw-r--r-- root/root       665 2013-10-28 22:03 ./usr/share/htslib-test/c1#pad3.sam
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Post Build                                                                   │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Cleanup                                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Purging /«BUILDDIR»
+Reading package lists...
+Building dependency tree...
+Reading state information...
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  bsdmainutils* debhelper* dh-exec* diffstat* file* gettext* gettext-base*
+  groff-base* hardening-includes* intltool-debian* libapt-pkg-perl*
+  libarchive-zip-perl* libasprintf0c2* libclass-accessor-perl* libclone-perl*
+  libcroco3* libdigest-hmac-perl* libemail-valid-perl* libffi6*
+  libfile-basedir-perl* libglib2.0-0* libio-pty-perl* libio-socket-inet6-perl*
+  libio-socket-ssl-perl* libio-string-perl* libipc-run-perl*
+  liblist-moreutils-perl* libmagic1* libmailtools-perl* libnet-dns-perl*
+  libnet-domain-tld-perl* libnet-ip-perl* libnet-smtp-ssl-perl*
+  libnet-ssleay-perl* libparse-debianchangelog-perl* libpipeline1*
+  libsocket6-perl* libssl1.0.0* libsub-name-perl* libtext-levenshtein-perl*
+  libunistring0* liburi-perl* libxml2* lintian* man-db* netbase* patchutils*
+  po-debconf* sbuild-build-depends-core-dummy*
+  sbuild-build-depends-htslib-dummy* sbuild-build-depends-lintian-dummy*
+  t1utils* zlib1g-dev*
+0 upgraded, 0 newly installed, 53 to remove and 0 not upgraded.
+After this operation, 36.6 MB disk space will be freed.
+(Reading database ... 13731 files and directories currently installed.)
+Removing sbuild-build-depends-lintian-dummy ...
+Removing lintian ...
+Purging configuration files for lintian ...
+Removing sbuild-build-depends-htslib-dummy ...
+Removing dh-exec ...
+Removing diffstat ...
+Removing hardening-includes ...
+Removing libapt-pkg-perl ...
+Removing libarchive-zip-perl ...
+Removing libparse-debianchangelog-perl ...
+Removing libclass-accessor-perl ...
+Removing libclone-perl ...
+Removing libemail-valid-perl ...
+Removing libnet-dns-perl ...
+Removing libdigest-hmac-perl ...
+Removing libfile-basedir-perl ...
+Removing libipc-run-perl ...
+Removing libio-pty-perl ...
+Removing libio-socket-inet6-perl ...
+Removing libmailtools-perl ...
+Removing libnet-smtp-ssl-perl ...
+Removing libio-socket-ssl-perl ...
+Removing libio-string-perl ...
+Removing liblist-moreutils-perl ...
+Removing libnet-domain-tld-perl ...
+Removing libnet-ip-perl ...
+Removing libnet-ssleay-perl ...
+Removing libsocket6-perl ...
+Removing libssl1.0.0:amd64 ...
+Purging configuration files for libssl1.0.0:amd64 ...
+Removing libsub-name-perl ...
+Removing libtext-levenshtein-perl ...
+Removing liburi-perl ...
+Removing netbase ...
+Purging configuration files for netbase ...
+Removing patchutils ...
+Removing sbuild-build-depends-core-dummy ...
+Removing t1utils ...
+Removing zlib1g-dev:amd64 ...
+Removing debhelper ...
+Removing man-db ...
+Purging configuration files for man-db ...
+Removing bsdmainutils ...
+Purging configuration files for bsdmainutils ...
+Removing file ...
+Removing po-debconf ...
+Removing intltool-debian ...
+Removing gettext ...
+Removing gettext-base ...
+Removing groff-base ...
+Purging configuration files for groff-base ...
+Removing libasprintf0c2:amd64 ...
+Removing libcroco3:amd64 ...
+Purging configuration files for libcroco3:amd64 ...
+Removing libglib2.0-0:amd64 ...
+Purging configuration files for libglib2.0-0:amd64 ...
+Removing libffi6:amd64 ...
+Purging configuration files for libffi6:amd64 ...
+Removing libmagic1:amd64 ...
+Purging configuration files for libmagic1:amd64 ...
+Removing libpipeline1:amd64 ...
+Purging configuration files for libpipeline1:amd64 ...
+Removing libunistring0:amd64 ...
+Purging configuration files for libunistring0:amd64 ...
+Removing libxml2:amd64 ...
+Purging configuration files for libxml2:amd64 ...
+Processing triggers for libc-bin ...
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│ Summary                                                                      │
+└──────────────────────────────────────────────────────────────────────────────┘
+
+Build Architecture: amd64
+Build-Space: 28664
+Build-Time: 69
+Distribution: unstable
+Host Architecture: amd64
+Install-Time: 12
+Job: htslib_0.2.0~rc3-1.dsc
+Lintian: pass
+Machine Architecture: amd64
+Package: htslib
+Package-Time: 86
+Source-Version: 0.2.0~rc3-1
+Space: 28664
+Status: successful
+Version: 0.2.0~rc3-1
+────────────────────────────────────────────────────────────────────────────────
+Finished at 20131116-1538
+Build needed 00:01:26, 28664k disc space
