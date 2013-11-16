@@ -30,7 +30,8 @@ Package: libhts-dev
 Architecture: any
 Multi-Arch: same
 Section: libdevel
-Depends: ${shlibs:Depends},
+Depends: libhts0 (= ${binary:Version}),
+         ${shlibs:Depends},
          ${misc:Depends}
 Description: Development files for the HTSlib
  HTSlib is a unified C library for accessing common file formats, such as SAM
