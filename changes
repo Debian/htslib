@@ -1,0 +1,61 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Format: 1.8
+Date: Sat, 16 Nov 2013 15:35:03 +0900
+Source: htslib
+Binary: libhts0 libhts-dev htslib-test
+Architecture: source amd64 all
+Version: 0.2.0~rc3-1
+Distribution: unstable
+Urgency: low
+Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
+Changed-By: Charles Plessy <plessy@debian.org>
+Description: 
+ htslib-test - Test data for HTSlib
+ libhts-dev - Development files for the HTSlib
+ libhts0    - C library for high-throughput sequencing data formats
+Closes: 729282
+Changes: 
+ htslib (0.2.0~rc3-1) unstable; urgency=low
+ .
+   * Initial release. (Closes: #729282)
+Checksums-Sha1: 
+ bd34306f015be0dd90a1c58c12f16280b924064e 2039 htslib_0.2.0~rc3-1.dsc
+ a34fc68574d10754d9813fdb7ce4dad52da99d05 923352 htslib_0.2.0~rc3.orig.tar.gz
+ 336b5f8094a71997a7cbd74d0d1c69f43801449b 10532 htslib_0.2.0~rc3-1.diff.gz
+ 68883a6fb26a0c9fc5d057d370eff2c5d795af5d 183826 libhts0_0.2.0~rc3-1_amd64.deb
+ 65beede3659386ae4d9df13d15bcb770b77b2112 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
+ ac04ef188b27f4aed31836d948d3c1e5afb8d5ec 514106 htslib-test_0.2.0~rc3-1_all.deb
+Checksums-Sha256: 
+ 112816defd06b384117e770b45ac0c25c5c6c35addc602442871645ae045cf42 2039 htslib_0.2.0~rc3-1.dsc
+ 5e972ce7048c9b236911cd30e2100f7bfb28e65aa4cc3687a9aaf31d116be3ce 923352 htslib_0.2.0~rc3.orig.tar.gz
+ 3575954047af6c97d4500b3eb0b0bf78c327f355804a54844a128bb5391dd1a8 10532 htslib_0.2.0~rc3-1.diff.gz
+ ca825bf740968fab20c50d49be6ea446f6dad4cc041638af28e51c48c4b8092b 183826 libhts0_0.2.0~rc3-1_amd64.deb
+ 49f8bb3be8c784927e60bc856fbe3004f013f26dfe7b8f06f7e80754c6db4bd2 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
+ 7fd8597061206552f31f146276bac59473d2e96fb751c1f6451affdbe7a49f6b 514106 htslib-test_0.2.0~rc3-1_all.deb
+Files: 
+ 1d21905015a24b86b28762a01758e029 2039 libs optional htslib_0.2.0~rc3-1.dsc
+ 5d055a061e84ae987b25cb72bb4173d6 923352 libs optional htslib_0.2.0~rc3.orig.tar.gz
+ e7f26daf824e4fa67171c78cc6ef932b 10532 libs optional htslib_0.2.0~rc3-1.diff.gz
+ 136ca39311885c1aeffe2565f9cfcd47 183826 libs optional libhts0_0.2.0~rc3-1_amd64.deb
+ bb6e3c45eb785b132025527bd2bdc884 221284 libdevel optional libhts-dev_0.2.0~rc3-1_amd64.deb
+ 40e1ca3c045337aad2355198183ead36 514106 libs optional htslib-test_0.2.0~rc3-1_all.deb
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.14 (GNU/Linux)
+
+iQIcBAEBCgAGBQJShxNpAAoJEMW9bI8ildUCVgQP/i3wqxtNL+rWiN+NmRf92fbq
+1Wx5xWwMG3B/S/b4uo+qNV9awwDijFzmgEDEbBUQ5LIOHJQ/9m/zHUT/1Mcl1WaV
++s9fWhSmlK7s4VIkqhQLGM1UwlAL8rF5/g/jNDf/1epCnZ8EvRyJzowpG1nOHD2m
+Igmp2+Fjyh3mK74qs+D2QqcYL6pApU9PJn+tiOL10yVgLjI6hNjeUj8wx8cvl09T
+DN0pBRf+tQLMxxyGbyP5zGvpU79gnefSziCKJoupYiEJzAZq9MmgcgNV/QMze8v8
+t+LpM4Uu0Js7143H/Y2oErok1cll+T/1Sbwig/Asw+xCuwwUpkOa0RYSU0TnmkWx
+JTdRlZf4XlOwfV7OSyG6OA9qxC8rqAxns9po9Qw2Enk6Db5jEOJop21qy0ZpQVcw
+RU860IIaCgROKYdtLeegnnifgeOZ+Ah7KFku7mA6bl+QecMV7TLuDXVwlTGcrVK5
+dDpkCoNO90A8pJ0cj2HMr1djj6g7VMOdDX1f3FHmKuMKJ6H4nXQ27OuyhkS33Yw9
+jOQI7XOn5KgcVqbDQhZlNAcSxxIuMplvWKYups3TERTc/1crP0YEi1MwFBJXrLvJ
+4d0L2RdjLylZAIsGldzVS6uoTSGGfmrfOdLFH10+QMd1sGryuujJTW+BPhhFwvGo
+thnqcw8JM+C6jvJyQRec
+=u1pj
+-----END PGP SIGNATURE-----
