@@ -14,10 +14,11 @@ override_dh_auto_build:
 	dh_auto_build -- \
 	  CFLAGS="$$(dpkg-buildflags --get CFLAGS)" \
 	  CPPFLAGS="-I. -DSAMTOOLS=1 $$(dpkg-buildflags --get CPPFLAGS)" \
-	  LDFLAGS="$$(dpkg-buildflags --get LDFLAGS)"
+	  LDFLAGS="$$(dpkg-buildflags --get LDFLAGS)" \
+	  PACKAGE_VERSION="$$(git describe --always --dirty --match '[!d]*')"
 
 override_dh_auto_install:
-	dh_auto_install -- prefix=/usr
+	dh_auto_install -- prefix=/usr PACKAGE_VERSION="$$(git describe --always --dirty --match '[!d]*')"
 
 override_dh_clean:
 	chmod ugo+x debian/libhts0.install debian/libhts-dev.install
