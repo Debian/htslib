@@ -27,11 +27,13 @@ libhts.so.0 libhts0 #MINVER#
  bam_mplp_auto@Base 0.2.0~rc3
  bam_mplp_destroy@Base 0.2.0~rc3
  bam_mplp_init@Base 0.2.0~rc3
+ bam_mplp_init_overlaps@Base 0.2.0~rc3-2
  bam_mplp_set_maxcnt@Base 0.2.0~rc3
  bam_name2id@Base 0.2.0~rc3
  bam_plp_auto@Base 0.2.0~rc3
  bam_plp_destroy@Base 0.2.0~rc3
  bam_plp_init@Base 0.2.0~rc3
+ bam_plp_init_overlaps@Base 0.2.0~rc3-2
  bam_plp_next@Base 0.2.0~rc3
  bam_plp_push@Base 0.2.0~rc3
  bam_plp_reset@Base 0.2.0~rc3
@@ -410,19 +412,19 @@ libhts.so.0 libhts0 #MINVER#
  pool_create@Base 0.2.0~rc3
  pool_destroy@Base 0.2.0~rc3
  pool_free@Base 0.2.0~rc3
- razf_close@Base 0.2.0~rc3
- razf_dopen2@Base 0.2.0~rc3
- razf_dopen@Base 0.2.0~rc3
- razf_get_data_size@Base 0.2.0~rc3
- razf_jump@Base 0.2.0~rc3
- razf_open2@Base 0.2.0~rc3
- razf_open@Base 0.2.0~rc3
- razf_read@Base 0.2.0~rc3
- razf_seek2@Base 0.2.0~rc3
- razf_seek@Base 0.2.0~rc3
- razf_skip@Base 0.2.0~rc3
- razf_tell2@Base 0.2.0~rc3
- razf_write@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_close@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_dopen2@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_dopen@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_get_data_size@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_jump@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_open2@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_open@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_read@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_seek2@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_seek@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_skip@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_tell2@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc3-2# razf_write@Base 0.2.0~rc3
  refs2id@Base 0.2.0~rc3
  refs_free@Base 0.2.0~rc3
  sam_format1@Base 0.2.0~rc3
