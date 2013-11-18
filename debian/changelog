@@ -1,3 +1,12 @@
+htslib (0.2.0~rc3-2) UNRELEASED; urgency=low
+
+  ba56a71 Merged with upstream's develop branch.
+
+  420896b Override PACKAGE_VERSION to avoid tags with a slash in the name.
+  72b5c4a Finally use the 3.0 (quilt) format in single-debian-patch mode.
+
+ -- Charles Plessy <plessy@debian.org>  Mon, 18 Nov 2013 13:00:42 +0900
+
 htslib (0.2.0~rc3-1) unstable; urgency=low
 
   * Initial release. (Closes: #729282)
