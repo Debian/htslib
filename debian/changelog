@@ -1,11 +1,11 @@
-htslib (0.2.0~rc3-2) UNRELEASED; urgency=low
+htslib (0.2.0~rc4-1) UNRELEASED; urgency=low
 
-  ba56a71 Merged with upstream's develop branch.
-
+  be359b5 ba56a71 Merged with upstream's develop branch.
   420896b Override PACKAGE_VERSION to avoid tags with a slash in the name.
   72b5c4a Finally use the 3.0 (quilt) format in single-debian-patch mode.
+  7a66c32 Updated symbols file.
 
- -- Charles Plessy <plessy@debian.org>  Mon, 18 Nov 2013 13:00:42 +0900
+ -- Charles Plessy <plessy@debian.org>  Wed, 20 Nov 2013 12:51:26 +0900
 
 htslib (0.2.0~rc3-1) unstable; urgency=low
 
