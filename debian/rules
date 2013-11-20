@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 export DH_VERBOSE=1
+DEB_VERSION := $(shell dpkg-parsechangelog | egrep '^Version:' | cut -f 2 -d ' ')
 
 %:
 	dh $@
@@ -11,11 +12,12 @@ override_dh_auto_test:
               test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
 
 override_dh_auto_build:
+	cat Makefile
 	dh_auto_build -- \
 	  CFLAGS="$$(dpkg-buildflags --get CFLAGS)" \
 	  CPPFLAGS="-I. -DSAMTOOLS=1 $$(dpkg-buildflags --get CPPFLAGS)" \
 	  LDFLAGS="$$(dpkg-buildflags --get LDFLAGS)" \
-	  PACKAGE_VERSION="$$(git describe --always --dirty --match '[!d]*')"
+	  PACKAGE_VERSION="$(DEB_VERSION)"
 
 override_dh_auto_install:
-	dh_auto_install -- prefix=/usr PACKAGE_VERSION="$$(git describe --always --dirty --match '[!d]*')"
+	dh_auto_install -- prefix=/usr PACKAGE_VERSION="$(DEB_VERSION)"
