@@ -4,8 +4,10 @@ htslib (0.2.0~rc4-1) UNRELEASED; urgency=low
   420896b Override PACKAGE_VERSION to avoid tags with a slash in the name.
   72b5c4a Finally use the 3.0 (quilt) format in single-debian-patch mode.
   7a66c32 Updated symbols file.
+  d870946 Adjusted substitution variables following dpkg's warnings.
+  79b5d4e Use the Debian as package version.
 
- -- Charles Plessy <plessy@debian.org>  Wed, 20 Nov 2013 12:51:26 +0900
+ -- Charles Plessy <plessy@debian.org>  Wed, 20 Nov 2013 14:32:44 +0900
 
 htslib (0.2.0~rc3-1) unstable; urgency=low
 
