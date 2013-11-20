@@ -14,6 +14,7 @@ Homepage: https://github.com/samtools/htslib
 Package: libhts0
 Architecture: any
 Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Description: C library for high-throughput sequencing data formats
@@ -33,7 +34,6 @@ Architecture: any
 Multi-Arch: same
 Section: libdevel
 Depends: libhts0 (= ${binary:Version}),
-         ${shlibs:Depends},
          ${misc:Depends}
 Description: Development files for the HTSlib
  HTSlib is a unified C library for accessing common file formats, such as SAM
@@ -45,7 +45,8 @@ Description: Development files for the HTSlib
 
 Package: htslib-test
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${misc:Depends},
+         ${perl:Depends}
 Description: Test data for HTSlib
  HTSlib is a unified C library for accessing common file formats, such as SAM
  (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
