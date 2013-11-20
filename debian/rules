@@ -12,7 +12,6 @@ override_dh_auto_test:
               test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
 
 override_dh_auto_build:
-	cat Makefile
 	dh_auto_build -- \
 	  CFLAGS="$$(dpkg-buildflags --get CFLAGS)" \
 	  CPPFLAGS="-I. -DSAMTOOLS=1 $$(dpkg-buildflags --get CPPFLAGS)" \
