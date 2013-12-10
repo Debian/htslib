@@ -105,7 +105,8 @@ libhts.so.0 libhts0 #MINVER#
  bcf_sr_regions_destroy@Base 0.2.0~rc3
  bcf_sr_regions_init@Base 0.2.0~rc3
  bcf_sr_regions_next@Base 0.2.0~rc3
- bcf_sr_regions_query@Base 0.2.0~rc3
+ bcf_sr_regions_overlap@Base 0.2.0~rc5
+#MISSING: 0.2.0~rc5# bcf_sr_regions_query@Base 0.2.0~rc3
  bcf_sr_regions_seek@Base 0.2.0~rc3
  bcf_sr_set_regions@Base 0.2.0~rc3
  bcf_sr_set_samples@Base 0.2.0~rc3
