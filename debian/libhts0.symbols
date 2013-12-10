@@ -17,6 +17,7 @@ libhts.so.0 libhts0 #MINVER#
  bam_copy1@Base 0.2.0~rc3
  bam_destroy1@Base 0.2.0~rc3
  bam_endpos@Base 0.2.0~rc3
+ bam_flag2str@Base 0.2.0~rc5
  bam_hdr_destroy@Base 0.2.0~rc3
  bam_hdr_init@Base 0.2.0~rc3
  bam_hdr_read@Base 0.2.0~rc3
@@ -37,10 +38,11 @@ libhts.so.0 libhts0 #MINVER#
  bam_plp_next@Base 0.2.0~rc3
  bam_plp_push@Base 0.2.0~rc3
  bam_plp_reset@Base 0.2.0~rc3
- bam_plp_set_mask@Base 0.2.0~rc3
+#MISSING: 0.2.0~rc5# bam_plp_set_mask@Base 0.2.0~rc3
  bam_plp_set_maxcnt@Base 0.2.0~rc3
  bam_read1@Base 0.2.0~rc3
  bam_readrec@Base 0.2.0~rc3
+ bam_str2flag@Base 0.2.0~rc5
  bam_write1@Base 0.2.0~rc3
  bcf_add_filter@Base 0.2.0~rc3
  bcf_calc_ac@Base 0.2.0~rc3
@@ -230,6 +232,7 @@ libhts.so.0 libhts0 #MINVER#
  cram_huffman_encode_int0@Base 0.2.0~rc3
  cram_huffman_encode_int@Base 0.2.0~rc3
  cram_huffman_encode_store@Base 0.2.0~rc3
+ cram_index_build@Base 0.2.0~rc5
  cram_index_free@Base 0.2.0~rc3
  cram_index_load@Base 0.2.0~rc3
  cram_index_query@Base 0.2.0~rc3
