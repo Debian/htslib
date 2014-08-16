@@ -1,4 +1,4 @@
-libhts.so.1 libhts0 #MINVER#
+libhts.so.1 libhts1 #MINVER#
  MD5_Final@Base 1.0-1
  MD5_Init@Base 1.0-1
  MD5_Update@Base 1.0-1
