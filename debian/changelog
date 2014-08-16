@@ -1,13 +1,16 @@
 htslib (1.0-1) UNRELEASED; urgency=low
 
-  [ Charles Plessy ]
-  cc559b8 be359b5 ba56a71 1a76ced Merged with upstream's develop branch.
+  cc559b8 Merged with upstream's develop branch.
   420896b Override PACKAGE_VERSION to avoid tags with a slash in the name.
   72b5c4a Finally use the 3.0 (quilt) format in single-debian-patch mode.
-  7a66c32 Updated symbols file.
   d870946 Adjusted substitution variables following dpkg's warnings.
   79b5d4e Use the Debian as package version.
   9469458 Removed debug command accidentally introduced.
+  74b9d7b Build on the master branch.
+  98c18ca Updated symbols file.
+  04815a7 New major version (libhts0 -> libhts1).
+  22fef0c Install pkgconfig file.
+  8c7f7d4 Replace the old tabix package from the tabix source package.
 
  -- Charles Plessy <plessy@debian.org>  Wed, 20 Nov 2013 14:32:44 +0900
 
