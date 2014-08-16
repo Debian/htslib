@@ -1,16 +1,16 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://github.com/samtools/htslib/archive/0.2.0-rc4.tar.gz
+Source: https://github.com/samtools/htslib.git
 
 Files: *
-Copyright: (C) 2012-2013 Genome Research Ltd.
-           (c) 2008 Broad Institute / Massachusetts Institute of Technology
-           The Wellcome Trust Sanger Institute
-           (c) 2008, 2009, 2011 by Attractive Chaos <attractor@live.co.uk>
+Copyright: © 2012-2014 Genome Research Ltd.
+           © 2008-2013 Broad Institute / Massachusetts Institute of Technology
+           © The Wellcome Trust Sanger Institute
+           © 2008-2012 by Attractive Chaos <attractor@live.co.uk>
 License: MIT
 
 Files: cram/*
-Copyright: (c) 2012-2013 Genome Research Ltd.
-           (c) 1995-1996 MEDICAL RESEARCH COUNCIL
+Copyright: © 2012-2014 Genome Research Ltd.
+           © 1995-2003 MEDICAL RESEARCH COUNCIL
 License: Various_BSD-3-Clause
  The files in the 'cram' directory are under one or both of the following
  licenses.
