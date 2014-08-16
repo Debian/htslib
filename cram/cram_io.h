@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2012-2013 Genome Research Ltd.
+Copyright (c) 2012-2014 Genome Research Ltd.
 Author: James Bonfield <jkb@sanger.ac.uk>
 
 Redistribution and use in source and binary forms, with or without 
@@ -148,6 +148,14 @@ int cram_write_block(cram_fd *fd, cram_block *b);
 /*! Frees a CRAM block, deallocating internal data too.
  */
 void cram_free_block(cram_block *b);
+
+/*! Uncompress a memory block using Zlib.
+ *
+ * @return
+ * Returns 0 on success;
+ *        -1 on failure
+ */
+char *zlib_mem_inflate(char *cdata, size_t csize, size_t *size);
 
 /*! Uncompresses a CRAM block, if compressed.
  *
@@ -475,7 +483,9 @@ int cram_flush(cram_fd *fd);
 /*! Checks for end of file on a cram_fd stream.
  *
  * @return
- * Returns 1 if we hit an EOF while reading.
+ * Returns 0 if not at end of file
+ *         1 if we hit an expected EOF (end of range or EOF block)
+ *         2 for other EOF (end of stream without EOF block)
  */
 int cram_eof(cram_fd *fd);
 
@@ -514,7 +524,6 @@ int cram_set_voption(cram_fd *fd, enum cram_option opt, va_list args);
  */
 int cram_set_header(cram_fd *fd, SAM_hdr *hdr);
 
-/**@}*/
 
 #ifdef __cplusplus
 }

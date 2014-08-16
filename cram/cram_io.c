@@ -1,5 +1,5 @@
 /*
-Copyright (c) 2012-2013 Genome Research Ltd.
+Copyright (c) 2012-2014 Genome Research Ltd.
 Author: James Bonfield <jkb@sanger.ac.uk>
 
 Redistribution and use in source and binary forms, with or without 
@@ -79,7 +79,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endif
 
 #ifdef SAMTOOLS
-#include "hfile.h"
+#include "htslib/hfile.h"
 #define paranoid_hclose(fp) (hclose(fp))
 #else
 #define hclose_abruptly(fp) (fclose(fp))
@@ -527,15 +527,14 @@ int int32_put(cram_block *b, int32_t val) {
  * They're static here as they're only used within the cram_compress_block
  * and cram_uncompress_block functions, which are the external interface.
  */
-
-static char *zlib_mem_inflate(char *cdata, size_t csize, size_t *size) {
+char *zlib_mem_inflate(char *cdata, size_t csize, size_t *size) {
     z_stream s;
     unsigned char *data = NULL; /* Uncompressed output */
     int data_alloc = 0;
     int err;
 
-    /* Starting point at uncompressed size, 4x compressed */
-    data = malloc(data_alloc = csize+10);
+    /* Starting point at uncompressed size, and scale after that */
+    data = malloc(data_alloc = csize*1.2+100);
     if (!data)
 	return NULL;
 
@@ -561,6 +560,7 @@ static char *zlib_mem_inflate(char *cdata, size_t csize, size_t *size) {
     /* Decode to 'data' array */
     for (;s.avail_in;) {
 	unsigned char *data_tmp;
+	int alloc_inc;
 
 	s.next_out = &data[s.total_out];
 	err = inflate(&s, Z_NO_FLUSH);
@@ -572,13 +572,14 @@ static char *zlib_mem_inflate(char *cdata, size_t csize, size_t *size) {
 	    break;
 	}
 
-	/* More to come, so realloc */
-	data = realloc((data_tmp = data), data_alloc += s.avail_in + 10);
+	/* More to come, so realloc based on growth so far */
+	alloc_inc = (double)s.avail_in/s.total_in * s.total_out + 100;
+	data = realloc((data_tmp = data), data_alloc += alloc_inc);
 	if (!data) {
 	    free(data_tmp);
 	    return NULL;
 	}
-	s.avail_out += s.avail_in+10;
+	s.avail_out += alloc_inc;
     }
     inflateEnd(&s);
 
@@ -785,6 +786,7 @@ int cram_uncompress_block(cram_block *b) {
 	    return -1;
 	free(b->data);
 	b->data = (unsigned char *)uncomp;
+	b->alloc = uncomp_size;
 	b->method = RAW;
 	break;
 
@@ -800,6 +802,7 @@ int cram_uncompress_block(cram_block *b) {
 	    return -1;
 	}
 	b->data = (unsigned char *)uncomp;
+	b->alloc = usize;
 	b->method = RAW;
 	b->uncomp_size = usize; // Just incase it differs
 	break;
@@ -862,7 +865,7 @@ static int cram_compress_block_bzip2(cram_fd *fd, cram_block *b,
  */
 int cram_compress_block(cram_fd *fd, cram_block *b, cram_metrics *metrics,
 			int level,  int strat,
-			 int level2, int strat2) {
+			int level2, int strat2) {
     char *comp = NULL;
     size_t comp_size = 0;
 
@@ -890,7 +893,7 @@ int cram_compress_block(cram_fd *fd, cram_block *b, cram_metrics *metrics,
 		    metrics->trial, metrics->next_trial,
 		    metrics->m1, metrics->m2);
 
-    if (strat2 >= 0 && (metrics->trial || --metrics->next_trial == 0)) {
+    if (strat2 >= 0 && (metrics->trial > 0 || --metrics->next_trial <= 0)) {
 	char *c1, *c2;
 	size_t s1, s2;
 
@@ -1087,6 +1090,7 @@ static refs_t *refs_create(void) {
     r->ref_id = NULL; // see refs2id() to populate.
     r->count = 1;
     r->last = NULL;
+    r->last_id = -1;
 
     if (!(r->h_meta = kh_init(refs)))
 	goto err;
@@ -1115,6 +1119,7 @@ static refs_t *refs_load_fai(refs_t *r_orig, char *fn, int is_err) {
     char fai_fn[PATH_MAX];
     char line[8192];
     refs_t *r = r_orig;
+    size_t fn_l = strlen(fn);
 
     RP("refs_load_fai %s\n", fn);
 
@@ -1135,15 +1140,19 @@ static refs_t *refs_load_fai(refs_t *r_orig, char *fn, int is_err) {
 
     if (!(r->fn = string_dup(r->pool, fn)))
 	goto err;
+	
+    if (fn_l > 4 && strcmp(&fn[fn_l-4], ".fai") == 0)
+	r->fn[fn_l-4] = 0;
 
-    if (!(r->fp = fopen(fn, "r"))) {
+    if (!(r->fp = fopen(r->fn, "r"))) {
 	if (is_err)
 	    perror(fn);
 	goto err;
     }
 
     /* Parse .fai file and load meta-data */
-    sprintf(fai_fn, "%.*s.fai", PATH_MAX-5, fn);
+    sprintf(fai_fn, "%.*s.fai", PATH_MAX-5, r->fn);
+
     if (stat(fai_fn, &sb) != 0) {
 	if (is_err)
 	    perror(fai_fn);
@@ -1424,8 +1433,8 @@ static int cram_populate_ref(cram_fd *fd, int id, ref_entry *r) {
     if (fd->verbose)
 	fprintf(stderr, "cram_populate_ref on fd %p, id %d\n", fd, id);
 
-    if (!ref_path)
-	ref_path = ".";
+    if (!ref_path || *ref_path == 0)
+	ref_path = "|http://www.ebi.ac.uk:80/ena/cram/md5/%s";
 
     if (!r->name)
 	return -1;
@@ -1465,13 +1474,9 @@ static int cram_populate_ref(cram_fd *fd, int id, ref_entry *r) {
 
     /* Otherwise search */
     if ((mf = open_path_mfile(tag->str+3, ref_path, NULL))) {
-	mfseek(mf, 0, SEEK_END);
-	r->length = mftell(mf);
-	r->seq = malloc(r->length);
-	mrewind(mf);
-	mfread(r->seq, 1, r->length, mf);
-	mfclose(mf);
-
+	size_t sz;
+	r->seq = mfsteal(mf, &sz);
+	r->length = sz;
     } else {
 	refs_t *refs;
 	char *fn;
@@ -1554,6 +1559,9 @@ static void cram_ref_incr_locked(refs_t *r, int id) {
     if (id < 0 || !r->ref_id[id]->seq)
 	return;
 
+    if (r->last_id == id)
+	r->last_id = -1;
+
     ++r->ref_id[id]->count;
 }
 
@@ -1573,11 +1581,18 @@ static void cram_ref_decr_locked(refs_t *r, int id) {
 
     if (--r->ref_id[id]->count <= 0) {
 	assert(r->ref_id[id]->count == 0);
-	RP("%d FREE REF %d (%p)\n", gettid(), id, r->ref_id[id]->seq);
-	if (r->ref_id[id]->seq) {
-	    free(r->ref_id[id]->seq);
-	    r->ref_id[id]->seq = NULL;
-	    r->ref_id[id]->length = 0;
+	if (r->last_id >= 0) {
+	    if (r->ref_id[r->last_id]->count <= 0 &&
+		r->ref_id[r->last_id]->seq) {
+		RP("%d FREE REF %d (%p)\n", gettid(),
+		   r->last_id, r->ref_id[r->last_id]->seq);
+		free(r->ref_id[r->last_id]->seq);
+		r->ref_id[r->last_id]->seq = NULL;
+		r->ref_id[r->last_id]->length = 0;
+	    }
+	    r->last_id = -1;
+	} else {
+	    r->last_id = id;
 	}
     }
 }
@@ -1649,6 +1664,11 @@ static char *load_ref_portion(FILE *fp, ref_entry *e, int start, int end) {
 	    fprintf(stderr, "Malformed reference file?\n");
 	    free(seq);
 	    return NULL;
+	}
+    } else {
+	int i;
+	for (i = 0; i < len; i++) {
+	    seq[i] = seq[i] & ~0x20; // uppercase in ASCII
 	}
     }
 
@@ -1948,7 +1968,7 @@ int cram_load_reference(cram_fd *fd, char *fn) {
     }
     fd->ref_fn = fn;
 
-    if (!fd->refs && fd->header) {
+    if ((!fd->refs || (fd->refs->nref == 0 && !fn)) && fd->header) {
 	if (!(fd->refs = refs_create()))
 	    return -1;
 	if (-1 == refs_from_header(fd->refs, fd, fd->header))
@@ -2124,14 +2144,14 @@ cram_container *cram_read_container(cram_fd *fd) {
     memset(&c2, 0, sizeof(c2));
     if (fd->version == CRAM_1_VERS) {
 	if ((s = itf8_decode(fd, &c2.length)) == -1) {
-	    fd->eof = 1;
+	    fd->eof = fd->empty_container ? 1 : 2;
 	    return NULL;
 	} else {
 	    rd+=s;
 	}
     } else {
 	if ((s = int32_decode(fd, &c2.length)) == -1) {
-	    fd->eof = 1;
+	    fd->eof = fd->empty_container ? 1 : 2;
 	    return NULL;
 	} else {
 	    rd+=s;
@@ -2164,7 +2184,8 @@ cram_container *cram_read_container(cram_fd *fd) {
 
     *c = c2;
 
-    if (!(c->landmark = malloc(c->num_landmarks * sizeof(int32_t)))) {
+    if (!(c->landmark = malloc(c->num_landmarks * sizeof(int32_t))) &&
+	c->num_landmarks) {
 	fd->err = errno;
 	cram_free_container(c);
 	return NULL;
@@ -2190,6 +2211,11 @@ cram_container *cram_read_container(cram_fd *fd) {
 	c->multi_seq = 1;
 	fd->multi_seq = 1;
     }
+
+    fd->empty_container =
+	(c->num_records == 0 &&
+	 c->ref_seq_id == -1 &&
+	 c->ref_seq_start == 0x454f46 /* EOF */) ? 1 : 0;
 
     return c;
 }
@@ -2734,11 +2760,9 @@ cram_file_def *cram_read_file_def(cram_fd *fd) {
 	return NULL;
     }
 
-    if (!(def->major_version == 1 && def->minor_version == 0) &&
-	!(def->major_version == 1 && def->minor_version == 1) &&
-	!(def->major_version == 2 && def->minor_version == 0)) {
+    if (def->major_version > 2) {
 	fprintf(stderr, "CRAM version number mismatch\n"
-		"Expected 1.0 or 2.0, got %d.%d\n",
+		"Expected 1.x or 2.x, got %d.%d\n",
 		def->major_version, def->minor_version);
 	free(def);
 	return NULL;
@@ -2943,8 +2967,11 @@ int cram_write_SAM_hdr(cram_fd *fd, SAM_hdr *hdr) {
 		rlen = fd->refs->ref_id[i]->length;
 		MD5_Init(&md5);
 		ref = cram_get_ref(fd, i, 1, rlen);
+		if (NULL == ref) return -1;
+		rlen = fd->refs->ref_id[i]->length; /* In case it just loaded */
 		MD5_Update(&md5, ref, rlen);
 		MD5_Final(buf, &md5);
+		cram_ref_decr(fd->refs, i);
 
 		for (j = 0; j < 16; j++) {
 		    buf2[j*2+0] = "0123456789abcdef"[buf[j]>>4];
@@ -2953,7 +2980,6 @@ int cram_write_SAM_hdr(cram_fd *fd, SAM_hdr *hdr) {
 		buf2[32] = 0;
 		if (sam_hdr_update(hdr, ty, "M5", buf2, NULL))
 		    return -1;
-		cram_ref_decr(fd->refs, i);
 	    }
 
 	    if (fd->ref_fn) {
@@ -3025,7 +3051,7 @@ int cram_write_SAM_hdr(cram_fd *fd, SAM_hdr *hdr) {
 #endif
 
 #ifdef PADDED_BLOCK
-	padded_length = MAX(c->length*2, 10000) - c->length;
+	padded_length = MAX(c->length*1.5, 10000) - c->length;
 	c->length += padded_length;
 	if (NULL == (pads = calloc(1, padded_length))) {
 	    cram_free_block(b);
@@ -3179,7 +3205,7 @@ static void cram_init_tables(cram_fd *fd) {
 
 // Default version numbers for CRAM
 static int major_version = 2;
-static int minor_version = 0;
+static int minor_version = 1;
 
 /*
  * Opens a CRAM file for read (mode "rb") or write ("wb").
@@ -3310,7 +3336,7 @@ cram_fd *cram_dopen(cram_FILE *fp, const char *filename, const char *mode) {
 	fd->m[i] = cram_new_metrics();
 
     fd->range.refid = -2; // no ref.
-    fd->eof = 0;
+    fd->eof = 1;          // See samtools issue #150
     fd->ref_fn = NULL;
 
     fd->bl = NULL;
@@ -3337,7 +3363,7 @@ cram_fd *cram_dopen(cram_FILE *fp, const char *filename, const char *mode) {
 int cram_seek(cram_fd *fd, off_t offset, int whence) {
     char buf[65536];
 
-    if (hseek(fd->fp, offset, whence) == 0)
+    if (hseek(fd->fp, offset, whence) >= 0)
 	return 0;
 
     if (!(whence == SEEK_CUR && offset >= 0))
@@ -3384,7 +3410,6 @@ int cram_close(cram_fd *fd) {
     spare_bams *bl, *next;
     int i;
 	
-
     if (!fd)
 	return -1;
 
@@ -3410,6 +3435,20 @@ int cram_close(cram_fd *fd) {
 	//fprintf(stderr, "CRAM: destroy queue %p\n", fd->rqueue);
 
 	t_results_queue_destroy(fd->rqueue);
+    }
+
+    if (fd->mode == 'w') {
+	/* Write EOF block */
+	if (30 != hwrite(fd->fp, "\x0b\x00\x00\x00\xff\xff\xff\xff"
+			 "\xff\xe0\x45\x4f\x46\x00\x00\x00"
+			 "\x00\x01\x00\x00\x01\x00\x06\x06"
+			 "\x01\x00\x01\x00\x01\x00", 30))
+	    return -1;
+
+//	if (1 != fwrite("\x00\x00\x00\x00\xff\xff\xff\xff"
+//			"\xff\xe0\x45\x4f\x46\x00\x00\x00"
+//			"\x00\x00\x00", 19, 1, fd->fp))
+//	    return -1;
     }
 
     for (bl = fd->bl; bl; bl = next) {
@@ -3546,16 +3585,23 @@ int cram_set_voption(cram_fd *fd, enum cram_option opt, va_list args) {
 
     case CRAM_OPT_RANGE:
 	fd->range = *va_arg(args, cram_range *);
-	cram_seek_to_refpos(fd, &fd->range);
-	break;
+	return cram_seek_to_refpos(fd, &fd->range);
 
     case CRAM_OPT_REFERENCE:
 	return cram_load_reference(fd, va_arg(args, char *));
 
     case CRAM_OPT_VERSION: {
+	int major, minor;
 	char *s = va_arg(args, char *);
-	if (2 != sscanf(s, "%d.%d", &major_version, &minor_version)) {
+	if (2 != sscanf(s, "%d.%d", &major, &minor)) {
 	    fprintf(stderr, "Malformed version string %s\n", s);
+	    return -1;
+	}
+	if (!((major == 1 &&  minor == 0) ||
+	      (major == 2 && (minor == 0 || minor == 1)) ||
+	      (major == 3 &&  minor == 0))) {
+	    fprintf(stderr, "Unknown version string; "
+		    "use 1.0, 2.0, 2.1 or 3.0\n");
 	    return -1;
 	}
 	break;
