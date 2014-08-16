@@ -1,7 +1,7 @@
 Source: htslib
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Uploaders: Charles Plessy <plessy@debian.org>
-Section: libs
+Section: science
 Priority: optional
 Build-Depends: debhelper (>= 9),
                dh-exec,
@@ -14,6 +14,7 @@ Homepage: https://github.com/samtools/htslib
 Package: libhts1
 Architecture: any
 Multi-Arch: same
+Section: libs
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends}
@@ -53,3 +54,14 @@ Description: Test data for HTSlib
  sequence data obtained by high-throughput sequencing.
  .
  This package contains test files and scripts for the HTSlib.
+
+Package: tabix
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: generic indexer for TAB-delimited genome position files
+ Tabix indexes files where some columns indicate sequence coordinates: name
+ (usually a chromosme), start and stop. The input data file must be position
+ sorted and compressed by bgzip (provided in this package), which has a gzip
+ like interface. After indexing, tabix is able to quickly retrieve data lines by
+ chromosomal coordinates. Fast data retrieval also works over network if an URI
+ is given as a file name.
