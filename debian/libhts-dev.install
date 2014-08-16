@@ -1,5 +1,6 @@
 #! /usr/bin/dh-exec
-usr/include/*		usr/include/
-usr/lib/*.a		usr/lib/${DEB_HOST_MULTIARCH}/
-usr/lib/*.so		usr/lib/${DEB_HOST_MULTIARCH}/
-usr/share/man/man5/*	usr/share/man/man5/
+usr/include/*				usr/include
+usr/lib/${DEB_HOST_MULTIARCH}/*.a	usr/lib/${DEB_HOST_MULTIARCH}
+usr/lib/${DEB_HOST_MULTIARCH}/*.so	usr/lib/${DEB_HOST_MULTIARCH}
+usr/share/man/man5/*			usr/share/man/man5
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/htslib.pc usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig

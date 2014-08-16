@@ -1,2 +1,2 @@
 #! /usr/bin/dh-exec
-usr/lib/libhts.so.*	usr/lib/${DEB_HOST_MULTIARCH}/
+usr/lib/${DEB_HOST_MULTIARCH}/libhts.so.*	usr/lib/${DEB_HOST_MULTIARCH}
