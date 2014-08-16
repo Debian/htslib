@@ -16,6 +16,7 @@ override_dh_auto_build:
 	  CFLAGS="$$(dpkg-buildflags --get CFLAGS)" \
 	  CPPFLAGS="-I. -DSAMTOOLS=1 $$(dpkg-buildflags --get CPPFLAGS)" \
 	  LDFLAGS="$$(dpkg-buildflags --get LDFLAGS)" \
+	  LDLIBS=-lhts \
 	  PACKAGE_VERSION="$(DEB_VERSION)" \
 	  libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
