@@ -19,16 +19,15 @@ Pre-Depends: ${misc:Pre-Depends}
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Description: C library for high-throughput sequencing data formats
- HTSlib is a unified C library for accessing common file formats, such as SAM
- (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
- sequence data obtained by high-throughput sequencing.
+ HTSlib is an implementation of a unified C library for accessing common file
+ formats, such as SAM (Sequence Alignment/Map), CRAM and VCF (Variant Call
+ Format), used for high-throughput sequencing data, and is the core library
+ used by samtools and bcftools. HTSlib only depends on zlib. It is known to be
+ compatible with gcc, g++ and clang.
  .
- HTSlib implements a generalized BAM (binary SAM) index.  The HTSlib file
- reader first looks for the new index and then for the old if the new index is
- absent.
- .
- HTSlib is still experimental.  It has not been tested on large-scale real
- data. Some useful APIs are missing.
+ HTSlib implements a generalized BAM (binary SAM) index, with file extension
+ ‘csi’ (coordinate-sorted index). The HTSlib file reader first looks for the
+ new index and then for the old if the new index is absent.
 
 Package: libhts-dev
 Architecture: any
@@ -37,22 +36,14 @@ Section: libdevel
 Depends: libhts1 (= ${binary:Version}),
          ${misc:Depends}
 Description: Development files for the HTSlib
- HTSlib is a unified C library for accessing common file formats, such as SAM
- (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
- sequence data obtained by high-throughput sequencing.
- .
- This package contains development files: headers, static library, manual pages,
- etc.
+ This package contains development files for the HTSlib: headers, static
+ library, manual pages, etc.
 
 Package: htslib-test
 Architecture: all
 Depends: ${misc:Depends},
          ${perl:Depends}
 Description: Test data for HTSlib
- HTSlib is a unified C library for accessing common file formats, such as SAM
- (Sequence Alignment/Map) and VCF (Variant Call Format), used for nucleic acid
- sequence data obtained by high-throughput sequencing.
- .
  This package contains test files and scripts for the HTSlib.
 
 Package: tabix
@@ -65,3 +56,5 @@ Description: generic indexer for TAB-delimited genome position files
  like interface. After indexing, tabix is able to quickly retrieve data lines by
  chromosomal coordinates. Fast data retrieval also works over network if an URI
  is given as a file name.
+ .
+ This version of tabix is built from the HTSlib source.
