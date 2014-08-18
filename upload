@@ -1,8 +1,9 @@
-u htslib-test_0.2.0~rc3-1_all.deb ftp.upload.debian.org Sat Nov 16 15:40:59 2013
-u htslib_0.2.0~rc3-1.diff.gz ftp.upload.debian.org Sat Nov 16 15:41:00 2013
-u libhts-dev_0.2.0~rc3-1_amd64.deb ftp.upload.debian.org Sat Nov 16 15:41:03 2013
-u htslib_0.2.0~rc3-1.dsc ftp.upload.debian.org Sat Nov 16 15:41:04 2013
-u libhts0_0.2.0~rc3-1_amd64.deb ftp.upload.debian.org Sat Nov 16 15:41:06 2013
-u htslib_0.2.0~rc3.orig.tar.gz ftp.upload.debian.org Sat Nov 16 15:41:09 2013
-u htslib_0.2.0~rc3-1_amd64.changes ftp.upload.debian.org Sat Nov 16 15:41:10 2013
-s htslib_0.2.0~rc3-1_amd64.changes ftp.upload.debian.org Sat Nov 16 15:41:10 2013
+u tabix_1.0-1_amd64.deb ftp.upload.debian.org Mon Aug 18 20:56:50 2014
+u htslib-test_1.0-1_all.deb ftp.upload.debian.org Mon Aug 18 20:56:52 2014
+u htslib_1.0-1.debian.tar.xz ftp.upload.debian.org Mon Aug 18 20:56:53 2014
+u libhts-dev_1.0-1_amd64.deb ftp.upload.debian.org Mon Aug 18 20:56:55 2014
+u htslib_1.0.orig.tar.gz ftp.upload.debian.org Mon Aug 18 20:56:58 2014
+u libhts1_1.0-1_amd64.deb ftp.upload.debian.org Mon Aug 18 20:57:00 2014
+u htslib_1.0-1.dsc ftp.upload.debian.org Mon Aug 18 20:57:01 2014
+u htslib_1.0-1_amd64.changes ftp.upload.debian.org Mon Aug 18 20:57:02 2014
+s htslib_1.0-1_amd64.changes ftp.upload.debian.org Mon Aug 18 20:57:02 2014

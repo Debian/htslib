@@ -2,60 +2,73 @@
 Hash: SHA512
 
 Format: 1.8
-Date: Sat, 16 Nov 2013 15:35:03 +0900
+Date: Sun, 17 Aug 2014 20:12:28 +0900
 Source: htslib
-Binary: libhts0 libhts-dev htslib-test
+Binary: libhts1 libhts-dev htslib-test tabix
 Architecture: source amd64 all
-Version: 0.2.0~rc3-1
-Distribution: unstable
+Version: 1.0-1
+Distribution: experimental
 Urgency: low
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Changed-By: Charles Plessy <plessy@debian.org>
-Description: 
+Description:
  htslib-test - Test data for HTSlib
  libhts-dev - Development files for the HTSlib
- libhts0    - C library for high-throughput sequencing data formats
-Closes: 729282
-Changes: 
- htslib (0.2.0~rc3-1) unstable; urgency=low
+ libhts1    - C library for high-throughput sequencing data formats
+ tabix      - generic indexer for TAB-delimited genome position files
+Changes:
+ htslib (1.0-1) experimental; urgency=low
  .
-   * Initial release. (Closes: #729282)
-Checksums-Sha1: 
- bd34306f015be0dd90a1c58c12f16280b924064e 2039 htslib_0.2.0~rc3-1.dsc
- a34fc68574d10754d9813fdb7ce4dad52da99d05 923352 htslib_0.2.0~rc3.orig.tar.gz
- 336b5f8094a71997a7cbd74d0d1c69f43801449b 10532 htslib_0.2.0~rc3-1.diff.gz
- 68883a6fb26a0c9fc5d057d370eff2c5d795af5d 183826 libhts0_0.2.0~rc3-1_amd64.deb
- 65beede3659386ae4d9df13d15bcb770b77b2112 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
- ac04ef188b27f4aed31836d948d3c1e5afb8d5ec 514106 htslib-test_0.2.0~rc3-1_all.deb
-Checksums-Sha256: 
- 112816defd06b384117e770b45ac0c25c5c6c35addc602442871645ae045cf42 2039 htslib_0.2.0~rc3-1.dsc
- 5e972ce7048c9b236911cd30e2100f7bfb28e65aa4cc3687a9aaf31d116be3ce 923352 htslib_0.2.0~rc3.orig.tar.gz
- 3575954047af6c97d4500b3eb0b0bf78c327f355804a54844a128bb5391dd1a8 10532 htslib_0.2.0~rc3-1.diff.gz
- ca825bf740968fab20c50d49be6ea446f6dad4cc041638af28e51c48c4b8092b 183826 libhts0_0.2.0~rc3-1_amd64.deb
- 49f8bb3be8c784927e60bc856fbe3004f013f26dfe7b8f06f7e80754c6db4bd2 221284 libhts-dev_0.2.0~rc3-1_amd64.deb
- 7fd8597061206552f31f146276bac59473d2e96fb751c1f6451affdbe7a49f6b 514106 htslib-test_0.2.0~rc3-1_all.deb
-Files: 
- 1d21905015a24b86b28762a01758e029 2039 libs optional htslib_0.2.0~rc3-1.dsc
- 5d055a061e84ae987b25cb72bb4173d6 923352 libs optional htslib_0.2.0~rc3.orig.tar.gz
- e7f26daf824e4fa67171c78cc6ef932b 10532 libs optional htslib_0.2.0~rc3-1.diff.gz
- 136ca39311885c1aeffe2565f9cfcd47 183826 libs optional libhts0_0.2.0~rc3-1_amd64.deb
- bb6e3c45eb785b132025527bd2bdc884 221284 libdevel optional libhts-dev_0.2.0~rc3-1_amd64.deb
- 40e1ca3c045337aad2355198183ead36 514106 libs optional htslib-test_0.2.0~rc3-1_all.deb
+   cc559b8 Merged with upstream's master branch.
+   74b9d7b Build on the master branch.
+   04815a7 New major version (libhts0 -> libhts1).
+   98c18ca Updated symbols file.
+   22fef0c Install pkgconfig file.
+   420896b Override PACKAGE_VERSION to avoid tags with a slash in the name.
+   79b5d4e Use the Debian package version as PACKAGE_VERSION.
+   72b5c4a Finally use the 3.0 (quilt) format in single-debian-patch mode.
+   d870946 Adjusted substitution variables following dpkg's warnings.
+   9469458 Removed debug command accidentally introduced.
+   8c7f7d4 Replace the old tabix package from the tabix source package.
+Checksums-Sha1:
+ e16a31cb0402d5a46281e32d1ad9309d535dcdb2 2073 htslib_1.0-1.dsc
+ 3eca8a7e919782def2478347b5824bab15ca2d10 956351 htslib_1.0.orig.tar.gz
+ ad6c9b6e54725071e4ba82ef616ec1b0f04a31ca 7296 htslib_1.0-1.debian.tar.xz
+ 58e45a3d2e0cf52f3081e7dbc478755c6b982e35 203538 libhts1_1.0-1_amd64.deb
+ 37e40e3532d70f851ec20b87f5cbe6bca5bfce5d 248802 libhts-dev_1.0-1_amd64.deb
+ 848836bfa686c6ea1a883e0e4e1363b55c141627 515934 htslib-test_1.0-1_all.deb
+ 4bcc64ace3cf22c093a3c88b895ec816d00e6380 189596 tabix_1.0-1_amd64.deb
+Checksums-Sha256:
+ cd282f5f30d070b2627e95452e6c472102e08845c6b9a52e23cb9b28e892341e 2073 htslib_1.0-1.dsc
+ 93ba8de2bc35040f17ca2fbfed3d161fd278f394e82cdfe443336948311b88a8 956351 htslib_1.0.orig.tar.gz
+ 207c357a597bb3871c93c17e84a169227d164a3ec14defcc170fe8e0517f8e1a 7296 htslib_1.0-1.debian.tar.xz
+ 9cb8388234c8f712a92e29da2ede573703bc1dbc061baf57b6d6085e10db8ed6 203538 libhts1_1.0-1_amd64.deb
+ 3a3a026fd431c6d2456f3ee7c144976bd2283d41b19f3e91c2391cce2ea7a876 248802 libhts-dev_1.0-1_amd64.deb
+ a5e218f10bdbd769dae4d8e03c3a9182c41c200af3b3b1d9005cf54614c31112 515934 htslib-test_1.0-1_all.deb
+ 2b272f5b5411d356b60794f89bf2d353a3e4d2e5ec07aecac6666eb871fe67cd 189596 tabix_1.0-1_amd64.deb
+Files:
+ 52dd57f6e124c76204d32fa0d7267bf5 203538 libs optional libhts1_1.0-1_amd64.deb
+ dc3e7a5a49b89249ddd4d53c0f84511c 248802 libdevel optional libhts-dev_1.0-1_amd64.deb
+ 94fe486b55f89696f622768aba48f838 515934 science optional htslib-test_1.0-1_all.deb
+ 454fbd54cb02e47e6dd2f0d929ab7824 189596 science optional tabix_1.0-1_amd64.deb
+ f261afba4304a8cc1bd962e1f4b2e290 2073 science optional htslib_1.0-1.dsc
+ 3c7ffe5ffa81fea55b4c33132ae77424 956351 science optional htslib_1.0.orig.tar.gz
+ fe23052ac3b5c82f493f343aea0a580a 7296 science optional htslib_1.0-1.debian.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.14 (GNU/Linux)
+Version: GnuPG v1
 
-iQIcBAEBCgAGBQJShxNpAAoJEMW9bI8ildUCVgQP/i3wqxtNL+rWiN+NmRf92fbq
-1Wx5xWwMG3B/S/b4uo+qNV9awwDijFzmgEDEbBUQ5LIOHJQ/9m/zHUT/1Mcl1WaV
-+s9fWhSmlK7s4VIkqhQLGM1UwlAL8rF5/g/jNDf/1epCnZ8EvRyJzowpG1nOHD2m
-Igmp2+Fjyh3mK74qs+D2QqcYL6pApU9PJn+tiOL10yVgLjI6hNjeUj8wx8cvl09T
-DN0pBRf+tQLMxxyGbyP5zGvpU79gnefSziCKJoupYiEJzAZq9MmgcgNV/QMze8v8
-t+LpM4Uu0Js7143H/Y2oErok1cll+T/1Sbwig/Asw+xCuwwUpkOa0RYSU0TnmkWx
-JTdRlZf4XlOwfV7OSyG6OA9qxC8rqAxns9po9Qw2Enk6Db5jEOJop21qy0ZpQVcw
-RU860IIaCgROKYdtLeegnnifgeOZ+Ah7KFku7mA6bl+QecMV7TLuDXVwlTGcrVK5
-dDpkCoNO90A8pJ0cj2HMr1djj6g7VMOdDX1f3FHmKuMKJ6H4nXQ27OuyhkS33Yw9
-jOQI7XOn5KgcVqbDQhZlNAcSxxIuMplvWKYups3TERTc/1crP0YEi1MwFBJXrLvJ
-4d0L2RdjLylZAIsGldzVS6uoTSGGfmrfOdLFH10+QMd1sGryuujJTW+BPhhFwvGo
-thnqcw8JM+C6jvJyQRec
-=u1pj
+iQIcBAEBCgAGBQJT8ej3AAoJEMW9bI8ildUC8OQP/33MJHgBealFDStGIP/6FkP1
+NowY6lAD5/t4RV5PMk7ZQPOWDW3MlS3z9VBD3woe1jxVqRScZwFfcEX89i7A2JkO
+hJ4nIiyxTu5e/xt6qB8g3/gfF1Jh7753MDJ0pgHjymTZTd/4pnG03jLCkTlhGnlQ
+6YTFJdQ8uMubw/HbkfbsKZByD883KJU7Go5zUKkcgPj0lLZv0P5PMFaaPcVrH/J+
+Mh6yw0ThBErUc8KvpcxAm0TYP+KxwLXz9G+SdzfjNxs9jAE59w1FjvEiTaIiZ3+Q
+IrzlidXPp/NwSK/6NMZ4Ha1YJ4Y1VIbmNRIG51rotzjfrjKHuCsr5Mcpclx9FJWi
+W9qDf6I2zDVNkCI0qssSxUIG/mY6ISF2Mb8BZ0A8PZX8e99KOPav1+bjKxH+P8rO
+nPzeNGdF5HxGikNi9DQQTAA9KnuHRCIpM9iitrfowXam5Yk3xF7BW4XWXkr0PHWS
+GZLMnI6I5f+/0Ca36GwzP/dtGQKSWEyVh96HbmzbmnEp/i/FkvG/ipHdj/ZwGdSS
+eRrqnBxnZhUSSrR2fqpDqm74lG3AyAonrHu2iy39YTjHXLCI8N5GAyzI9oZvUpl3
+sbtQDk0m5Jb6/2+Vs6v2OhIHt/Pj0RF0bkHmYPXGtDW/Gwl8Sl7eRZJS2i1F8wXe
+o/xuX5pqKD+hjvlvinOa
+=rcsB
 -----END PGP SIGNATURE-----
