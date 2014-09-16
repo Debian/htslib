@@ -1,3 +1,9 @@
+htslib (1.0-2) unstable; urgency=medium
+
+  Uploaded to unstable (see previous changelog from experimental).
+
+ -- Charles Plessy <plessy@debian.org>  Tue, 16 Sep 2014 20:27:04 +0900
+
 htslib (1.0-1) experimental; urgency=low
 
   cc559b8 Merged with upstream's master branch.
