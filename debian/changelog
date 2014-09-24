@@ -1,8 +1,13 @@
-htslib (1.1-1) UNRELEASED; urgency=medium
+htslib (1.1-1) unstable; urgency=medium
 
   1357fbd Merge tag '1.1' into debian/unstable
+  87549cd Updated symbols file.  One symbol is missing.
+  873ea9b Removed orphan paragraph in machine-readable copyright file.
+  49de2b9 Allow parallel build.
+  7fe3bb5 Normalise control file (VCS-Browser, Pre-Depends).
+  0e5e9e6 Conforms to Policy 3.9.6.
 
- -- Charles Plessy <plessy@debian.org>  Wed, 24 Sep 2014 21:11:46 +0900
+ -- Charles Plessy <plessy@debian.org>  Wed, 24 Sep 2014 21:24:11 +0900
 
 htslib (1.0-2) unstable; urgency=medium
 
