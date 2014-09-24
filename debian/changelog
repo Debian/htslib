@@ -1,3 +1,9 @@
+htslib (1.1-1) UNRELEASED; urgency=medium
+
+  1357fbd Merge tag '1.1' into debian/unstable
+
+ -- Charles Plessy <plessy@debian.org>  Wed, 24 Sep 2014 21:11:46 +0900
+
 htslib (1.0-2) unstable; urgency=medium
 
   Uploaded to unstable (see previous changelog from experimental).
