@@ -58,9 +58,11 @@ libhts.so.1 libhts1 #MINVER#
  bcf_fmt_array@Base 1.0
  bcf_fmt_sized_array@Base 1.0
  bcf_get_fmt@Base 1.0
+ bcf_get_fmt_id@Base 1.1
  bcf_get_format_string@Base 1.0
  bcf_get_format_values@Base 1.0
  bcf_get_info@Base 1.0
+ bcf_get_info_id@Base 1.1
  bcf_get_info_values@Base 1.0
  bcf_get_variant_type@Base 1.0
  bcf_get_variant_types@Base 1.0
@@ -298,9 +300,12 @@ libhts.so.1 libhts1 #MINVER#
  fai_load@Base 1.0
  fai_read@Base 1.0
  fai_save@Base 1.0
- faidx_fetch_nseq@Base 1.0
+#MISSING: 1.1# faidx_fetch_nseq@Base 1.0
  faidx_fetch_seq@Base 1.0
  faidx_has_seq@Base 1.0
+ faidx_iseq@Base 1.1
+ faidx_nseq@Base 1.1
+ faidx_seq_len@Base 1.1
  file_exists@Base 1.0
  file_size@Base 1.0
  find_file_url@Base 1.0
