@@ -1,20 +1,20 @@
 sbuild (Debian sbuild) 0.64.1 (13 Oct 2013) on aqwa.igloo
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
-║ htslib 1.0-2 (amd64)                                     16 sept. 2014 20:35 ║
+║ htslib 1.1-1 (amd64)                                     24 sept. 2014 21:27 ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
 
 Package: htslib
-Version: 1.0-2
-Source Version: 1.0-2
+Version: 1.1-1
+Source Version: 1.1-1
 Distribution: unstable
 Machine Architecture: amd64
 Host Architecture: amd64
 Build Architecture: amd64
 
-I: NOTICE: Log filtering will replace 'build/htslib-HoJijP/htslib-1.0' with '«PKGBUILDDIR»'
-I: NOTICE: Log filtering will replace 'build/htslib-HoJijP' with '«BUILDDIR»'
-I: NOTICE: Log filtering will replace 'var/lib/schroot/mount/unstable-amd64-sbuild-53d58173-3a11-46dd-9b64-be5096ec1397' with '«CHROOT»'
+I: NOTICE: Log filtering will replace 'build/htslib-5gwd1t/htslib-1.1' with '«PKGBUILDDIR»'
+I: NOTICE: Log filtering will replace 'build/htslib-5gwd1t' with '«BUILDDIR»'
+I: NOTICE: Log filtering will replace 'var/lib/schroot/mount/unstable-amd64-sbuild-01d18392-263d-4179-86e4-09a8ce3256d9' with '«CHROOT»'
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Update chroot                                                                │
@@ -24,7 +24,7 @@ Hit http://ftp.jp.debian.org unstable InRelease
 Get:1 http://ftp.jp.debian.org unstable/main Sources/DiffIndex [7876 B]
 Get:2 http://ftp.jp.debian.org unstable/main amd64 Packages/DiffIndex [7876 B]
 Get:3 http://ftp.jp.debian.org unstable/main Translation-en/DiffIndex [7876 B]
-Fetched 23.6 kB in 2s (11.2 kB/s)
+Fetched 23.6 kB in 1s (13.3 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -39,14 +39,14 @@ Reading state information...
 Local sources
 ─────────────
 
-htslib_1.0-2.dsc exists in .; copying to chroot
+htslib_1.1-1.dsc exists in .; copying to chroot
 
 Check arch
 ──────────
 
 Merged Build-Depends: build-essential, fakeroot
 Filtered Build-Depends: build-essential, fakeroot
-dpkg-deb: building package `sbuild-build-depends-core-dummy' in `/«BUILDDIR»/resolver-Xp7dfL/apt_archive/sbuild-build-depends-core-dummy.deb'.
+dpkg-deb: building package `sbuild-build-depends-core-dummy' in `/«BUILDDIR»/resolver-qqvBHY/apt_archive/sbuild-build-depends-core-dummy.deb'.
 OK
 Reading package lists...
 
@@ -62,7 +62,7 @@ The following NEW packages will be installed:
   sbuild-build-depends-core-dummy
 debconf: delaying package configuration, since apt-utils is not installed
 0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
-Need to get 0 B/820 B of archives.
+Need to get 0 B/822 B of archives.
 After this operation, 0 B of additional disk space will be used.
 Selecting previously unselected package sbuild-build-depends-core-dummy.
 (Reading database ... 11169 files and directories currently installed.)
@@ -71,7 +71,7 @@ Unpacking sbuild-build-depends-core-dummy (0.invalid.0) ...
 Setting up sbuild-build-depends-core-dummy (0.invalid.0) ...
 Merged Build-Depends: base-files, base-passwd, bash, bsdutils, coreutils, dash, debianutils, diffutils, dpkg, e2fsprogs, findutils, grep, gzip, hostname, init, libc-bin, login, mount, ncurses-base, ncurses-bin, perl-base, sed, sysvinit-utils, tar, util-linux, libc6-dev | libc-dev, gcc (>= 4:4.9.1), g++ (>= 4:4.9.1), make, dpkg-dev (>= 1.17.11), debhelper (>= 9), dh-exec, zlib1g-dev
 Filtered Build-Depends: base-files, base-passwd, bash, bsdutils, coreutils, dash, debianutils, diffutils, dpkg, e2fsprogs, findutils, grep, gzip, hostname, init, libc-bin, login, mount, ncurses-base, ncurses-bin, perl-base, sed, sysvinit-utils, tar, util-linux, libc6-dev, gcc (>= 4:4.9.1), g++ (>= 4:4.9.1), make, dpkg-dev (>= 1.17.11), debhelper (>= 9), dh-exec, zlib1g-dev
-dpkg-deb: building package `sbuild-build-depends-htslib-dummy' in `/«BUILDDIR»/resolver-hNMZZt/apt_archive/sbuild-build-depends-htslib-dummy.deb'.
+dpkg-deb: building package `sbuild-build-depends-htslib-dummy' in `/«BUILDDIR»/resolver-NVoury/apt_archive/sbuild-build-depends-htslib-dummy.deb'.
 OK
 Reading package lists...
 
@@ -92,20 +92,24 @@ Suggested packages:
   libmail-box-perl
 Recommended packages:
   curl wget lynx-cur autopoint libasprintf-dev libgettextpo-dev
-  libglib2.0-data shared-mime-info xml-core libmail-sendmail-perl
+  libglib2.0-data shared-mime-info xdg-user-dirs xml-core
+  libmail-sendmail-perl
 The following NEW packages will be installed:
   bsdmainutils debhelper dh-exec file gettext gettext-base groff-base
   intltool-debian libasprintf0c2 libcroco3 libffi6 libglib2.0-0 libmagic1
   libpipeline1 libunistring0 libxml2 man-db po-debconf
   sbuild-build-depends-htslib-dummy zlib1g-dev
-debconf: delaying package configuration, since apt-utils is not installed
 0 upgraded, 20 newly installed, 0 to remove and 0 not upgraded.
-Need to get 0 B/9043 kB of archives.
-After this operation, 27.5 MB of additional disk space will be used.
+Need to get 3484 kB/9117 kB of archives.
+After this operation, 27.1 MB of additional disk space will be used.
+Get:1 http://ftp.jp.debian.org/debian/ unstable/main man-db amd64 2.7.0.1-1 [999 kB]
+Get:2 http://ftp.jp.debian.org/debian/ unstable/main libglib2.0-0 amd64 2.42.0-1 [2485 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3484 kB in 11s (305 kB/s)
 Selecting previously unselected package libpipeline1:amd64.
 (Reading database ... 11169 files and directories currently installed.)
-Preparing to unpack .../libpipeline1_1.3.0-1_amd64.deb ...
-Unpacking libpipeline1:amd64 (1.3.0-1) ...
+Preparing to unpack .../libpipeline1_1.3.1-1_amd64.deb ...
+Unpacking libpipeline1:amd64 (1.3.1-1) ...
 Selecting previously unselected package groff-base.
 Preparing to unpack .../groff-base_1.22.2-8_amd64.deb ...
 Unpacking groff-base (1.22.2-8) ...
@@ -113,8 +117,8 @@ Selecting previously unselected package bsdmainutils.
 Preparing to unpack .../bsdmainutils_9.0.5_amd64.deb ...
 Unpacking bsdmainutils (9.0.5) ...
 Selecting previously unselected package man-db.
-Preparing to unpack .../man-db_2.6.7.1-1_amd64.deb ...
-Unpacking man-db (2.6.7.1-1) ...
+Preparing to unpack .../man-db_2.7.0.1-1_amd64.deb ...
+Unpacking man-db (2.7.0.1-1) ...
 Selecting previously unselected package libasprintf0c2:amd64.
 Preparing to unpack .../libasprintf0c2_0.19.2-2_amd64.deb ...
 Unpacking libasprintf0c2:amd64 (0.19.2-2) ...
@@ -128,8 +132,8 @@ Selecting previously unselected package libffi6:amd64.
 Preparing to unpack .../libffi6_3.1-2_amd64.deb ...
 Unpacking libffi6:amd64 (3.1-2) ...
 Selecting previously unselected package libglib2.0-0:amd64.
-Preparing to unpack .../libglib2.0-0_2.40.0-5_amd64.deb ...
-Unpacking libglib2.0-0:amd64 (2.40.0-5) ...
+Preparing to unpack .../libglib2.0-0_2.42.0-1_amd64.deb ...
+Unpacking libglib2.0-0:amd64 (2.42.0-1) ...
 Selecting previously unselected package libcroco3:amd64.
 Preparing to unpack .../libcroco3_0.6.8-3_amd64.deb ...
 Unpacking libcroco3:amd64 (0.6.8-3) ...
@@ -163,18 +167,18 @@ Unpacking dh-exec (0.13) ...
 Selecting previously unselected package sbuild-build-depends-htslib-dummy.
 Preparing to unpack .../sbuild-build-depends-htslib-dummy.deb ...
 Unpacking sbuild-build-depends-htslib-dummy (0.invalid.0) ...
-Setting up libpipeline1:amd64 (1.3.0-1) ...
+Setting up libpipeline1:amd64 (1.3.1-1) ...
 Setting up groff-base (1.22.2-8) ...
 Setting up bsdmainutils (9.0.5) ...
 update-alternatives: using /usr/bin/bsd-write to provide /usr/bin/write (write) in auto mode
 update-alternatives: using /usr/bin/bsd-from to provide /usr/bin/from (from) in auto mode
-Setting up man-db (2.6.7.1-1) ...
+Setting up man-db (2.7.0.1-1) ...
 Not building database; man-db/auto-update is not 'true'.
 Setting up libasprintf0c2:amd64 (0.19.2-2) ...
 Setting up libmagic1:amd64 (1:5.19-2) ...
 Setting up libxml2:amd64 (2.9.1+dfsg1-4) ...
 Setting up libffi6:amd64 (3.1-2) ...
-Setting up libglib2.0-0:amd64 (2.40.0-5) ...
+Setting up libglib2.0-0:amd64 (2.42.0-1) ...
 No schema files found: doing nothing.
 Setting up libcroco3:amd64 (0.6.8-3) ...
 Setting up libunistring0:amd64 (0.9.3-5.2) ...
@@ -194,8 +198,8 @@ Processing triggers for libc-bin (2.19-11) ...
 └──────────────────────────────────────────────────────────────────────────────┘
 
 Kernel: Linux 3.16-1-amd64 amd64 (x86_64)
-Toolchain package versions: binutils_2.24.51.20140903-1 dpkg-dev_1.17.13 g++-4.9_4.9.1-14 gcc-4.9_4.9.1-14 libc6-dev_2.19-11 libstdc++-4.9-dev_4.9.1-14 libstdc++6_4.9.1-14 linux-libc-dev_3.16.2-3
-Package versions: apt_1.0.8 base-files_7.5 base-passwd_3.5.36 bash_4.3-9 binutils_2.24.51.20140903-1 bsdmainutils_9.0.5 bsdutils_1:2.20.1-5.8 build-essential_11.7 bzip2_1.0.6-7 coreutils_8.23-2 cpp_4:4.9.1-4 cpp-4.9_4.9.1-14 dash_0.5.7-4 debconf_1.5.53 debconf-i18n_1.5.53 debfoster_2.7-2 debhelper_9.20140817 debian-archive-keyring_2014.1 debianutils_4.4 dh-exec_0.13 diffutils_1:3.3-1 dpkg_1.17.13 dpkg-dev_1.17.13 e2fslibs_1.42.12-1 e2fsprogs_1.42.12-1 eatmydata_26-2 fakeroot_1.20.1-1.1 file_1:5.19-2 findutils_4.4.2-9 g++_4:4.9.1-4 g++-4.9_4.9.1-14 gcc_4:4.9.1-4 gcc-4.9_4.9.1-14 gcc-4.9-base_4.9.1-14 gettext_0.19.2-2 gettext-base_0.19.2-2 gnupg_1.4.18-4 gpgv_1.4.18-4 grep_2.20-3 groff-base_1.22.2-8 gzip_1.6-3 hostname_3.15 init_1.21 initscripts_2.88dsf-53.4 insserv_1.14.0-5 intltool-debian_0.35.0+20060710.1 libacl1_2.2.52-2 libalgorithm-c3-perl_0.09-1 libapt-pkg4.12_1.0.8 libarchive-extract-perl_0.72-1 libasan1_4.9.1-14 libasprintf0c2_0.19.2-2 libatomic1_4.9.1-14 libattr1_1:2.4.47-2 libaudit-common_1:2.4-1 libaudit1_1:2.4-1 libblkid1_2.20.1-5.8 libbz2-1.0_1.0.6-7 libc-bin_2.19-11 libc-dev-bin_2.19-11 libc6_2.19-11 libc6-dev_2.19-11 libcap2_1:2.24-4 libcgi-fast-perl_1:2.02-1 libcgi-pm-perl_4.03-1 libcilkrts5_4.9.1-14 libclass-c3-perl_0.26-1 libclass-c3-xs-perl_0.13-2+b1 libclass-isa-perl_0.36-5 libcloog-isl4_0.18.2-1 libcomerr2_1.42.12-1 libcpan-meta-perl_2.142060-1 libcroco3_0.6.8-3 libdata-optlist-perl_0.109-1 libdata-section-perl_0.200006-1 libdb5.1_5.1.29-7 libdb5.3_5.3.28-6 libdebconfclient0_0.192 libdpkg-perl_1.17.13 libfakeroot_1.20.1-1.1 libfcgi-perl_0.77-1+b1 libffi6_3.1-2 libgc1c2_1:7.2d-6.3 libgcc-4.9-dev_4.9.1-14 libgcc1_1:4.9.1-14 libgdbm3_1.8.3-13 libglib2.0-0_2.40.0-5 libgmp10_2:6.0.0+dfsg-6 libgomp1_4.9.1-14 libisl10_0.12.2-2 libitm1_4.9.1-14 liblocale-gettext-perl_1.05-8+b1 liblog-message-perl_0.8-1 liblog-message-simple-perl_0.10-2 liblsan0_4.9.1-14 liblzma5_5.1.1alpha+20120614-2 libmagic1_1:5.19-2 libmodule-build-perl_0.421000-1 libmodule-pluggable-perl_5.1-1 libmodule-signature-perl_0.73-1 libmount1_2.20.1-5.8 libmpc3_1.0.2-1 libmpfr4_3.1.2-1 libmro-compat-perl_0.12-1 libncurses5_5.9+20140712-2 libpackage-constants-perl_0.04-1 libpam-modules_1.1.8-3.1 libpam-modules-bin_1.1.8-3.1 libpam-runtime_1.1.8-3.1 libpam0g_1.1.8-3.1 libparams-util-perl_1.07-2+b1 libpcre3_1:8.35-3 libpipeline1_1.3.0-1 libpod-latex-perl_0.61-1 libpod-readme-perl_0.11-1 libquadmath0_4.9.1-14 libreadline6_6.3-8 libregexp-common-perl_2013031301-1 libselinux1_2.3-2 libsemanage-common_2.3-1 libsemanage1_2.3-1 libsepol1_2.3-2 libslang2_2.2.4-17 libsoftware-license-perl_0.103010-1 libss2_1.42.12-1 libstdc++-4.9-dev_4.9.1-14 libstdc++6_4.9.1-14 libsub-exporter-perl_0.986-1 libsub-install-perl_0.928-1 libswitch-perl_2.17-1 libterm-ui-perl_0.42-1 libtext-charwidth-perl_0.04-7+b3 libtext-iconv-perl_1.7-5+b2 libtext-soundex-perl_3.4-1+b2 libtext-template-perl_1.46-1 libtext-wrapi18n-perl_0.06-7 libtimedate-perl_2.3000-2 libtinfo5_5.9+20140712-2 libtsan0_4.9.1-14 libubsan0_4.9.1-14 libunistring0_0.9.3-5.2 libusb-0.1-4_2:0.1.12-24 libustr-1.0-1_1.0.4-3 libuuid1_2.20.1-5.8 libxml2_2.9.1+dfsg1-4 linux-libc-dev_3.16.2-3 login_1:4.2-2+b1 lsb-base_4.1+Debian13 make_4.0-8 man-db_2.6.7.1-1 mawk_1.3.3-17 mount_2.20.1-5.8 multiarch-support_2.19-11 ncurses-base_5.9+20140712-2 ncurses-bin_5.9+20140712-2 passwd_1:4.2-2+b1 patch_2.7.1-6 perl_5.20.0-6 perl-base_5.20.0-6 perl-modules_5.20.0-6 po-debconf_1.0.16+nmu3 readline-common_6.3-8 sbuild-build-depends-core-dummy_0.invalid.0 sbuild-build-depends-htslib-dummy_0.invalid.0 sed_4.2.2-4 sensible-utils_0.0.9 startpar_0.59-3 sysv-rc_2.88dsf-53.4 sysvinit_2.88dsf-53.4 sysvinit-core_2.88dsf-53.4 sysvinit-utils_2.88dsf-53.4 tar_1.27.1-2 tzdata_2014g-1 util-linux_2.20.1-5.8 xz-utils_5.1.1alpha+20120614-2 zlib1g_1:1.2.8.dfsg-2 zlib1g-dev_1:1.2.8.dfsg-2
+Toolchain package versions: binutils_2.24.51.20140918-1 dpkg-dev_1.17.13 g++-4.9_4.9.1-15 gcc-4.9_4.9.1-15 libc6-dev_2.19-11 libstdc++-4.9-dev_4.9.1-15 libstdc++6_4.9.1-15 linux-libc-dev_3.16.3-2
+Package versions: apt_1.0.9.1 base-files_7.5 base-passwd_3.5.36 bash_4.3-9 binutils_2.24.51.20140918-1 bsdmainutils_9.0.5 bsdutils_1:2.20.1-5.8 build-essential_11.7 bzip2_1.0.6-7 coreutils_8.23-2 cpp_4:4.9.1-4 cpp-4.9_4.9.1-15 dash_0.5.7-4 debconf_1.5.53 debconf-i18n_1.5.53 debfoster_2.7-2 debhelper_9.20140817 debian-archive-keyring_2014.1 debianutils_4.4 dh-exec_0.13 diffutils_1:3.3-1 dpkg_1.17.13 dpkg-dev_1.17.13 e2fslibs_1.42.12-1 e2fsprogs_1.42.12-1 eatmydata_26-2 fakeroot_1.20.1-1.1 file_1:5.19-2 findutils_4.4.2-9 g++_4:4.9.1-4 g++-4.9_4.9.1-15 gcc_4:4.9.1-4 gcc-4.9_4.9.1-15 gcc-4.9-base_4.9.1-15 gettext_0.19.2-2 gettext-base_0.19.2-2 gnupg_1.4.18-4 gpgv_1.4.18-4 grep_2.20-3 groff-base_1.22.2-8 gzip_1.6-3 hostname_3.15 init_1.21 initscripts_2.88dsf-53.4 insserv_1.14.0-5 intltool-debian_0.35.0+20060710.1 libacl1_2.2.52-2 libalgorithm-c3-perl_0.09-1 libapt-pkg4.12_1.0.9.1 libarchive-extract-perl_0.72-1 libasan1_4.9.1-15 libasprintf0c2_0.19.2-2 libatomic1_4.9.1-15 libattr1_1:2.4.47-2 libaudit-common_1:2.4-1 libaudit1_1:2.4-1 libblkid1_2.20.1-5.8 libbz2-1.0_1.0.6-7 libc-bin_2.19-11 libc-dev-bin_2.19-11 libc6_2.19-11 libc6-dev_2.19-11 libcap2_1:2.24-5 libcgi-fast-perl_1:2.02-1 libcgi-pm-perl_4.03-1 libcilkrts5_4.9.1-15 libclass-c3-perl_0.26-1 libclass-c3-xs-perl_0.13-2+b1 libclass-isa-perl_0.36-5 libcloog-isl4_0.18.2-1 libcomerr2_1.42.12-1 libcpan-meta-perl_2.142060-1 libcroco3_0.6.8-3 libdata-optlist-perl_0.109-1 libdata-section-perl_0.200006-1 libdb5.1_5.1.29-7 libdb5.3_5.3.28-6 libdebconfclient0_0.192 libdpkg-perl_1.17.13 libfakeroot_1.20.1-1.1 libfcgi-perl_0.77-1+b1 libffi6_3.1-2 libgc1c2_1:7.2d-6.3 libgcc-4.9-dev_4.9.1-15 libgcc1_1:4.9.1-15 libgdbm3_1.8.3-13 libglib2.0-0_2.42.0-1 libgmp10_2:6.0.0+dfsg-6 libgomp1_4.9.1-15 libisl10_0.12.2-2 libitm1_4.9.1-15 liblocale-gettext-perl_1.05-8+b1 liblog-message-perl_0.8-1 liblog-message-simple-perl_0.10-2 liblsan0_4.9.1-15 liblzma5_5.1.1alpha+20120614-2 libmagic1_1:5.19-2 libmodule-build-perl_0.421000-2 libmodule-pluggable-perl_5.1-1 libmodule-signature-perl_0.73-1 libmount1_2.20.1-5.8 libmpc3_1.0.2-1 libmpfr4_3.1.2-1 libmro-compat-perl_0.12-1 libncurses5_5.9+20140913-1 libpackage-constants-perl_0.04-1 libpam-modules_1.1.8-3.1 libpam-modules-bin_1.1.8-3.1 libpam-runtime_1.1.8-3.1 libpam0g_1.1.8-3.1 libparams-util-perl_1.07-2+b1 libpcre3_1:8.35-3 libpipeline1_1.3.1-1 libpod-latex-perl_0.61-1 libpod-readme-perl_0.11-1 libquadmath0_4.9.1-15 libreadline6_6.3-8 libregexp-common-perl_2013031301-1 libselinux1_2.3-2 libsemanage-common_2.3-1 libsemanage1_2.3-1 libsepol1_2.3-2 libslang2_2.3.0-1 libsoftware-license-perl_0.103010-2 libss2_1.42.12-1 libstdc++-4.9-dev_4.9.1-15 libstdc++6_4.9.1-15 libsub-exporter-perl_0.986-1 libsub-install-perl_0.928-1 libswitch-perl_2.17-2 libterm-ui-perl_0.42-1 libtext-charwidth-perl_0.04-7+b3 libtext-iconv-perl_1.7-5+b2 libtext-soundex-perl_3.4-1+b2 libtext-template-perl_1.46-1 libtext-wrapi18n-perl_0.06-7 libtimedate-perl_2.3000-2 libtinfo5_5.9+20140913-1 libtsan0_4.9.1-15 libubsan0_4.9.1-15 libunistring0_0.9.3-5.2 libusb-0.1-4_2:0.1.12-24 libustr-1.0-1_1.0.4-3 libuuid1_2.20.1-5.8 libxml2_2.9.1+dfsg1-4 linux-libc-dev_3.16.3-2 login_1:4.2-2+b1 lsb-base_4.1+Debian13 make_4.0-8 man-db_2.7.0.1-1 mawk_1.3.3-17 mount_2.20.1-5.8 multiarch-support_2.19-11 ncurses-base_5.9+20140913-1 ncurses-bin_5.9+20140913-1 passwd_1:4.2-2+b1 patch_2.7.1-6 perl_5.20.1-1 perl-base_5.20.1-1 perl-modules_5.20.1-1 po-debconf_1.0.16+nmu3 readline-common_6.3-8 sbuild-build-depends-core-dummy_0.invalid.0 sbuild-build-depends-htslib-dummy_0.invalid.0 sed_4.2.2-4 sensible-utils_0.0.9 startpar_0.59-3 sysv-rc_2.88dsf-53.4 sysvinit_2.88dsf-53.4 sysvinit-core_2.88dsf-53.4 sysvinit-utils_2.88dsf-53.4 tar_1.27.1-2 tzdata_2014g-1 util-linux_2.20.1-5.8 xz-utils_5.1.1alpha+20120614-2 zlib1g_1:1.2.8.dfsg-2 zlib1g-dev_1:1.2.8.dfsg-2
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Build                                                                        │
@@ -205,10 +209,10 @@ Package versions: apt_1.0.8 base-files_7.5 base-passwd_3.5.36 bash_4.3-9 binutil
 Unpack source
 ─────────────
 
-dpkg-source: warning: extracting unsigned source package (htslib_1.0-2.dsc)
-dpkg-source: info: extracting htslib in htslib-1.0
-dpkg-source: info: unpacking htslib_1.0.orig.tar.gz
-dpkg-source: info: unpacking htslib_1.0-2.debian.tar.xz
+dpkg-source: warning: extracting unsigned source package (htslib_1.1-1.dsc)
+dpkg-source: info: extracting htslib in htslib-1.1
+dpkg-source: info: unpacking htslib_1.1.orig.tar.gz
+dpkg-source: info: unpacking htslib_1.1-1.debian.tar.xz
 dpkg-source: info: applying debian-changes
 
 Check disc space
@@ -227,7 +231,7 @@ SCHROOT_CHROOT_NAME=unstable-amd64-sbuild
 SCHROOT_COMMAND=env
 SCHROOT_GID=1000
 SCHROOT_GROUP=charles
-SCHROOT_SESSION_ID=unstable-amd64-sbuild-53d58173-3a11-46dd-9b64-be5096ec1397
+SCHROOT_SESSION_ID=unstable-amd64-sbuild-01d18392-263d-4179-86e4-09a8ce3256d9
 SCHROOT_UID=1000
 SCHROOT_USER=charles
 SHELL=/bin/sh
@@ -236,23 +240,23 @@ USER=charles
 USERNAME=charles
 XDG_RUNTIME_DIR=/run/user/1000
 XDG_SEAT=seat0
-XDG_SESSION_ID=1
+XDG_SESSION_ID=115
 XDG_VTNR=7
 
 dpkg-buildpackage
 ─────────────────
 
 dpkg-buildpackage: source package htslib
-dpkg-buildpackage: source version 1.0-2
+dpkg-buildpackage: source version 1.1-1
 dpkg-buildpackage: source distribution unstable
 dpkg-buildpackage: source changed by Charles Plessy <plessy@debian.org>
- dpkg-source --before-build htslib-1.0
+ dpkg-source --before-build htslib-1.1
 dpkg-buildpackage: host architecture amd64
-dpkg-source: info: using options from htslib-1.0/debian/source/options: --single-debian-patch
+dpkg-source: info: using options from htslib-1.1/debian/source/options: --single-debian-patch
  fakeroot debian/rules clean
-dh clean
-   dh_testdir
-   dh_auto_clean
+dh clean --parallel
+   dh_testdir -O--parallel
+   dh_auto_clean -O--parallel
 	make -j1 distclean
 make[1]: Entering directory '/«PKGBUILDDIR»'
 rm -f test/*.tmp test/*.tmp.*
@@ -261,7 +265,7 @@ rm -f libhts.so libhts.so.*
 rm -f libhts.a bgzip tabix test/fieldarith test/hfile test/sam test/test_view test/test-vcf-api test/test-vcf-sweep
 rm -f TAGS *-uninstalled.pc
 make[1]: Leaving directory '/«PKGBUILDDIR»'
-   dh_clean
+   dh_clean -O--parallel
 	rm -f debian/libhts1.substvars
 	rm -f debian/libhts1.*.debhelper
 	rm -rf debian/libhts1/
@@ -284,20 +288,20 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 		\) -exec rm -f {} + \) -o \
 		\( -type d -a -name autom4te.cache -prune -exec rm -rf {} + \) \)
 	rm -f *-stamp
- dpkg-source -b htslib-1.0
-dpkg-source: info: using options from htslib-1.0/debian/source/options: --single-debian-patch
+ dpkg-source -b htslib-1.1
+dpkg-source: info: using options from htslib-1.1/debian/source/options: --single-debian-patch
 dpkg-source: info: using source format `3.0 (quilt)'
-dpkg-source: info: building htslib using existing ./htslib_1.0.orig.tar.gz
+dpkg-source: info: building htslib using existing ./htslib_1.1.orig.tar.gz
 dpkg-source: info: local changes detected, the modified files are:
- htslib-1.0/.travis.yml
- htslib-1.0/README.md
-dpkg-source: info: local changes have been recorded in a new patch: htslib-1.0/debian/patches/debian-changes
-dpkg-source: info: building htslib in htslib_1.0-2.debian.tar.xz
-dpkg-source: info: building htslib in htslib_1.0-2.dsc
+ htslib-1.1/.travis.yml
+ htslib-1.1/README.md
+dpkg-source: info: local changes have been recorded in a new patch: htslib-1.1/debian/patches/debian-changes
+dpkg-source: info: building htslib in htslib_1.1-1.debian.tar.xz
+dpkg-source: info: building htslib in htslib_1.1-1.dsc
  debian/rules build
-dh build
-   dh_testdir
-   dh_auto_configure
+dh build --parallel
+   dh_testdir -O--parallel
+   dh_auto_configure -O--parallel
    debian/rules override_dh_auto_build
 make[1]: Entering directory '/«PKGBUILDDIR»'
 dh_auto_build -- \
@@ -305,7 +309,7 @@ dh_auto_build -- \
   CPPFLAGS="-I. -DSAMTOOLS=1 $(dpkg-buildflags --get CPPFLAGS)" \
   LDFLAGS="$(dpkg-buildflags --get LDFLAGS)" \
 # re-try later	  LDLIBS=-lhts \
-  PACKAGE_VERSION="1.0-2" \
+  PACKAGE_VERSION="1.1-1" \
   libdir=/usr/lib/x86_64-linux-gnu
 	make -j1 "CFLAGS=-g -O2 -fstack-protector-strong -Wformat -Werror=format-security" "CPPFLAGS=-I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2" LDFLAGS=-Wl,-z,relro
 make[2]: Entering directory '/«PKGBUILDDIR»'
@@ -316,7 +320,7 @@ gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTO
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o faidx.o faidx.c
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hfile.o hfile.c
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hfile_net.o hfile_net.c
-echo '#define HTS_VERSION "1.0"' > version.h
+echo '#define HTS_VERSION "1.1"' > version.h
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o hts.o hts.c
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o sam.o sam.c
 gcc -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -I. -DSAMTOOLS=1 -D_FORTIFY_SOURCE=2 -c -o synced_bcf_reader.o synced_bcf_reader.c
@@ -402,7 +406,7 @@ make[2]: Entering directory '/«PKGBUILDDIR»'
 test/fieldarith test/fieldarith.sam
 test/hfile
 test/sam
-cd test && ./test_view.pl
+cd test && REF_PATH=: ./test_view.pl
 
 === Testing aux#aux.sam, ref aux.fa ===
   ./test_view -S -b aux#aux.sam > aux#aux.tmp.bam
@@ -697,11 +701,11 @@ Successes 240
 Failures  0
 cd test && ./test.pl
 test_vcf_api:
-	/«PKGBUILDDIR»/test/test-vcf-api /tmp/3zZKs9rOsu/test-vcf-api.bcf
+	/«PKGBUILDDIR»/test/test-vcf-api /tmp/NKVe0YPr_D/test-vcf-api.bcf
 .. ok
 
 test_vcf_sweep:
-	/«PKGBUILDDIR»/test/test-vcf-sweep /tmp/3zZKs9rOsu/test-vcf-api.bcf
+	/«PKGBUILDDIR»/test/test-vcf-sweep /tmp/NKVe0YPr_D/test-vcf-api.bcf
 .. ok
 
 
@@ -715,9 +719,9 @@ rm -f test/*.tmp test/*.tmp.* test/*.o test/*.dSYM \
               test/fieldarith test/hfile test/test_view test/test-vcf-api test/test-vcf-sweep
 make[1]: Leaving directory '/«PKGBUILDDIR»'
  fakeroot debian/rules binary
-dh binary
-   dh_testroot
-   dh_prep
+dh binary --parallel
+   dh_testroot -O--parallel
+   dh_prep -O--parallel
 	rm -f debian/libhts1.substvars
 	rm -f debian/libhts1.*.debhelper
 	rm -rf debian/libhts1/
@@ -736,30 +740,30 @@ rm /«PKGBUILDDIR»/test/sam
 dh_auto_install -- \
   prefix=/usr \
   libdir=/usr/lib/x86_64-linux-gnu \
-  PACKAGE_VERSION="1.0-2"
+  PACKAGE_VERSION="1.1-1"
 	install -d debian/libhts1
 	install -d debian/libhts-dev
 	install -d debian/htslib-test
 	install -d debian/tabix
-	make -j1 install DESTDIR=/«PKGBUILDDIR»/debian/tmp AM_UPDATE_INFO_DIR=no prefix=/usr libdir=/usr/lib/x86_64-linux-gnu PACKAGE_VERSION=1.0-2
+	make -j1 install DESTDIR=/«PKGBUILDDIR»/debian/tmp AM_UPDATE_INFO_DIR=no prefix=/usr libdir=/usr/lib/x86_64-linux-gnu PACKAGE_VERSION=1.1-1
 make[2]: Entering directory '/«PKGBUILDDIR»'
 mkdir -p -m 755 /«PKGBUILDDIR»/debian/tmp/usr/bin /«PKGBUILDDIR»/debian/tmp/usr/include /«PKGBUILDDIR»/debian/tmp/usr/include/htslib /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu /«PKGBUILDDIR»/debian/tmp/usr/share/man/man1 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man5 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig
-install -p -m 644 libhts.so /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1.0-2
-ln -sf libhts.so.1.0-2 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so
-ln -sf libhts.so.1.0-2 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1
-sed -e 's#@includedir@#/usr/include#g;s#@libdir@#/usr/lib/x86_64-linux-gnu#g;s#@PACKAGE_VERSION@#1.0-2#g' htslib.pc.in > /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig/htslib.pc
+install -p -m 644 libhts.so /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1.1-1
+ln -sf libhts.so.1.1-1 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so
+ln -sf libhts.so.1.1-1 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1
+sed -e 's#@includedir@#/usr/include#g;s#@libdir@#/usr/lib/x86_64-linux-gnu#g;s#@PACKAGE_VERSION@#1.1-1#g' htslib.pc.in > /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig/htslib.pc
 chmod 644 /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig/htslib.pc
 install -p bgzip tabix /«PKGBUILDDIR»/debian/tmp/usr/bin
 install -p -m 644 htslib/*.h /«PKGBUILDDIR»/debian/tmp/usr/include/htslib
 install -p -m 644 libhts.a /«PKGBUILDDIR»/debian/tmp/usr/lib/x86_64-linux-gnu/libhts.a
-install -p -m 644 *.1 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man1
-install -p -m 644 *.5 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man5
+install -p -m 644 tabix.1 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man1
+install -p -m 644 faidx.5 sam.5 vcf.5 /«PKGBUILDDIR»/debian/tmp/usr/share/man/man5
 make[2]: Leaving directory '/«PKGBUILDDIR»'
 make[1]: Leaving directory '/«PKGBUILDDIR»'
-   dh_install
+   dh_install -O--parallel
 	install -d debian/libhts1/usr/lib/x86_64-linux-gnu
 	cp -a debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1 debian/libhts1/usr/lib/x86_64-linux-gnu/
-	cp -a debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1.0-2 debian/libhts1/usr/lib/x86_64-linux-gnu/
+	cp -a debian/tmp/usr/lib/x86_64-linux-gnu/libhts.so.1.1-1 debian/libhts1/usr/lib/x86_64-linux-gnu/
 	install -d debian/libhts-dev/usr/include
 	cp -a debian/tmp/usr/include/htslib debian/libhts-dev/usr/include/
 	install -d debian/libhts-dev/usr/lib/x86_64-linux-gnu
@@ -819,7 +823,7 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	install -d debian/tabix/usr/bin
 	cp -a ./tabix debian/tabix/usr/bin/
 	cp -a ./bgzip debian/tabix/usr/bin/
-   dh_installdocs
+   dh_installdocs -O--parallel
 	install -g 0 -o 0 -d debian/libhts1/usr/share/doc/libhts1
 	install -g 0 -o 0 -m 644 -p debian/copyright debian/libhts1/usr/share/doc/libhts1/copyright
 	install -g 0 -o 0 -d debian/libhts-dev/usr/share/doc/libhts-dev
@@ -828,12 +832,12 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	install -g 0 -o 0 -m 644 -p debian/copyright debian/htslib-test/usr/share/doc/htslib-test/copyright
 	install -g 0 -o 0 -d debian/tabix/usr/share/doc/tabix
 	install -g 0 -o 0 -m 644 -p debian/copyright debian/tabix/usr/share/doc/tabix/copyright
-   dh_installchangelogs
+   dh_installchangelogs -O--parallel
 	install -o 0 -g 0 -p -m644 debian/changelog debian/libhts1/usr/share/doc/libhts1/changelog.Debian
 	install -o 0 -g 0 -p -m644 debian/changelog debian/libhts-dev/usr/share/doc/libhts-dev/changelog.Debian
 	install -o 0 -g 0 -p -m644 debian/changelog debian/htslib-test/usr/share/doc/htslib-test/changelog.Debian
 	install -o 0 -g 0 -p -m644 debian/changelog debian/tabix/usr/share/doc/tabix/changelog.Debian
-   dh_installman
+   dh_installman -O--parallel
 	man --recode UTF-8 ./vcf\.5 > vcf\.5\.new
 	chmod 644 vcf.5.new
 	mv -f vcf.5.new vcf.5
@@ -848,17 +852,17 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	man --recode UTF-8 ./tabix\.1 > tabix\.1\.new
 	chmod 644 tabix.1.new
 	mv -f tabix.1.new tabix.1
-   dh_perl
+   dh_perl -O--parallel
 	(grep -s -v perl:Depends debian/htslib-test.substvars; echo perl:Depends=perl) > debian/htslib-test.substvars.new
 	mv debian/htslib-test.substvars.new debian/htslib-test.substvars
-   dh_link
+   dh_link -O--parallel
 	rm -f debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1
-	ln -sf libhts.so.1.0-2 debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1
+	ln -sf libhts.so.1.1-1 debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1
 	rm -f debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.so
-	ln -sf libhts.so.1.0-2 debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.so
+	ln -sf libhts.so.1.1-1 debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.so
 	rm -f debian/tabix/usr/share/man/man1/bgzip.1.gz
 	ln -sf tabix.1.gz debian/tabix/usr/share/man/man1/bgzip.1.gz
-   dh_compress
+   dh_compress -O--parallel
 	cd debian/libhts1
 	chmod a-x usr/share/doc/libhts1/changelog.Debian
 	gzip -9nf usr/share/doc/libhts1/changelog.Debian
@@ -875,7 +879,7 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	chmod a-x usr/share/man/man1/tabix.1 usr/share/doc/tabix/changelog.Debian
 	gzip -9nf usr/share/man/man1/tabix.1 usr/share/doc/tabix/changelog.Debian
 	cd '/«PKGBUILDDIR»'
-   dh_fixperms
+   dh_fixperms -O--parallel
 	find debian/libhts1  -print0 2>/dev/null | xargs -0r chown --no-dereference 0:0
 	find debian/libhts1 ! -type l  -print0 2>/dev/null | xargs -0r chmod go=rX,u+rw,a-s
 	find debian/libhts1/usr/share/doc -type f  ! -regex 'debian/libhts1/usr/share/doc/[^/]*/examples/.*' -print0 2>/dev/null | xargs -0r chmod 644
@@ -921,12 +925,12 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	find debian/tabix/usr/lib/x86_64-linux-gnu/perl5/5.20 debian/tabix/usr/share/perl5 -type f -perm -5 -name '*.pm'  -print0 2>/dev/null | xargs -0r chmod a-X
 	find debian/tabix/usr/bin -type f  -print0 2>/dev/null | xargs -0r chmod a+x
 	find debian/tabix/usr/lib -type f -name '*.ali'  -print0 2>/dev/null | xargs -0r chmod uga-w
-   dh_strip
-	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.0-2
+   dh_strip -O--parallel
+	strip --remove-section=.comment --remove-section=.note --strip-unneeded debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.1-1
 	strip --strip-debug debian/libhts-dev/usr/lib/x86_64-linux-gnu/libhts.a
 	strip --remove-section=.comment --remove-section=.note debian/tabix/usr/bin/tabix
 	strip --remove-section=.comment --remove-section=.note debian/tabix/usr/bin/bgzip
-   dh_makeshlibs
+   dh_makeshlibs -O--parallel
 	rm -f debian/libhts1/DEBIAN/shlibs
 	install -d debian/libhts1/DEBIAN
 	echo 'libhts 1 libhts1' >>debian/libhts1/DEBIAN/shlibs
@@ -938,20 +942,20 @@ make[1]: Leaving directory '/«PKGBUILDDIR»'
 	echo '# End automatically added section' >> debian/libhts1.postrm.debhelper
 	chmod 644 debian/libhts1/DEBIAN/shlibs
 	chown 0:0 debian/libhts1/DEBIAN/shlibs
-	dpkg-gensymbols -plibhts1 -Idebian/libhts1.symbols -Pdebian/libhts1 "-edebian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.0-2\
+	dpkg-gensymbols -plibhts1 -Idebian/libhts1.symbols -Pdebian/libhts1 "-edebian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.1-1\
 "
 	(grep -s -v misc:Pre-Depends debian/libhts1.substvars; echo misc:Pre-Depends=multiarch-support) > debian/libhts1.substvars.new
 	mv debian/libhts1.substvars.new debian/libhts1.substvars
 	rm -f debian/libhts-dev/DEBIAN/shlibs
 	rm -f debian/htslib-test/DEBIAN/shlibs
 	rm -f debian/tabix/DEBIAN/shlibs
-   dh_shlibdeps
-	dpkg-shlibdeps -Tdebian/libhts1.substvars debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.0-2
+   dh_shlibdeps -O--parallel
+	dpkg-shlibdeps -Tdebian/libhts1.substvars debian/libhts1/usr/lib/x86_64-linux-gnu/libhts.so.1.1-1
 	install -o 0 -g 0 -d debian/libhts-dev/DEBIAN
 	install -o 0 -g 0 -d debian/htslib-test/DEBIAN
 	install -o 0 -g 0 -d debian/tabix/DEBIAN
 	dpkg-shlibdeps -Tdebian/tabix.substvars debian/tabix/usr/bin/tabix debian/tabix/usr/bin/bgzip
-   dh_installdeb
+   dh_installdeb -O--parallel
 	printf '#!/bin/sh
 set -e
 ' > debian/libhts1/DEBIAN/postinst
@@ -964,7 +968,7 @@ set -e
 	cat debian/libhts1.postrm.debhelper >> debian/libhts1/DEBIAN/postrm
 	chown 0:0 debian/libhts1/DEBIAN/postrm
 	chmod 755 debian/libhts1/DEBIAN/postrm
-   dh_gencontrol
+   dh_gencontrol -O--parallel
 	echo misc:Depends= >> debian/libhts1.substvars
 	dpkg-gencontrol -plibhts1 -ldebian/changelog -Tdebian/libhts1.substvars -Pdebian/libhts1
 dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
@@ -985,7 +989,7 @@ dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is no
 dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is not NFS-safe
 	chmod 644 debian/tabix/DEBIAN/control
 	chown 0:0 debian/tabix/DEBIAN/control
-   dh_md5sums
+   dh_md5sums -O--parallel
 	(cd debian/libhts1 >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
 	chmod 644 debian/libhts1/DEBIAN/md5sums
 	chown 0:0 debian/libhts1/DEBIAN/md5sums
@@ -998,22 +1002,22 @@ dpkg-gencontrol: warning: File::FcntlLock not available; using flock which is no
 	(cd debian/tabix >/dev/null ; find . -type f  ! -regex './DEBIAN/.*' -printf '%P\0' | LC_ALL=C sort -z | xargs -r0 md5sum > DEBIAN/md5sums) >/dev/null
 	chmod 644 debian/tabix/DEBIAN/md5sums
 	chown 0:0 debian/tabix/DEBIAN/md5sums
-   dh_builddeb
+   dh_builddeb -O--parallel
 	dpkg-deb --build debian/libhts1 ..
-dpkg-deb: building package `libhts1' in `../libhts1_1.0-2_amd64.deb'.
+dpkg-deb: building package `libhts1' in `../libhts1_1.1-1_amd64.deb'.
 	dpkg-deb --build debian/libhts-dev ..
-dpkg-deb: building package `libhts-dev' in `../libhts-dev_1.0-2_amd64.deb'.
+dpkg-deb: building package `libhts-dev' in `../libhts-dev_1.1-1_amd64.deb'.
 	dpkg-deb --build debian/htslib-test ..
-dpkg-deb: building package `htslib-test' in `../htslib-test_1.0-2_all.deb'.
+dpkg-deb: building package `htslib-test' in `../htslib-test_1.1-1_all.deb'.
 	dpkg-deb --build debian/tabix ..
-dpkg-deb: building package `tabix' in `../tabix_1.0-2_amd64.deb'.
- dpkg-genchanges  >../htslib_1.0-2_amd64.changes
-dpkg-genchanges: not including original source code in upload
- dpkg-source --after-build htslib-1.0
-dpkg-source: info: using options from htslib-1.0/debian/source/options: --single-debian-patch
-dpkg-buildpackage: binary and diff upload (original source NOT included)
+dpkg-deb: building package `tabix' in `../tabix_1.1-1_amd64.deb'.
+ dpkg-genchanges  >../htslib_1.1-1_amd64.changes
+dpkg-genchanges: including full source code in upload
+ dpkg-source --after-build htslib-1.1
+dpkg-source: info: using options from htslib-1.1/debian/source/options: --single-debian-patch
+dpkg-buildpackage: full upload (original source is included)
 ────────────────────────────────────────────────────────────────────────────────
-Build finished at 20140916-2037
+Build finished at 20140924-2129
 
 Finished
 ────────
@@ -1030,7 +1034,7 @@ lintian
 
 Merged Build-Depends: lintian
 Filtered Build-Depends: lintian
-dpkg-deb: building package `sbuild-build-depends-lintian-dummy' in `/«BUILDDIR»/resolver-og3Lsr/apt_archive/sbuild-build-depends-lintian-dummy.deb'.
+dpkg-deb: building package `sbuild-build-depends-lintian-dummy' in `/«BUILDDIR»/resolver-InEKDh/apt_archive/sbuild-build-depends-lintian-dummy.deb'.
 OK
 Reading package lists...
 
@@ -1072,7 +1076,7 @@ debconf: delaying package configuration, since apt-utils is not installed
 Need to get 0 B/3597 kB of archives.
 After this operation, 12.0 MB of additional disk space will be used.
 Selecting previously unselected package libssl1.0.0:amd64.
-(Reading database ... 12651 files and directories currently installed.)
+(Reading database ... 12655 files and directories currently installed.)
 Preparing to unpack .../libssl1.0.0_1.0.1i-2_amd64.deb ...
 Unpacking libssl1.0.0:amd64 (1.0.1i-2) ...
 Selecting previously unselected package netbase.
@@ -1168,7 +1172,7 @@ Unpacking lintian (2.5.27) ...
 Selecting previously unselected package sbuild-build-depends-lintian-dummy.
 Preparing to unpack .../sbuild-build-depends-lintian-dummy.deb ...
 Unpacking sbuild-build-depends-lintian-dummy (0.invalid.0) ...
-Processing triggers for man-db (2.6.7.1-1) ...
+Processing triggers for man-db (2.7.0.1-1) ...
 Not building database; man-db/auto-update is not 'true'.
 Setting up libssl1.0.0:amd64 (1.0.1i-2) ...
 Setting up netbase (5.2) ...
@@ -1204,8 +1208,7 @@ Setting up lintian (2.5.27) ...
 Setting up sbuild-build-depends-lintian-dummy (0.invalid.0) ...
 Processing triggers for libc-bin (2.19-11) ...
 I: htslib source: quilt-patch-using-template-description debian-changes
-I: htslib source: wildcard-matches-nothing-in-dep5-copyright htslib/razf.? (paragraph at line 97)
-I: htslib source: unused-file-paragraph-in-dep5-copyright paragraph at line 97
+W: htslib source: newer-standards-version 3.9.6 (current is 3.9.5)
 P: htslib source: debian-watch-may-check-gpg-signature
 P: libhts-dev: no-upstream-changelog
 I: libhts-dev: extended-description-is-probably-too-short
@@ -1225,15 +1228,15 @@ I: Lintian run was successful.
 └──────────────────────────────────────────────────────────────────────────────┘
 
 
-htslib_1.0-2_amd64.changes:
+htslib_1.1-1_amd64.changes:
 ───────────────────────────
 
 Format: 1.8
-Date: Tue, 16 Sep 2014 20:27:04 +0900
+Date: Wed, 24 Sep 2014 21:24:11 +0900
 Source: htslib
 Binary: libhts1 libhts-dev htslib-test tabix
 Architecture: source amd64 all
-Version: 1.0-2
+Version: 1.1-1
 Distribution: unstable
 Urgency: medium
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
@@ -1244,53 +1247,61 @@ Description:
  libhts1    - C library for high-throughput sequencing data formats
  tabix      - generic indexer for TAB-delimited genome position files
 Changes:
- htslib (1.0-2) unstable; urgency=medium
+ htslib (1.1-1) unstable; urgency=medium
  .
-   Uploaded to unstable (see previous changelog from experimental).
+   1357fbd Merge tag '1.1' into debian/unstable
+   87549cd Updated symbols file.  One symbol is missing.
+   873ea9b Removed orphan paragraph in machine-readable copyright file.
+   49de2b9 Allow parallel build.
+   7fe3bb5 Normalise control file (VCS-Browser, Pre-Depends).
+   0e5e9e6 Conforms to Policy 3.9.6.
 Checksums-Sha1:
- 26a46a9d4c72fc67320aa63547cced5d37cb1ef4 1204 htslib_1.0-2.dsc
- 4d3ffed48e525aa614c6d90ca609ffd6478c0834 8168 htslib_1.0-2.debian.tar.xz
- 4f7acbe3666d29c9356a3b1ad791df69c5452211 204078 libhts1_1.0-2_amd64.deb
- bfb9a013f97ec60033dd50883d091874bff89b38 249018 libhts-dev_1.0-2_amd64.deb
- 97e7ab12503eeadcdcd5d2a35c29eb15a1eeec94 516114 htslib-test_1.0-2_all.deb
- 7dd5fe6fe85a29dcd1f603dbec40f1eefbb413cd 189978 tabix_1.0-2_amd64.deb
+ 64174691d6b696c41a0cf1cb1a04f557d23625b9 1200 htslib_1.1-1.dsc
+ 206d1947eea6ad0b519e8c271702cdc281c976a7 957217 htslib_1.1.orig.tar.gz
+ 883afbd9282c3e6dc02e7feed024229ba58fe565 8228 htslib_1.1-1.debian.tar.xz
+ 6e2b09a03a74c3abf8def399a75e9c6214181920 204556 libhts1_1.1-1_amd64.deb
+ e7430b65ca6a44e3157276fcd3448951da418650 249544 libhts-dev_1.1-1_amd64.deb
+ 5d17f0cc3291f02de7995fd8d866a407ec852ef8 516462 htslib-test_1.1-1_all.deb
+ cb0ebcaef0899425a987aa0211e89ba92d8aa185 189910 tabix_1.1-1_amd64.deb
 Checksums-Sha256:
- 50402a0e8f5d7a0938fbbc7932dd93bf6acded810dd08d0aea788fca8e06bfe0 1204 htslib_1.0-2.dsc
- e6cdea9223ba502ee6f1956bf7c066951120396f46ad5f883cf7fe8639e4a68b 8168 htslib_1.0-2.debian.tar.xz
- b75989c2273ec9b0a8299dc5daef5fe9270ef41e7ba1b705090d5b17a61d8bbe 204078 libhts1_1.0-2_amd64.deb
- fd2dc1cf4eebbf9da12eb28ba652fe560b1f47b6ff0042f1ea554e5a0ba812f3 249018 libhts-dev_1.0-2_amd64.deb
- f8475f18a700a9f469c90bdf9fcf3c34e8ab38281a831ad3ec6747fcc265260a 516114 htslib-test_1.0-2_all.deb
- 44908fc4b5cae97723b9acb5a631a795a9f1021d8783542bebdfbea28b01654a 189978 tabix_1.0-2_amd64.deb
+ 0e27964764e9ba0c3b8ae2cf7d60733edfbece8cebda3bde9367c02e9da1602d 1200 htslib_1.1-1.dsc
+ eb0a7918862336518afcaf62e3d7da8b7f87053fd40d88f2d1ab689f7f25923f 957217 htslib_1.1.orig.tar.gz
+ 933344fb9e357794bcbe162ceebc89d5c72870805e985ad06344ba703718b7fd 8228 htslib_1.1-1.debian.tar.xz
+ 04055c2b92f14d44338f4911875f9f82c87888564576937f9d23102d61e2f03a 204556 libhts1_1.1-1_amd64.deb
+ 0b47cd8f6feff42f55432cc6079117e55de126e6cebab77e4c9741ac47d1f21d 249544 libhts-dev_1.1-1_amd64.deb
+ de6f9e1724e2d951675b5d10d2e727e65fa310ae3efc0952b82d418828eed171 516462 htslib-test_1.1-1_all.deb
+ f8be942aea134a3a28c68eec11ff505a0116160d59680401f792864dab8c696d 189910 tabix_1.1-1_amd64.deb
 Files:
- 8ffc250bba417d6bcf070ca2b885f013 204078 libs optional libhts1_1.0-2_amd64.deb
- f79a07fdad848e91a280a49e050d13e1 249018 libdevel optional libhts-dev_1.0-2_amd64.deb
- 280c34dbe5a0b8d296a6eab6d7e69ce9 516114 science optional htslib-test_1.0-2_all.deb
- 841963677645879ffa8fb9962721f9eb 189978 science optional tabix_1.0-2_amd64.deb
- 6d95fc6247432323659e0a45d9c8ea1c 1204 science optional htslib_1.0-2.dsc
- b0921cda431b57bdbd688f460de3574d 8168 science optional htslib_1.0-2.debian.tar.xz
+ ba400c82cd9932fc6feb77f4f3e0072d 204556 libs optional libhts1_1.1-1_amd64.deb
+ 75e0ce0dbd48da4f8ca0609d5adaefec 249544 libdevel optional libhts-dev_1.1-1_amd64.deb
+ 1bd2059de9bb0186449165ec1f409e42 516462 science optional htslib-test_1.1-1_all.deb
+ 0a7109428dd7b989d82e80f6c6e72bdb 189910 science optional tabix_1.1-1_amd64.deb
+ b46a895274c92ed28530251f1dcf42be 1200 science optional htslib_1.1-1.dsc
+ d0be108a121ace289fc960b854625f84 957217 science optional htslib_1.1.orig.tar.gz
+ 2f74134e218c9e7c00c8ba7a6229bbea 8228 science optional htslib_1.1-1.debian.tar.xz
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │ Package contents                                                             │
 └──────────────────────────────────────────────────────────────────────────────┘
 
 
-libhts1_1.0-2_amd64.deb
+libhts1_1.1-1_amd64.deb
 ───────────────────────
 
  new debian package, version 2.0.
- size 204078 bytes: control archive=4374 bytes.
+ size 204556 bytes: control archive=4412 bytes.
      979 bytes,    22 lines      control              
      217 bytes,     3 lines      md5sums              
      135 bytes,     7 lines   *  postinst             #!/bin/sh
      132 bytes,     7 lines   *  postrm               #!/bin/sh
       17 bytes,     1 lines      shlibs               
-   13474 bytes,   529 lines      symbols              
+   13564 bytes,   533 lines      symbols              
  Package: libhts1
  Source: htslib
- Version: 1.0-2
+ Version: 1.1-1
  Architecture: amd64
  Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
- Installed-Size: 543
+ Installed-Size: 542
  Pre-Depends: multiarch-support
  Depends: libc6 (>= 2.15), zlib1g (>= 1:1.2.0.2)
  Section: libs
@@ -1308,33 +1319,33 @@ libhts1_1.0-2_amd64.deb
   ‘csi’ (coordinate-sorted index). The HTSlib file reader first looks for the
   new index and then for the old if the new index is absent.
 
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/lib/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/
-lrwxrwxrwx root/root         0 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/libhts.so.1 -> libhts.so.1.0-2
--rw-r--r-- root/root    501280 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/libhts.so.1.0-2
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/libhts1/
--rw-r--r-- root/root       624 2014-09-16 20:28 ./usr/share/doc/libhts1/changelog.Debian.gz
--rw-r--r-- root/root      7175 2014-08-18 21:03 ./usr/share/doc/libhts1/copyright
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/lib/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/
+lrwxrwxrwx root/root         0 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/libhts.so.1 -> libhts.so.1.1-1
+-rw-r--r-- root/root    501296 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/libhts.so.1.1-1
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/libhts1/
+-rw-r--r-- root/root       816 2014-09-24 21:25 ./usr/share/doc/libhts1/changelog.Debian.gz
+-rw-r--r-- root/root      5779 2014-09-24 21:20 ./usr/share/doc/libhts1/copyright
 
 
-libhts-dev_1.0-2_amd64.deb
+libhts-dev_1.1-1_amd64.deb
 ──────────────────────────
 
  new debian package, version 2.0.
- size 249018 bytes: control archive=1305 bytes.
+ size 249544 bytes: control archive=1300 bytes.
      449 bytes,    14 lines      control              
     1667 bytes,    26 lines      md5sums              
  Package: libhts-dev
  Source: htslib
- Version: 1.0-2
+ Version: 1.1-1
  Architecture: amd64
  Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
  Installed-Size: 945
- Depends: libhts1 (= 1.0-2)
+ Depends: libhts1 (= 1.1-1)
  Section: libdevel
  Priority: optional
  Multi-Arch: same
@@ -1343,60 +1354,60 @@ libhts-dev_1.0-2_amd64.deb
   This package contains development files for the HTSlib: headers, static
   library, manual pages, etc.
 
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/include/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/include/htslib/
--rw-r--r-- root/root     10450 2014-08-15 19:04 ./usr/include/htslib/bgzf.h
--rw-r--r-- root/root      4101 2014-08-15 19:04 ./usr/include/htslib/faidx.h
--rw-r--r-- root/root      6558 2014-08-15 19:04 ./usr/include/htslib/hfile.h
--rw-r--r-- root/root     10673 2014-08-15 19:04 ./usr/include/htslib/hts.h
--rw-r--r-- root/root      1721 2014-08-15 19:04 ./usr/include/htslib/hts_defs.h
--rw-r--r-- root/root      2647 2014-08-15 19:04 ./usr/include/htslib/kfunc.h
--rw-r--r-- root/root     21224 2014-08-15 19:04 ./usr/include/htslib/khash.h
--rw-r--r-- root/root      3637 2014-08-15 19:04 ./usr/include/htslib/khash_str2int.h
--rw-r--r-- root/root      4651 2014-08-15 19:04 ./usr/include/htslib/klist.h
--rw-r--r-- root/root      2828 2014-08-15 19:04 ./usr/include/htslib/knetfile.h
--rw-r--r-- root/root      8934 2014-08-15 19:04 ./usr/include/htslib/kseq.h
--rw-r--r-- root/root     10125 2014-08-15 19:04 ./usr/include/htslib/ksort.h
--rw-r--r-- root/root      6657 2014-08-15 19:04 ./usr/include/htslib/kstring.h
--rw-r--r-- root/root     15120 2014-08-15 19:04 ./usr/include/htslib/sam.h
--rw-r--r-- root/root     12203 2014-08-15 19:04 ./usr/include/htslib/synced_bcf_reader.h
--rw-r--r-- root/root      2747 2014-08-15 19:04 ./usr/include/htslib/tbx.h
--rw-r--r-- root/root     37811 2014-08-15 19:04 ./usr/include/htslib/vcf.h
--rw-r--r-- root/root      1517 2014-08-15 19:04 ./usr/include/htslib/vcf_sweep.h
--rw-r--r-- root/root      3988 2014-08-15 19:04 ./usr/include/htslib/vcfutils.h
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/lib/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/
--rw-r--r-- root/root    732342 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/libhts.a
-lrwxrwxrwx root/root         0 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/libhts.so -> libhts.so.1.0-2
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/pkgconfig/
--rw-r--r-- root/root       270 2014-09-16 20:37 ./usr/lib/x86_64-linux-gnu/pkgconfig/htslib.pc
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/libhts-dev/
--rw-r--r-- root/root       624 2014-09-16 20:28 ./usr/share/doc/libhts-dev/changelog.Debian.gz
--rw-r--r-- root/root      7175 2014-08-18 21:03 ./usr/share/doc/libhts-dev/copyright
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/man/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/man/man5/
--rw-r--r-- root/root      2081 2014-09-16 20:37 ./usr/share/man/man5/faidx.5.gz
--rw-r--r-- root/root      1535 2014-09-16 20:37 ./usr/share/man/man5/sam.5.gz
--rw-r--r-- root/root      1854 2014-09-16 20:37 ./usr/share/man/man5/vcf.5.gz
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/include/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/include/htslib/
+-rw-r--r-- root/root     10450 2014-09-23 23:39 ./usr/include/htslib/bgzf.h
+-rw-r--r-- root/root      4475 2014-09-23 23:39 ./usr/include/htslib/faidx.h
+-rw-r--r-- root/root      6558 2014-09-23 23:39 ./usr/include/htslib/hfile.h
+-rw-r--r-- root/root     10673 2014-09-23 23:39 ./usr/include/htslib/hts.h
+-rw-r--r-- root/root      1721 2014-09-23 23:39 ./usr/include/htslib/hts_defs.h
+-rw-r--r-- root/root      2647 2014-09-23 23:39 ./usr/include/htslib/kfunc.h
+-rw-r--r-- root/root     21224 2014-09-23 23:39 ./usr/include/htslib/khash.h
+-rw-r--r-- root/root      3798 2014-09-23 23:39 ./usr/include/htslib/khash_str2int.h
+-rw-r--r-- root/root      4651 2014-09-23 23:39 ./usr/include/htslib/klist.h
+-rw-r--r-- root/root      2828 2014-09-23 23:39 ./usr/include/htslib/knetfile.h
+-rw-r--r-- root/root      8934 2014-09-23 23:39 ./usr/include/htslib/kseq.h
+-rw-r--r-- root/root     10125 2014-09-23 23:39 ./usr/include/htslib/ksort.h
+-rw-r--r-- root/root      6657 2014-09-23 23:39 ./usr/include/htslib/kstring.h
+-rw-r--r-- root/root     15120 2014-09-23 23:39 ./usr/include/htslib/sam.h
+-rw-r--r-- root/root     12203 2014-09-23 23:39 ./usr/include/htslib/synced_bcf_reader.h
+-rw-r--r-- root/root      2747 2014-09-23 23:39 ./usr/include/htslib/tbx.h
+-rw-r--r-- root/root     38337 2014-09-23 23:39 ./usr/include/htslib/vcf.h
+-rw-r--r-- root/root      1517 2014-09-23 23:39 ./usr/include/htslib/vcf_sweep.h
+-rw-r--r-- root/root      3988 2014-09-23 23:39 ./usr/include/htslib/vcfutils.h
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/lib/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/
+-rw-r--r-- root/root    733376 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/libhts.a
+lrwxrwxrwx root/root         0 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/libhts.so -> libhts.so.1.1-1
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/pkgconfig/
+-rw-r--r-- root/root       270 2014-09-24 21:29 ./usr/lib/x86_64-linux-gnu/pkgconfig/htslib.pc
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/libhts-dev/
+-rw-r--r-- root/root       816 2014-09-24 21:25 ./usr/share/doc/libhts-dev/changelog.Debian.gz
+-rw-r--r-- root/root      5779 2014-09-24 21:20 ./usr/share/doc/libhts-dev/copyright
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/man/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/man/man5/
+-rw-r--r-- root/root      2081 2014-09-24 21:29 ./usr/share/man/man5/faidx.5.gz
+-rw-r--r-- root/root      1535 2014-09-24 21:29 ./usr/share/man/man5/sam.5.gz
+-rw-r--r-- root/root      1854 2014-09-24 21:29 ./usr/share/man/man5/vcf.5.gz
 
 
-htslib-test_1.0-2_all.deb
+htslib-test_1.1-1_all.deb
 ─────────────────────────
 
  new debian package, version 2.0.
- size 516114 bytes: control archive=1773 bytes.
+ size 516462 bytes: control archive=1777 bytes.
      366 bytes,    12 lines      control              
     3161 bytes,    46 lines      md5sums              
  Package: htslib-test
  Source: htslib
- Version: 1.0-2
+ Version: 1.1-1
  Architecture: all
  Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
- Installed-Size: 4122
+ Installed-Size: 4121
  Depends: perl
  Section: science
  Priority: optional
@@ -1404,73 +1415,73 @@ htslib-test_1.0-2_all.deb
  Description: Test data for HTSlib
   This package contains test files and scripts for the HTSlib.
 
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/htslib-test/
--rw-r--r-- root/root       624 2014-09-16 20:28 ./usr/share/doc/htslib-test/changelog.Debian.gz
--rw-r--r-- root/root      7175 2014-08-18 21:03 ./usr/share/doc/htslib-test/copyright
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/htslib-test/
--rw-r--r-- root/root       727 2014-08-15 19:04 ./usr/share/htslib-test/aux#aux.sam
--rw-r--r-- root/root        29 2014-08-15 19:04 ./usr/share/htslib-test/aux.fa
--rw-r--r-- root/root        18 2014-08-15 19:04 ./usr/share/htslib-test/aux.fa.fai
--rw-r--r-- root/root       148 2014-08-15 19:04 ./usr/share/htslib-test/c1#bounds.sam
--rw-r--r-- root/root       337 2014-08-15 19:04 ./usr/share/htslib-test/c1#clip.sam
--rw-r--r-- root/root       388 2014-08-15 19:04 ./usr/share/htslib-test/c1#pad1.sam
--rw-r--r-- root/root       527 2014-08-15 19:04 ./usr/share/htslib-test/c1#pad2.sam
--rw-r--r-- root/root       665 2014-08-15 19:04 ./usr/share/htslib-test/c1#pad3.sam
--rw-r--r-- root/root        15 2014-08-15 19:04 ./usr/share/htslib-test/c1.fa
--rw-r--r-- root/root        14 2014-08-15 19:04 ./usr/share/htslib-test/c1.fa.fai
--rw-r--r-- root/root       342 2014-08-15 19:04 ./usr/share/htslib-test/ce#1.sam
--rw-r--r-- root/root       646 2014-08-15 19:04 ./usr/share/htslib-test/ce#2.sam
--rw-r--r-- root/root      1889 2014-08-15 19:04 ./usr/share/htslib-test/ce#5.sam
--rw-r--r-- root/root      1853 2014-08-15 19:04 ./usr/share/htslib-test/ce#5b.sam
--rw-r--r-- root/root   2147245 2014-08-15 19:04 ./usr/share/htslib-test/ce#large_seq.sam
--rw-r--r-- root/root      1634 2014-08-15 19:04 ./usr/share/htslib-test/ce#tag_depadded.sam
--rw-r--r-- root/root      1646 2014-08-15 19:04 ./usr/share/htslib-test/ce#tag_padded.sam
--rw-r--r-- root/root      1325 2014-08-15 19:04 ./usr/share/htslib-test/ce#unmap.sam
--rw-r--r-- root/root      2769 2014-08-15 19:04 ./usr/share/htslib-test/ce#unmap1.sam
--rw-r--r-- root/root      5547 2014-08-15 19:04 ./usr/share/htslib-test/ce#unmap2.sam
--rw-r--r-- root/root   1060702 2014-08-15 19:04 ./usr/share/htslib-test/ce.fa
--rw-r--r-- root/root       230 2014-08-15 19:04 ./usr/share/htslib-test/ce.fa.fai
--rwxr-xr-x root/root      4351 2014-08-15 19:04 ./usr/share/htslib-test/compare_sam.pl
--rw-r--r-- root/root      2409 2014-08-15 19:04 ./usr/share/htslib-test/fieldarith.c
--rw-r--r-- root/root       916 2014-08-15 19:04 ./usr/share/htslib-test/fieldarith.sam
--rw-r--r-- root/root      6824 2014-08-15 19:04 ./usr/share/htslib-test/hfile.c
--rw-r--r-- root/root      4751 2014-08-15 19:04 ./usr/share/htslib-test/sam.c
--rw-r--r-- root/root      8946 2014-08-15 19:04 ./usr/share/htslib-test/test-vcf-api.c
--rw-r--r-- root/root      1936 2014-08-15 19:04 ./usr/share/htslib-test/test-vcf-api.out
--rw-r--r-- root/root      3802 2014-08-15 19:04 ./usr/share/htslib-test/test-vcf-sweep.c
--rw-r--r-- root/root        92 2014-08-15 19:04 ./usr/share/htslib-test/test-vcf-sweep.out
--rwxr-xr-x root/root      6226 2014-08-15 19:04 ./usr/share/htslib-test/test.pl
--rw-r--r-- root/root      4830 2014-08-15 19:04 ./usr/share/htslib-test/test_view.c
--rwxr-xr-x root/root      2329 2014-08-15 19:04 ./usr/share/htslib-test/test_view.pl
--rw-r--r-- root/root         0 2014-08-15 19:04 ./usr/share/htslib-test/xx#blank.sam
--rw-r--r-- root/root    905485 2014-08-15 19:04 ./usr/share/htslib-test/xx#large_aux.sam
--rw-r--r-- root/root       651 2014-08-15 19:04 ./usr/share/htslib-test/xx#large_aux2.sam
--rw-r--r-- root/root       254 2014-08-15 19:04 ./usr/share/htslib-test/xx#minimal.sam
--rw-r--r-- root/root       304 2014-08-15 19:04 ./usr/share/htslib-test/xx#pair.sam
--rw-r--r-- root/root       517 2014-08-15 19:04 ./usr/share/htslib-test/xx#rg.sam
--rw-r--r-- root/root       267 2014-08-15 19:04 ./usr/share/htslib-test/xx#triplet.sam
--rw-r--r-- root/root       320 2014-08-15 19:04 ./usr/share/htslib-test/xx#unsorted.sam
--rw-r--r-- root/root        51 2014-08-15 19:04 ./usr/share/htslib-test/xx.fa
--rw-r--r-- root/root        29 2014-08-15 19:04 ./usr/share/htslib-test/xx.fa.fai
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/htslib-test/
+-rw-r--r-- root/root       816 2014-09-24 21:25 ./usr/share/doc/htslib-test/changelog.Debian.gz
+-rw-r--r-- root/root      5779 2014-09-24 21:20 ./usr/share/doc/htslib-test/copyright
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/htslib-test/
+-rw-r--r-- root/root       727 2014-09-23 23:39 ./usr/share/htslib-test/aux#aux.sam
+-rw-r--r-- root/root        29 2014-09-23 23:39 ./usr/share/htslib-test/aux.fa
+-rw-r--r-- root/root        18 2014-09-23 23:39 ./usr/share/htslib-test/aux.fa.fai
+-rw-r--r-- root/root       148 2014-09-23 23:39 ./usr/share/htslib-test/c1#bounds.sam
+-rw-r--r-- root/root       337 2014-09-23 23:39 ./usr/share/htslib-test/c1#clip.sam
+-rw-r--r-- root/root       388 2014-09-23 23:39 ./usr/share/htslib-test/c1#pad1.sam
+-rw-r--r-- root/root       527 2014-09-23 23:39 ./usr/share/htslib-test/c1#pad2.sam
+-rw-r--r-- root/root       665 2014-09-23 23:39 ./usr/share/htslib-test/c1#pad3.sam
+-rw-r--r-- root/root        15 2014-09-23 23:39 ./usr/share/htslib-test/c1.fa
+-rw-r--r-- root/root        14 2014-09-23 23:39 ./usr/share/htslib-test/c1.fa.fai
+-rw-r--r-- root/root       342 2014-09-23 23:39 ./usr/share/htslib-test/ce#1.sam
+-rw-r--r-- root/root       646 2014-09-23 23:39 ./usr/share/htslib-test/ce#2.sam
+-rw-r--r-- root/root      1889 2014-09-23 23:39 ./usr/share/htslib-test/ce#5.sam
+-rw-r--r-- root/root      1853 2014-09-23 23:39 ./usr/share/htslib-test/ce#5b.sam
+-rw-r--r-- root/root   2147245 2014-09-23 23:39 ./usr/share/htslib-test/ce#large_seq.sam
+-rw-r--r-- root/root      1634 2014-09-23 23:39 ./usr/share/htslib-test/ce#tag_depadded.sam
+-rw-r--r-- root/root      1646 2014-09-23 23:39 ./usr/share/htslib-test/ce#tag_padded.sam
+-rw-r--r-- root/root      1325 2014-09-23 23:39 ./usr/share/htslib-test/ce#unmap.sam
+-rw-r--r-- root/root      2769 2014-09-23 23:39 ./usr/share/htslib-test/ce#unmap1.sam
+-rw-r--r-- root/root      5547 2014-09-23 23:39 ./usr/share/htslib-test/ce#unmap2.sam
+-rw-r--r-- root/root   1060702 2014-09-23 23:39 ./usr/share/htslib-test/ce.fa
+-rw-r--r-- root/root       230 2014-09-23 23:39 ./usr/share/htslib-test/ce.fa.fai
+-rwxr-xr-x root/root      4351 2014-09-23 23:39 ./usr/share/htslib-test/compare_sam.pl
+-rw-r--r-- root/root      2409 2014-09-23 23:39 ./usr/share/htslib-test/fieldarith.c
+-rw-r--r-- root/root       916 2014-09-23 23:39 ./usr/share/htslib-test/fieldarith.sam
+-rw-r--r-- root/root      6824 2014-09-23 23:39 ./usr/share/htslib-test/hfile.c
+-rw-r--r-- root/root      4751 2014-09-23 23:39 ./usr/share/htslib-test/sam.c
+-rw-r--r-- root/root      8946 2014-09-23 23:39 ./usr/share/htslib-test/test-vcf-api.c
+-rw-r--r-- root/root      1936 2014-09-23 23:39 ./usr/share/htslib-test/test-vcf-api.out
+-rw-r--r-- root/root      3802 2014-09-23 23:39 ./usr/share/htslib-test/test-vcf-sweep.c
+-rw-r--r-- root/root        92 2014-09-23 23:39 ./usr/share/htslib-test/test-vcf-sweep.out
+-rwxr-xr-x root/root      6226 2014-09-23 23:39 ./usr/share/htslib-test/test.pl
+-rw-r--r-- root/root      4830 2014-09-23 23:39 ./usr/share/htslib-test/test_view.c
+-rwxr-xr-x root/root      2329 2014-09-23 23:39 ./usr/share/htslib-test/test_view.pl
+-rw-r--r-- root/root         0 2014-09-23 23:39 ./usr/share/htslib-test/xx#blank.sam
+-rw-r--r-- root/root    905485 2014-09-23 23:39 ./usr/share/htslib-test/xx#large_aux.sam
+-rw-r--r-- root/root       651 2014-09-23 23:39 ./usr/share/htslib-test/xx#large_aux2.sam
+-rw-r--r-- root/root       254 2014-09-23 23:39 ./usr/share/htslib-test/xx#minimal.sam
+-rw-r--r-- root/root       304 2014-09-23 23:39 ./usr/share/htslib-test/xx#pair.sam
+-rw-r--r-- root/root       517 2014-09-23 23:39 ./usr/share/htslib-test/xx#rg.sam
+-rw-r--r-- root/root       267 2014-09-23 23:39 ./usr/share/htslib-test/xx#triplet.sam
+-rw-r--r-- root/root       320 2014-09-23 23:39 ./usr/share/htslib-test/xx#unsorted.sam
+-rw-r--r-- root/root        51 2014-09-23 23:39 ./usr/share/htslib-test/xx.fa
+-rw-r--r-- root/root        29 2014-09-23 23:39 ./usr/share/htslib-test/xx.fa.fai
 
 
-tabix_1.0-2_amd64.deb
+tabix_1.1-1_amd64.deb
 ─────────────────────
 
  new debian package, version 2.0.
- size 189978 bytes: control archive=933 bytes.
+ size 189910 bytes: control archive=930 bytes.
      844 bytes,    19 lines      control              
      298 bytes,     5 lines      md5sums              
  Package: tabix
  Source: htslib
- Version: 1.0-2
+ Version: 1.1-1
  Architecture: amd64
  Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
- Installed-Size: 762
+ Installed-Size: 760
  Depends: libc6 (>= 2.15), zlib1g (>= 1:1.2.0.2)
  Section: science
  Priority: optional
@@ -1485,20 +1496,20 @@ tabix_1.0-2_amd64.deb
   .
   This version of tabix is built from the HTSlib source.
 
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/bin/
--rwxr-xr-x root/root    326968 2014-09-16 20:37 ./usr/bin/bgzip
--rwxr-xr-x root/root    405176 2014-09-16 20:37 ./usr/bin/tabix
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/doc/tabix/
--rw-r--r-- root/root       624 2014-09-16 20:28 ./usr/share/doc/tabix/changelog.Debian.gz
--rw-r--r-- root/root      7175 2014-08-18 21:03 ./usr/share/doc/tabix/copyright
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/man/
-drwxr-xr-x root/root         0 2014-09-16 20:37 ./usr/share/man/man1/
-lrwxrwxrwx root/root         0 2014-09-16 20:37 ./usr/share/man/man1/bgzip.1.gz -> tabix.1.gz
--rw-r--r-- root/root      2477 2014-09-16 20:37 ./usr/share/man/man1/tabix.1.gz
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/bin/
+-rwxr-xr-x root/root    326968 2014-09-24 21:29 ./usr/bin/bgzip
+-rwxr-xr-x root/root    405176 2014-09-24 21:29 ./usr/bin/tabix
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/doc/tabix/
+-rw-r--r-- root/root       816 2014-09-24 21:25 ./usr/share/doc/tabix/changelog.Debian.gz
+-rw-r--r-- root/root      5779 2014-09-24 21:20 ./usr/share/doc/tabix/copyright
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/man/
+drwxr-xr-x root/root         0 2014-09-24 21:29 ./usr/share/man/man1/
+lrwxrwxrwx root/root         0 2014-09-24 21:29 ./usr/share/man/man1/bgzip.1.gz -> tabix.1.gz
+-rw-r--r-- root/root      2483 2014-09-24 21:29 ./usr/share/man/man1/tabix.1.gz
 
 
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -1534,8 +1545,8 @@ The following packages will be REMOVED:
   sbuild-build-depends-htslib-dummy* sbuild-build-depends-lintian-dummy*
   t1utils* zlib1g-dev*
 0 upgraded, 0 newly installed, 53 to remove and 0 not upgraded.
-After this operation, 39.5 MB disk space will be freed.
-(Reading database ... 13875 files and directories currently installed.)
+After this operation, 39.0 MB disk space will be freed.
+(Reading database ... 13879 files and directories currently installed.)
 Removing sbuild-build-depends-lintian-dummy (0.invalid.0) ...
 Removing lintian (2.5.27) ...
 Purging configuration files for lintian (2.5.27) ...
@@ -1576,8 +1587,8 @@ Removing sbuild-build-depends-core-dummy (0.invalid.0) ...
 Removing t1utils (1.37-2.1) ...
 Removing zlib1g-dev:amd64 (1:1.2.8.dfsg-2) ...
 Removing debhelper (9.20140817) ...
-Removing man-db (2.6.7.1-1) ...
-Purging configuration files for man-db (2.6.7.1-1) ...
+Removing man-db (2.7.0.1-1) ...
+Purging configuration files for man-db (2.7.0.1-1) ...
 Removing bsdmainutils (9.0.5) ...
 Purging configuration files for bsdmainutils (9.0.5) ...
 Removing file (1:5.19-2) ...
@@ -1590,14 +1601,14 @@ Purging configuration files for groff-base (1.22.2-8) ...
 Removing libasprintf0c2:amd64 (0.19.2-2) ...
 Removing libcroco3:amd64 (0.6.8-3) ...
 Purging configuration files for libcroco3:amd64 (0.6.8-3) ...
-Removing libglib2.0-0:amd64 (2.40.0-5) ...
-Purging configuration files for libglib2.0-0:amd64 (2.40.0-5) ...
+Removing libglib2.0-0:amd64 (2.42.0-1) ...
+Purging configuration files for libglib2.0-0:amd64 (2.42.0-1) ...
 Removing libffi6:amd64 (3.1-2) ...
 Purging configuration files for libffi6:amd64 (3.1-2) ...
 Removing libmagic1:amd64 (1:5.19-2) ...
 Purging configuration files for libmagic1:amd64 (1:5.19-2) ...
-Removing libpipeline1:amd64 (1.3.0-1) ...
-Purging configuration files for libpipeline1:amd64 (1.3.0-1) ...
+Removing libpipeline1:amd64 (1.3.1-1) ...
+Purging configuration files for libpipeline1:amd64 (1.3.1-1) ...
 Removing libunistring0:amd64 (0.9.3-5.2) ...
 Purging configuration files for libunistring0:amd64 (0.9.3-5.2) ...
 Removing libxml2:amd64 (2.9.1+dfsg1-4) ...
@@ -1609,20 +1620,20 @@ Processing triggers for libc-bin (2.19-11) ...
 └──────────────────────────────────────────────────────────────────────────────┘
 
 Build Architecture: amd64
-Build-Space: 38796
-Build-Time: 108
+Build-Space: 37700
+Build-Time: 82
 Distribution: unstable
 Host Architecture: amd64
-Install-Time: 14
-Job: htslib_1.0-2.dsc
+Install-Time: 25
+Job: htslib_1.1-1.dsc
 Lintian: pass
 Machine Architecture: amd64
 Package: htslib
-Package-Time: 130
-Source-Version: 1.0-2
-Space: 38796
+Package-Time: 114
+Source-Version: 1.1-1
+Space: 37700
 Status: successful
-Version: 1.0-2
+Version: 1.1-1
 ────────────────────────────────────────────────────────────────────────────────
-Finished at 20140916-2037
-Build needed 00:02:10, 38796k disc space
+Finished at 20140924-2129
+Build needed 00:01:54, 37700k disc space
