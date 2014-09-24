@@ -1,46 +1,47 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Format: 1.0
+Format: 3.0 (quilt)
 Source: htslib
-Binary: libhts0, libhts-dev, htslib-test
+Binary: libhts1, libhts-dev, htslib-test, tabix
 Architecture: any all
-Version: 0.2.0~rc3-1
+Version: 1.1-1
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Uploaders: Charles Plessy <plessy@debian.org>
 Homepage: https://github.com/samtools/htslib
-Standards-Version: 3.9.5
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-med/htslib.git
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/debian-med/htslib.git
 Vcs-Git: git://anonscm.debian.org/debian-med/htslib.git -b debian/unstable
 Build-Depends: debhelper (>= 9), dh-exec, zlib1g-dev
-Package-List: 
- htslib-test deb libs optional
- libhts-dev deb libdevel optional
- libhts0 deb libs optional
-Checksums-Sha1: 
- a34fc68574d10754d9813fdb7ce4dad52da99d05 923352 htslib_0.2.0~rc3.orig.tar.gz
- 336b5f8094a71997a7cbd74d0d1c69f43801449b 10532 htslib_0.2.0~rc3-1.diff.gz
-Checksums-Sha256: 
- 5e972ce7048c9b236911cd30e2100f7bfb28e65aa4cc3687a9aaf31d116be3ce 923352 htslib_0.2.0~rc3.orig.tar.gz
- 3575954047af6c97d4500b3eb0b0bf78c327f355804a54844a128bb5391dd1a8 10532 htslib_0.2.0~rc3-1.diff.gz
-Files: 
- 5d055a061e84ae987b25cb72bb4173d6 923352 htslib_0.2.0~rc3.orig.tar.gz
- e7f26daf824e4fa67171c78cc6ef932b 10532 htslib_0.2.0~rc3-1.diff.gz
+Package-List:
+ htslib-test deb science optional arch=all
+ libhts-dev deb libdevel optional arch=any
+ libhts1 deb libs optional arch=any
+ tabix deb science optional arch=any
+Checksums-Sha1:
+ 206d1947eea6ad0b519e8c271702cdc281c976a7 957217 htslib_1.1.orig.tar.gz
+ 883afbd9282c3e6dc02e7feed024229ba58fe565 8228 htslib_1.1-1.debian.tar.xz
+Checksums-Sha256:
+ eb0a7918862336518afcaf62e3d7da8b7f87053fd40d88f2d1ab689f7f25923f 957217 htslib_1.1.orig.tar.gz
+ 933344fb9e357794bcbe162ceebc89d5c72870805e985ad06344ba703718b7fd 8228 htslib_1.1-1.debian.tar.xz
+Files:
+ d0be108a121ace289fc960b854625f84 957217 htslib_1.1.orig.tar.gz
+ 2f74134e218c9e7c00c8ba7a6229bbea 8228 htslib_1.1-1.debian.tar.xz
 
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.14 (GNU/Linux)
+Version: GnuPG v1
 
-iQIcBAEBCgAGBQJShxNmAAoJEMW9bI8ildUC3OsP/AzH6sqqcXO48D2LcitzCPHo
-kmeKbM+4NmeecHmeIgZIrLsWztN1N8uNYJUr74XVYm4qFh0TImkpXDTJDQXyBta4
-8FHn2FoRiHfXJV8XBpN3c7tTL+3gx22GTtsQfPH1pMTd2d4t1ouVajj7hhUJYnSw
-o3KWTvykr/ywih+taf8SU6ajwyvgMffbQ5ylEj9XH4VXCELpQZE/lD48qpeESFS8
-UQh1h8NlD5k+bA7Or8O5GOtje0CaC1YqBI36szLNz5fq4g1D5CIa5NQMPOUlRZAB
-Dm2i4PbnCXUf0qfHJMWlz3xGmR5LLUDHYcBfpSYZb10MbhmfDeaPnwX1Y1sHF3Ts
-omo1hFzw9+gH5/wftYpW38PBGglt3CKDuvaH6cC4Dhh9OC8ENRo45rXr+xdEONxB
-cR5EIHYYvWxUyjRgprEak+vgvt4U0TsYQcFmX0Y4QTuHbXIDT+z5KjMRU0kz11HY
-Zd/nudh9cU6Lw00c1WA/v9ANXMt95g2RegiuCbMeDEI/CF6swcULcpHK0uhivA4d
-qbiYDiUCUcCLouB7XCaBGrjZeyWfGx9OvKitR79x2M/RZiklYbyhABV/nKPBisEW
-j4D7L0wKD5EHS9VOQXpZPVc9fn+6o20b19TwrfqkEi32SYusov+HMfKfRrHjPFik
-aOirhlh41WYEvcUcP5td
-=oQK2
+iQIcBAEBCgAGBQJUIrofAAoJEMW9bI8ildUCX7kP/2XjAwYhFsuKN49IivVLqaiL
+yEuO59r6l9QElmVDVEDtMViOMP1bG4q6thtNZ4l6tmUmHJD1L42vNhucESp+RBpf
+Ebro2NlfRHo0VBmTnSrdSyMHqnmlEo0mj0JZVsUFyEvVALlv3vbI7diCRUDpgaeg
+zxB6uuQ7Jh/E1jiMwBXID0Y26tn7g3D0/47jd4g3uMESjj4i/mra2aR6kiLIH+ot
+xMxZLXibATCIdkMjUYpzFApojNFMZEF5J21yLssFxAsx8NT1SPPdKmkNhXWCOb/z
+z29Goq8pWVq1HfUbbTQSRMihll2EfEeKUL8egNl6acddLUHEhu/nqpVeKLPrhLyG
+WT70f75hUXcEWRlGue576UZ9/4Ir7HMtUK0JaJREQF9P4xcigZNG3A6QN6tAGGJp
+5AmBbWVXsSGTrfSKszMZooJmeVUxFvkoE3WtRjmjRhKHKhxwRO3LrWNU+U9x+3z0
+1sFZ9DZoKBHJcIXBWCl06JkvJNIpvpD2aRA8wIl8onO2Y0LXW+W/RMst1DxZVfot
+rLltEpgrfbdTBpGWhM5Iszf4DVxmLG01c+u5r6diCsil2Dr519pxwoVaACV+QAZx
+Mp3f5mOkxfcLSLyDkhd/CKbFMiiNjC5KzNx2RU/FmmB4o9NTzTKwtH4XU59qcMCb
+frscfbB29T9D1XxRK03s
+=HDl/
 -----END PGP SIGNATURE-----
