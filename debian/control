@@ -52,7 +52,7 @@ Depends: ${misc:Depends},
          ${shlibs:Depends}
 Description: generic indexer for TAB-delimited genome position files
  Tabix indexes files where some columns indicate sequence coordinates: name
- (usually a chromosme), start and stop. The input data file must be position
+ (usually a chromosome), start and stop. The input data file must be position
  sorted and compressed by bgzip (provided in this package), which has a gzip
  like interface. After indexing, tabix is able to quickly retrieve data lines by
  chromosomal coordinates. Fast data retrieval also works over network if an URI
