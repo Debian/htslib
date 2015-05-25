@@ -3,20 +3,28 @@
 *-uninstalled.pc
 /version.h
 
+autom4te.cache
+config.cache
+config.log
+config.mk
+config.status
+configure
+
 lib*.a
 lib*.dylib
 lib*.so
 lib*.so.*
 
 /bgzip
+/htsfile
 /tabix
 /test/fieldarith
 /test/hfile
 /test/sam
+/test/test-regidx
 /test/test-vcf-api
 /test/test-vcf-sweep
 /test/test_view
-/test/test-regidx
 /test/*.tmp
 /test/*.tmp.*
 
