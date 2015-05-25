@@ -1,8 +1,12 @@
-htslib (1.2.1-1) UNRELEASED; urgency=medium
+htslib (1.2.1-1) unstable; urgency=medium
 
   0662716 Merge tag '1.2.1' into debian/unstable
+  084f27d Install NEWS as upstream changelog.
+  316fb96 Override a Lintian false positive.
+  3363679 Clean test directory.
+  69bf167 Corrected a typo in tabix description.
 
- -- Charles Plessy <plessy@debian.org>  Sun, 05 Oct 2014 09:38:31 +0900
+ -- Charles Plessy <plessy@debian.org>  Mon, 25 May 2015 13:35:03 +0900
 
 htslib (1.1-1) unstable; urgency=medium
 
