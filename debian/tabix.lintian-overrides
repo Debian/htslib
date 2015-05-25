@@ -1,0 +1,3 @@
+# False positive
+spelling-error-in-binary usr/bin/bgzip compres compress
+spelling-error-in-binary usr/bin/tabix compres compress
