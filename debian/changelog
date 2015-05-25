@@ -1,10 +1,6 @@
-htslib (1.1+20141003-1) UNRELEASED; urgency=medium
+htslib (1.2.1-1) UNRELEASED; urgency=medium
 
-  * Pulled latest develop branch to solve a build failure on ARM.
-    See also #762647 and https://github.com/samtools/samtools/issues/304
-
-    For the moment I will wait two weeks to see if a new upstream release
-    comes on time for our Freeze.
+  0662716 Merge tag '1.2.1' into debian/unstable
 
  -- Charles Plessy <plessy@debian.org>  Sun, 05 Oct 2014 09:38:31 +0900
 

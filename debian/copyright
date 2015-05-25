@@ -1,8 +1,8 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://github.com/samtools/htslib/archive/1.1.tar.gz
+Source: https://github.com/samtools/htslib/archive/1.2.1.tar.gz
 
 Files: *
-Copyright: © 2012-2014 Genome Research Ltd.
+Copyright: © 2012-2015 Genome Research Ltd.
            © 2008-2013 Broad Institute / Massachusetts Institute of Technology
            © The Wellcome Trust Sanger Institute
            © 2008-2012 by Attractive Chaos <attractor@live.co.uk>
