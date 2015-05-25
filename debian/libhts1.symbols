@@ -3,6 +3,7 @@ libhts.so.1 libhts1 #MINVER#
  MD5_Init@Base 1.0
  MD5_Update@Base 1.0
  _reader_next_line@Base 1.0
+ _regidx_build_index@Base 1.2.1
  _vcf_parse_format@Base 1.0
  bam_aux2A@Base 1.0
  bam_aux2Z@Base 1.0
@@ -47,6 +48,7 @@ libhts.so.1 libhts1 #MINVER#
  bcf_add_filter@Base 1.0
  bcf_calc_ac@Base 1.0
  bcf_clear@Base 1.0
+ bcf_copy@Base 1.2.1
  bcf_destroy@Base 1.0
  bcf_dup@Base 1.0
  bcf_empty1@Base 1.0
@@ -125,6 +127,7 @@ libhts.so.1 libhts1 #MINVER#
  bcf_sr_set_regions@Base 1.0
  bcf_sr_set_samples@Base 1.0
  bcf_sr_set_targets@Base 1.0
+ bcf_sr_strerror@Base 1.2.1
  bcf_subset@Base 1.0
  bcf_subset_format@Base 1.0
  bcf_sweep_bwd@Base 1.0
@@ -187,7 +190,7 @@ libhts.so.1 libhts1 #MINVER#
  cram_byte_array_len_encode_init@Base 1.0
  cram_byte_array_len_encode_store@Base 1.0
  cram_byte_array_stop_decode_block@Base 1.0
- cram_byte_array_stop_decode_char@Base 1.0
+#MISSING: 1.2.1# cram_byte_array_stop_decode_char@Base 1.0
  cram_byte_array_stop_decode_free@Base 1.0
  cram_byte_array_stop_decode_init@Base 1.0
  cram_byte_array_stop_encode@Base 1.0
@@ -195,6 +198,7 @@ libhts.so.1 libhts1 #MINVER#
  cram_byte_array_stop_encode_init@Base 1.0
  cram_byte_array_stop_encode_store@Base 1.0
  cram_close@Base 1.0
+ cram_codec_to_id@Base 1.2.1
  cram_compress_block@Base 1.0
  cram_content_type2str@Base 1.0
  cram_decode_TD@Base 1.0
@@ -204,6 +208,7 @@ libhts.so.1 libhts1 #MINVER#
  cram_decode_slice_mt@Base 1.0
  cram_decode_slice_thread@Base 1.0
  cram_decoder_init@Base 1.0
+ cram_dependent_data_series@Base 1.2.1
  cram_dopen@Base 1.0
  cram_encode_compression_header@Base 1.0
  cram_encode_container@Base 1.0
@@ -211,14 +216,16 @@ libhts.so.1 libhts1 #MINVER#
  cram_encoder_init@Base 1.0
  cram_encoding2str@Base 1.0
  cram_eof@Base 1.0
- cram_external_decode_block@Base 1.0
+#MISSING: 1.2.1# cram_external_decode_block@Base 1.0
  cram_external_decode_char@Base 1.0
  cram_external_decode_free@Base 1.0
  cram_external_decode_init@Base 1.0
  cram_external_decode_int@Base 1.0
- cram_external_encode@Base 1.0
+#MISSING: 1.2.1# cram_external_encode@Base 1.0
+ cram_external_encode_char@Base 1.2.1
  cram_external_encode_free@Base 1.0
  cram_external_encode_init@Base 1.0
+ cram_external_encode_int@Base 1.2.1
  cram_external_encode_store@Base 1.0
  cram_flush@Base 1.0
  cram_flush_container@Base 1.0
@@ -291,7 +298,7 @@ libhts.so.1 libhts1 #MINVER#
  cram_write_file_def@Base 1.0
  debug_buffer@Base 1.0
  debug_buffers@Base 1.0
- download_and_open@Base 1.0
+#MISSING: 1.2.1# download_and_open@Base 1.0
  expand_cache_path@Base 1.0
  fai_build@Base 1.0
  fai_build_core@Base 1.0
@@ -300,7 +307,7 @@ libhts.so.1 libhts1 #MINVER#
  fai_load@Base 1.0
  fai_read@Base 1.0
  fai_save@Base 1.0
-#MISSING: 1.1# faidx_fetch_nseq@Base 1.0
+ faidx_fetch_nseq@Base 1.2.1
  faidx_fetch_seq@Base 1.0
  faidx_has_seq@Base 1.0
  faidx_iseq@Base 1.1
@@ -318,6 +325,7 @@ libhts.so.1 libhts1 #MINVER#
  hfile_oflags@Base 1.0
  hflush@Base 1.0
  hgetc2@Base 1.0
+ hisremote@Base 1.2.1
  hopen@Base 1.0
  hopen_net@Base 1.0
  hpeek@Base 1.0
@@ -327,9 +335,13 @@ libhts.so.1 libhts1 #MINVER#
  hrec_add_idx@Base 1.0
  hseek@Base 1.0
  hts_close@Base 1.0
+ hts_detect_format@Base 1.2.1
  hts_file_type@Base 1.0
+ hts_format_description@Base 1.2.1
  hts_get_bgzfp@Base 1.0
+ hts_get_format@Base 1.2.1
  hts_getline@Base 1.0
+ hts_hopen@Base 1.2.1
  hts_idx_destroy@Base 1.0
  hts_idx_finish@Base 1.0
  hts_idx_get_meta@Base 1.0
@@ -352,6 +364,7 @@ libhts.so.1 libhts1 #MINVER#
  hts_readlines@Base 1.0
  hts_readlist@Base 1.0
  hts_set_fai_filename@Base 1.0
+ hts_set_opt@Base 1.2.1
  hts_set_threads@Base 1.0
  hts_useek@Base 1.0
  hts_utell@Base 1.0
@@ -444,8 +457,23 @@ libhts.so.1 libhts1 #MINVER#
  pool_create@Base 1.0
  pool_destroy@Base 1.0
  pool_free@Base 1.0
+ rans_compress@Base 1.2.1
+ rans_compress_O0@Base 1.2.1
+ rans_compress_O1@Base 1.2.1
+ rans_uncompress@Base 1.2.1
+ rans_uncompress_O0@Base 1.2.1
+ rans_uncompress_O1@Base 1.2.1
  refs2id@Base 1.0
  refs_free@Base 1.0
+ regidx_destroy@Base 1.2.1
+ regidx_init@Base 1.2.1
+ regidx_insert@Base 1.2.1
+ regidx_nregs@Base 1.2.1
+ regidx_overlap@Base 1.2.1
+ regidx_parse_bed@Base 1.2.1
+ regidx_parse_tab@Base 1.2.1
+ regidx_seq_names@Base 1.2.1
+ regidx_seq_nregs@Base 1.2.1
  sam_format1@Base 1.0
  sam_hdr_PG_ID@Base 1.0
  sam_hdr_add@Base 1.0
@@ -479,6 +507,7 @@ libhts.so.1 libhts1 #MINVER#
  sam_parse1@Base 1.0
  sam_read1@Base 1.0
  sam_write1@Base 1.0
+ seq_nt16_int@Base 1.2.1
  seq_nt16_str@Base 1.0
  seq_nt16_table@Base 1.0
  string_alloc@Base 1.0
