@@ -21,7 +21,7 @@ override_dh_auto_build:
 	  libdir=/usr/lib/$(DEB_HOST_MULTIARCH)
 
 override_dh_auto_install:
-	rm $(CURDIR)/test/sam
+	rm $(CURDIR)/test/sam $(CURDIR)/test/test-regidx
 	dh_auto_install -- \
 	  prefix=/usr \
 	  libdir=/usr/lib/$(DEB_HOST_MULTIARCH) \
