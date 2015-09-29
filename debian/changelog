@@ -1,3 +1,10 @@
+htslib (1.2.1-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Team upload.
+  * Rebuild for jessie-backports.
+
+ -- Afif Elghraoui <afif@ghraoui.name>  Mon, 28 Sep 2015 18:43:33 -0700
+
 htslib (1.2.1-1) unstable; urgency=medium
 
   0662716 Merge tag '1.2.1' into debian/unstable
