@@ -4,6 +4,7 @@ htslib (1.2.1-2) UNRELEASED; urgency=medium
   * Enable build on hurd-i386
     Closes: #793512
   * More verbose description vor -dev and -test package
+  * Fix lintian override
 
  -- Andreas Tille <tille@debian.org>  Wed, 09 Dec 2015 16:43:38 +0100
 
