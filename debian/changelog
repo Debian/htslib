@@ -1,4 +1,4 @@
-htslib (1.2.1-2) UNRELEASED; urgency=medium
+htslib (1.2.1-2) unstable; urgency=medium
 
   * Team upload
   * Enable build on hurd-i386
@@ -8,7 +8,7 @@ htslib (1.2.1-2) UNRELEASED; urgency=medium
   * Verified Mayhem bug report which is solved in this version
     Closes: #716376
 
- -- Andreas Tille <tille@debian.org>  Wed, 09 Dec 2015 16:43:38 +0100
+ -- Andreas Tille <tille@debian.org>  Wed, 09 Dec 2015 17:00:47 +0100
 
 htslib (1.2.1-1) unstable; urgency=medium
 
