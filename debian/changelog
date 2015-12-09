@@ -3,8 +3,9 @@ htslib (1.2.1-2) UNRELEASED; urgency=medium
   * Team upload
   * Enable build on hurd-i386
     Closes: #793512
+  * More verbose description vor -dev and -test package
 
- -- Andreas Tille <tille@debian.org>  Wed, 09 Dec 2015 16:40:21 +0100
+ -- Andreas Tille <tille@debian.org>  Wed, 09 Dec 2015 16:43:38 +0100
 
 htslib (1.2.1-1) unstable; urgency=medium
 
