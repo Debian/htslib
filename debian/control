@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9),
                zlib1g-dev
 Standards-Version: 3.9.6
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-med/htslib.git
-Vcs-Git: git://anonscm.debian.org/debian-med/htslib.git -b debian/unstable
+Vcs-Git: https://anonscm.debian.org/git/debian-med/htslib.git -b debian/unstable
 Homepage: https://github.com/samtools/htslib
 
 Package: libhts1
