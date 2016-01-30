@@ -1,8 +1,10 @@
 htslib (1.3-1) UNRELEASED; urgency=medium
 
-  68e6f6c Merge tag '1.3' into debian/unstable
+  * Team upload
+  * New upstream version
+  * Ignore metadata files different between git and tarball
 
- -- Charles Plessy <plessy@debian.org>  Thu, 24 Dec 2015 13:17:01 +0900
+ -- Sascha Steinbiss <sascha@steinbiss.name>  Sat, 30 Jan 2016 12:16:06 +0000
 
 htslib (1.2.1-2) unstable; urgency=medium
 
