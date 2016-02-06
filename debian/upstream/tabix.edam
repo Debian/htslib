@@ -13,4 +13,4 @@ scopes:
        formats: [TSV]
     outputs:
      - data:   Data index
-       formats: [Tabix]
+       formats: [Tabix index file format]
