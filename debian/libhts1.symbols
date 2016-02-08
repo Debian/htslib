@@ -501,6 +501,7 @@ libhts.so.1 libhts1 #MINVER#
  mfflush@Base 1.0
  mfgetc@Base 1.0
  mfgets@Base 1.0
+ mfmmap@Base 1.3
  mfopen@Base 1.0
  mfprintf@Base 1.0
  mfread@Base 1.0
