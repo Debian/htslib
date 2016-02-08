@@ -1,5 +1,9 @@
 htslib (1.3-2) UNRELEASED; urgency=medium
 
+  [ Steffen Moeller and Jon Ison ]
+  * Introduction of EDAM annotation
+
+  [ Sascha Steinbiss ]
   * Team upload
   * Include upstream patch for large file support
   * Run configure as part of the build
