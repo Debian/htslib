@@ -1,7 +1,4 @@
 libhts.so.1 libhts1 #MINVER#
- MD5_Final@Base 1.0
- MD5_Init@Base 1.0
- MD5_Update@Base 1.0
  _reader_next_line@Base 1.0
  _regidx_build_index@Base 1.2.1
  _vcf_parse_format@Base 1.0
@@ -46,12 +43,13 @@ libhts.so.1 libhts1 #MINVER#
  bam_str2flag@Base 1.0
  bam_write1@Base 1.0
  bcf_add_filter@Base 1.0
+ bcf_add_id@Base 1.3
  bcf_calc_ac@Base 1.0
  bcf_clear@Base 1.0
  bcf_copy@Base 1.2.1
  bcf_destroy@Base 1.0
  bcf_dup@Base 1.0
- bcf_empty1@Base 1.0
+ bcf_empty@Base 1.3
  bcf_enc_vchar@Base 1.0
  bcf_enc_vfloat@Base 1.0
  bcf_enc_vint@Base 1.0
@@ -82,6 +80,7 @@ libhts.so.1 libhts1 #MINVER#
  bcf_hdr_get_version@Base 1.0
  bcf_hdr_id2int@Base 1.0
  bcf_hdr_init@Base 1.0
+ bcf_hdr_merge@Base 1.3
  bcf_hdr_parse@Base 1.0
  bcf_hdr_parse_line@Base 1.0
  bcf_hdr_parse_sample_line@Base 1.0
@@ -105,11 +104,14 @@ libhts.so.1 libhts1 #MINVER#
  bcf_hrec_format@Base 1.0
  bcf_hrec_set_val@Base 1.0
  bcf_index@Base 1.0
+ bcf_index_build2@Base 1.3
  bcf_index_build@Base 1.0
+ bcf_index_load2@Base 1.3
  bcf_init@Base 1.0
  bcf_is_snp@Base 1.0
  bcf_read@Base 1.0
  bcf_readrec@Base 1.0
+ bcf_remove_allele_set@Base 1.3
  bcf_remove_alleles@Base 1.0
  bcf_remove_filter@Base 1.0
  bcf_sr_add_reader@Base 1.0
@@ -149,6 +151,7 @@ libhts.so.1 libhts1 #MINVER#
  bcf_write@Base 1.0
  bgzf_check_EOF@Base 1.0
  bgzf_close@Base 1.0
+ bgzf_compress@Base 1.3
  bgzf_dopen@Base 1.0
  bgzf_flush@Base 1.0
  bgzf_flush_try@Base 1.0
@@ -181,7 +184,27 @@ libhts.so.1 libhts1 #MINVER#
  cram_beta_encode_init@Base 1.0
  cram_beta_encode_int@Base 1.0
  cram_beta_encode_store@Base 1.0
+ cram_block_append@Base 1.3
+ cram_block_compression_hdr_decoder2encoder@Base 1.3
+ cram_block_compression_hdr_set_rg@Base 1.3
+ cram_block_get_comp_size@Base 1.3
+ cram_block_get_content_id@Base 1.3
+ cram_block_get_content_type@Base 1.3
+ cram_block_get_crc32@Base 1.3
+ cram_block_get_data@Base 1.3
+ cram_block_get_offset@Base 1.3
+ cram_block_get_size@Base 1.3
+ cram_block_get_uncomp_size@Base 1.3
  cram_block_method2str@Base 1.0
+ cram_block_set_comp_size@Base 1.3
+ cram_block_set_content_id@Base 1.3
+ cram_block_set_crc32@Base 1.3
+ cram_block_set_data@Base 1.3
+ cram_block_set_offset@Base 1.3
+ cram_block_set_size@Base 1.3
+ cram_block_set_uncomp_size@Base 1.3
+ cram_block_size@Base 1.3
+ cram_block_update_size@Base 1.3
  cram_byte_array_len_decode@Base 1.0
  cram_byte_array_len_decode_free@Base 1.0
  cram_byte_array_len_decode_init@Base 1.0
@@ -190,7 +213,6 @@ libhts.so.1 libhts1 #MINVER#
  cram_byte_array_len_encode_init@Base 1.0
  cram_byte_array_len_encode_store@Base 1.0
  cram_byte_array_stop_decode_block@Base 1.0
-#MISSING: 1.2.1# cram_byte_array_stop_decode_char@Base 1.0
  cram_byte_array_stop_decode_free@Base 1.0
  cram_byte_array_stop_decode_init@Base 1.0
  cram_byte_array_stop_encode@Base 1.0
@@ -198,11 +220,22 @@ libhts.so.1 libhts1 #MINVER#
  cram_byte_array_stop_encode_init@Base 1.0
  cram_byte_array_stop_encode_store@Base 1.0
  cram_close@Base 1.0
+ cram_codec_decoder2encoder@Base 1.3
  cram_codec_to_id@Base 1.2.1
  cram_compress_block@Base 1.0
+ cram_container_get_landmarks@Base 1.3
+ cram_container_get_length@Base 1.3
+ cram_container_get_num_blocks@Base 1.3
+ cram_container_is_empty@Base 1.3
+ cram_container_set_landmarks@Base 1.3
+ cram_container_set_length@Base 1.3
+ cram_container_set_num_blocks@Base 1.3
+ cram_container_size@Base 1.3
  cram_content_type2str@Base 1.0
+ cram_copy_slice@Base 1.3
  cram_decode_TD@Base 1.0
  cram_decode_compression_header@Base 1.0
+ cram_decode_estimate_sizes@Base 1.3
  cram_decode_slice@Base 1.0
  cram_decode_slice_header@Base 1.0
  cram_decode_slice_mt@Base 1.0
@@ -216,17 +249,21 @@ libhts.so.1 libhts1 #MINVER#
  cram_encoder_init@Base 1.0
  cram_encoding2str@Base 1.0
  cram_eof@Base 1.0
-#MISSING: 1.2.1# cram_external_decode_block@Base 1.0
  cram_external_decode_char@Base 1.0
  cram_external_decode_free@Base 1.0
  cram_external_decode_init@Base 1.0
  cram_external_decode_int@Base 1.0
-#MISSING: 1.2.1# cram_external_encode@Base 1.0
  cram_external_encode_char@Base 1.2.1
  cram_external_encode_free@Base 1.0
  cram_external_encode_init@Base 1.0
  cram_external_encode_int@Base 1.2.1
  cram_external_encode_store@Base 1.0
+ cram_fd_get_fp@Base 1.3
+ cram_fd_get_header@Base 1.3
+ cram_fd_get_version@Base 1.3
+ cram_fd_set_fp@Base 1.3
+ cram_fd_set_header@Base 1.3
+ cram_fd_set_version@Base 1.3
  cram_flush@Base 1.0
  cram_flush_container@Base 1.0
  cram_flush_container_mt@Base 1.0
@@ -250,6 +287,7 @@ libhts.so.1 libhts1 #MINVER#
  cram_huffman_decode_init@Base 1.0
  cram_huffman_decode_int0@Base 1.0
  cram_huffman_decode_int@Base 1.0
+ cram_huffman_decode_null@Base 1.3
  cram_huffman_encode_char0@Base 1.0
  cram_huffman_encode_char@Base 1.0
  cram_huffman_encode_free@Base 1.0
@@ -262,6 +300,8 @@ libhts.so.1 libhts1 #MINVER#
  cram_index_load@Base 1.0
  cram_index_query@Base 1.0
  cram_load_reference@Base 1.0
+ cram_major_vers@Base 1.3
+ cram_minor_vers@Base 1.3
  cram_new_block@Base 1.0
  cram_new_compression_header@Base 1.0
  cram_new_container@Base 1.0
@@ -282,15 +322,18 @@ libhts.so.1 libhts1 #MINVER#
  cram_set_header@Base 1.0
  cram_set_option@Base 1.0
  cram_set_voption@Base 1.0
+ cram_slice_hdr_get_num_blocks@Base 1.3
  cram_stats_add@Base 1.0
  cram_stats_create@Base 1.0
  cram_stats_del@Base 1.0
  cram_stats_dump@Base 1.0
  cram_stats_encoding@Base 1.0
  cram_stats_free@Base 1.0
+ cram_store_container@Base 1.3
  cram_subexp_decode@Base 1.0
  cram_subexp_decode_free@Base 1.0
  cram_subexp_decode_init@Base 1.0
+ cram_transcode_rg@Base 1.3
  cram_uncompress_block@Base 1.0
  cram_write_SAM_hdr@Base 1.0
  cram_write_block@Base 1.0
@@ -298,7 +341,6 @@ libhts.so.1 libhts1 #MINVER#
  cram_write_file_def@Base 1.0
  debug_buffer@Base 1.0
  debug_buffers@Base 1.0
-#MISSING: 1.2.1# download_and_open@Base 1.0
  expand_cache_path@Base 1.0
  fai_build@Base 1.0
  fai_build_core@Base 1.0
@@ -316,13 +358,18 @@ libhts.so.1 libhts1 #MINVER#
  file_exists@Base 1.0
  file_size@Base 1.0
  find_file_url@Base 1.0
+ find_path@Base 1.3
  flen@Base 1.0
  hclose@Base 1.0
  hclose_abruptly@Base 1.0
  hdopen@Base 1.0
+ hfile_add_scheme_handler@Base 1.3
+ hfile_always_local@Base 1.3
+ hfile_always_remote@Base 1.3
  hfile_destroy@Base 1.0
  hfile_init@Base 1.0
  hfile_oflags@Base 1.0
+ hfile_plugin_init_net@Base 1.3
  hflush@Base 1.0
  hgetc2@Base 1.0
  hisremote@Base 1.2.1
@@ -338,6 +385,7 @@ libhts.so.1 libhts1 #MINVER#
  hts_detect_format@Base 1.2.1
  hts_file_type@Base 1.0
  hts_format_description@Base 1.2.1
+ hts_format_file_extension@Base 1.3
  hts_get_bgzfp@Base 1.0
  hts_get_format@Base 1.2.1
  hts_getline@Base 1.0
@@ -349,17 +397,31 @@ libhts.so.1 libhts1 #MINVER#
  hts_idx_get_stat@Base 1.0
  hts_idx_getfn@Base 1.0
  hts_idx_init@Base 1.0
+ hts_idx_load2@Base 1.3
  hts_idx_load@Base 1.0
- hts_idx_load_local@Base 1.0
  hts_idx_push@Base 1.0
  hts_idx_save@Base 1.0
+ hts_idx_save_as@Base 1.3
  hts_idx_seqnames@Base 1.0
  hts_idx_set_meta@Base 1.0
  hts_itr_destroy@Base 1.0
  hts_itr_next@Base 1.0
  hts_itr_query@Base 1.0
  hts_itr_querys@Base 1.0
+ hts_md5_destroy@Base 1.3
+ hts_md5_final@Base 1.3
+ hts_md5_hex@Base 1.3
+ hts_md5_init@Base 1.3
+ hts_md5_reset@Base 1.3
+ hts_md5_update@Base 1.3
  hts_open@Base 1.0
+ hts_open_format@Base 1.3
+ hts_opt_add@Base 1.3
+ hts_opt_apply@Base 1.3
+ hts_opt_free@Base 1.3
+ hts_parse_decimal@Base 1.3
+ hts_parse_format@Base 1.3
+ hts_parse_opt_list@Base 1.3
  hts_parse_reg@Base 1.0
  hts_readlines@Base 1.0
  hts_readlist@Base 1.0
@@ -373,11 +435,13 @@ libhts.so.1 libhts1 #MINVER#
  hwrite2@Base 1.0
  int32_decode@Base 1.0
  int32_encode@Base 1.0
- int32_get@Base 1.0
- int32_put@Base 1.0
+ int32_get_blk@Base 1.3
+ int32_put_blk@Base 1.3
  is_directory@Base 1.0
  is_file@Base 1.0
+ itf8_bytes@Base 1.3
  itf8_decode@Base 1.0
+ itf8_decode_crc@Base 1.3
  itf8_encode@Base 1.0
  itf8_put_blk@Base 1.0
  kf_betai@Base 1.0
@@ -389,6 +453,7 @@ libhts.so.1 libhts1 #MINVER#
  kftp_connect_file@Base 1.0
  kftp_parse_url@Base 1.0
  kftp_reconnect@Base 1.0
+ kgetline@Base 1.3
  kh_clear_s2i@Base 1.0
  kh_del_s2i@Base 1.0
  kh_destroy_s2i@Base 1.0
@@ -423,6 +488,7 @@ libhts.so.1 libhts1 #MINVER#
  kt_fisher_exact@Base 1.0
  kvsprintf@Base 1.0
  ltf8_decode@Base 1.0
+ ltf8_decode_crc@Base 1.3
  ltf8_get@Base 1.0
  ltf8_put@Base 1.0
  mfascii@Base 1.0
@@ -496,14 +562,19 @@ libhts.so.1 libhts1 #MINVER#
  sam_hdr_parse_@Base 1.0
  sam_hdr_read@Base 1.0
  sam_hdr_rebuild@Base 1.0
+ sam_hdr_sort_order@Base 1.3
  sam_hdr_str@Base 1.0
  sam_hdr_update@Base 1.0
  sam_hdr_vadd@Base 1.0
  sam_hdr_write@Base 1.0
+ sam_index_build2@Base 1.3
+ sam_index_build@Base 1.3
+ sam_index_load2@Base 1.3
  sam_index_load@Base 1.0
  sam_itr_queryi@Base 1.0
  sam_itr_querys@Base 1.0
  sam_open_mode@Base 1.0
+ sam_open_mode_opts@Base 1.3
  sam_parse1@Base 1.0
  sam_read1@Base 1.0
  sam_write1@Base 1.0
@@ -536,7 +607,9 @@ libhts.so.1 libhts1 #MINVER#
  tbx_conf_vcf@Base 1.0
  tbx_destroy@Base 1.0
  tbx_index@Base 1.0
+ tbx_index_build2@Base 1.3
  tbx_index_build@Base 1.0
+ tbx_index_load2@Base 1.3
  tbx_index_load@Base 1.0
  tbx_name2id@Base 1.0
  tbx_parse1@Base 1.0

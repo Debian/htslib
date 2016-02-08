@@ -1,2 +1,2 @@
 # False positive
-spelling-error-in-binary usr/lib/x86_64-linux-gnu/libhts.so.1.2.1-1 compres compress
+libhts1: spelling-error-in-binary usr/lib/x86_64-linux-gnu/libhts.so.* compres compress

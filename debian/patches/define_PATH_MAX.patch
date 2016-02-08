@@ -1,0 +1,23 @@
+Author: Andreas Tille <tille@debian.org>
+Last-Uudate: Wed, 09 Dec 2015 16:40:21 +0100
+Bug-Debian: https://bugs.debian.org/793512
+Description: Define PATH_MAX as it is done in cram/open_trace_file.c if
+ not existent.  The definition should be removed from this C file since the
+ header file affects all three C files where this definition is used.
+
+--- a/cram/os.h
++++ b/cram/os.h
+@@ -134,6 +134,13 @@ extern "C" {
+ #  define SP_BIG_ENDIAN
+ #endif
+ 
++/*
++ * in case PATH_MAX is not defined (like in hurd)
++ */
++#ifndef PATH_MAX
++#  define PATH_MAX 1024
++#endif
++
+ /* Some catch-alls */
+ #if defined(__LITTLE_ENDIAN__) || defined(__LITTLEENDIAN__)
+ #    define SP_LITTLE_ENDIAN
