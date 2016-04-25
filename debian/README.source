@@ -3,25 +3,25 @@ workflow it is documented here, how the package can be updated:
 
   1. in the master branch, pull the upstream master branch and its tags.
 
-       checkout master
+       git checkout master
        git pull https://github.com/samtools/htslib --tags
 
      Remark: If this pull fails with a lot of stuff to merge you might
      have some ~/.gitconfig that breaks the pull above.  Please try to
      deactivate it for the moment.
 
-  2. download the upstream tarball
+  2. Merge the tag in the debian/unstable branch
+
+       git checkout debian/unstable ; git merge <version>
+
+  3. download the upstream tarball
 
        uscan --force-download
 
-  3. Register the upstream tarball in the pristine-tar branch directly with
+  4. Register the upstream tarball in the pristine-tar branch directly with
      the pristine-tar command directly (stay in master branch when doing this)
 
        pristine-tar commit ../htslib_<version>.orig.tar.gz <version>
-
-  4. Merge the tag in the debian/unstable branch
-
-       git checkout debian/unstable ; git merge <version>
 
   5. Update the packaging files, build with gbp - debian-branch and
      upstream-branch are properly set in debian/gbp.conf
