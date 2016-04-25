@@ -13,7 +13,7 @@ override_dh_auto_test:
 
 override_dh_auto_configure:
 	autoconf
-	./configure
+	./configure --enable-libcurl
 
 override_dh_auto_build:
 	dh_auto_build -- \

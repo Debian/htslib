@@ -369,11 +369,13 @@ libhts.so.1 libhts1 #MINVER#
  hfile_destroy@Base 1.0
  hfile_init@Base 1.0
  hfile_oflags@Base 1.0
+ hfile_plugin_init_libcurl@Base 1.3.1
  hfile_plugin_init_net@Base 1.3
  hflush@Base 1.0
  hgetc2@Base 1.0
  hisremote@Base 1.2.1
  hopen@Base 1.0
+ hopen_libcurl@Base 1.3.1
  hopen_net@Base 1.0
  hpeek@Base 1.0
  hputc2@Base 1.0
