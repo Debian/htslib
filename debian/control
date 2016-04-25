@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 9),
                libssl-dev,
                zlib1g-dev,
                autoconf
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Vcs-Browser: https://anonscm.debian.org/cgit/debian-med/htslib.git
 Vcs-Git: https://anonscm.debian.org/git/debian-med/htslib.git -b debian/unstable
 Homepage: https://github.com/samtools/htslib
