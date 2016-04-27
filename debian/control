@@ -21,6 +21,7 @@ Section: libs
 Depends: ${shlibs:Depends},
          ${misc:Depends}
 Pre-Depends: ${misc:Pre-Depends}
+Breaks: samtools (<< 1.3.1)
 Description: C library for high-throughput sequencing data formats
  HTSlib is an implementation of a unified C library for accessing common file
  formats, such as SAM (Sequence Alignment/Map), CRAM and VCF (Variant Call
