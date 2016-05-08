@@ -1,0 +1,16 @@
+ontology: EDAM (1.13)
+topic:
+  - Sequencing
+  - Data management
+scopes:
+  - name: summary
+    function:
+     - Indexing
+    inputs:
+     - data:   Sequence coordinates
+       formats: [TSV, BED, GFF]
+     - data:   Data
+       formats: [TSV]
+    outputs:
+     - data:   Data index
+       formats: [Tabix index file format]

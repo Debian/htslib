@@ -1,7 +1,7 @@
 libhts.so.1 libhts1 #MINVER#
  _reader_next_line@Base 1.0
  _regidx_build_index@Base 1.2.1
- _vcf_parse_format@Base 1.0
+#MISSING: 1.3.1# _vcf_parse_format@Base 1.0
  bam_aux2A@Base 1.0
  bam_aux2Z@Base 1.0
  bam_aux2f@Base 1.0
@@ -347,7 +347,7 @@ libhts.so.1 libhts1 #MINVER#
  fai_destroy@Base 1.0
  fai_fetch@Base 1.0
  fai_load@Base 1.0
- fai_read@Base 1.0
+#MISSING: 1.3.1# fai_read@Base 1.0
  fai_save@Base 1.0
  faidx_fetch_nseq@Base 1.2.1
  faidx_fetch_seq@Base 1.0
@@ -369,11 +369,13 @@ libhts.so.1 libhts1 #MINVER#
  hfile_destroy@Base 1.0
  hfile_init@Base 1.0
  hfile_oflags@Base 1.0
+ hfile_plugin_init_libcurl@Base 1.3.1
  hfile_plugin_init_net@Base 1.3
  hflush@Base 1.0
  hgetc2@Base 1.0
  hisremote@Base 1.2.1
  hopen@Base 1.0
+ hopen_libcurl@Base 1.3.1
  hopen_net@Base 1.0
  hpeek@Base 1.0
  hputc2@Base 1.0
@@ -501,6 +503,7 @@ libhts.so.1 libhts1 #MINVER#
  mfflush@Base 1.0
  mfgetc@Base 1.0
  mfgets@Base 1.0
+ mfmmap@Base 1.3
  mfopen@Base 1.0
  mfprintf@Base 1.0
  mfread@Base 1.0
