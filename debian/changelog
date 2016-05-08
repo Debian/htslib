@@ -1,3 +1,9 @@
+htslib (1.3.1-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Charles Plessy <plessy@debian.org>  Sun, 08 May 2016 21:28:33 +0900
+
 htslib (1.3.1-1) unstable; urgency=medium
 
   36bf59a Merge tag '1.3.1' into debian/unstable
